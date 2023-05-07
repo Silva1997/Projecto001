@@ -520,3 +520,121 @@
         margin: 0 auto;
     }
 }
+
+@media screen and (max-width:412px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .navbar.fixed-top {
+        background: transparent;
+        background-color: rgba(36, 35, 35, 0.5);
+        position: fixed;
+        width: 92.5%;
+    }
+    .tel {
+        width: 30%;
+    }
+    .Fundocima {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("hero-background.png");
+        /* background-image: url('src/app/Img/hero-background.png'); */
+    }
+    .grid2 {
+        order: -1;
+        margin: 0 auto;
+    }
+    .grid1 {
+        margin: 30px;
+        text-align: justify;
+    }
+    .grid1 h5 {
+        font-size: 25pt;
+    }
+    .f_social_icon {
+        border-radius: 12px;
+        color: #fbfbfd;
+        background-color: #f38282;
+    }
+    .Ver {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .img2 {
+        position: relative;
+        top: -180px;
+        left: 30px;
+    }
+    .img1 {
+        position: relative;
+        top: -100px;
+        left: 55px;
+    }
+    #but {
+        position: relative;
+        margin-left: 30px;
+    }
+    .Descricaodanossahistoria {
+        display: grid;
+        grid-template-columns: 2fr;
+        grid-template-rows: 50vh 50vh 50vh;
+        grid-auto-rows: 100px;
+        /* row-gap: 10px; */
+        grid-auto-flow: column;
+        margin: 0 auto;
+        margin-bottom: 300px;
+    }
+    .P2 {
+        /* margin-left: 100px; */
+        justify-content: stretch;
+        justify-items: center;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        object-fit: cover;
+        background: #FFFFFF;
+        text-align: center;
+    }
+    .P3 {
+        /* margin-left: 100px; */
+        justify-content: stretch;
+        justify-items: center;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        background: #FFFFFF;
+        text-align: center;
+    }
+    .P1 {
+        /* margin-left: 100px; */
+        object-fit: cover;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("pastel-de-belem-02-1200x901.jpg");
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .P4 {
+        width: 100%;
+        /* margin-left: 100px; */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("ilcao_bx__13_.jpg");
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: span 4;
+    }
+    #iconButao {
+        display: flex;
+        justify-content: center;
+        left: -50px;
+        top: -9px;
+        background-color: #ffffff;
+        padding: 1px 2px;
+    }
+}

@@ -6,7 +6,7 @@ import Icon from './app/Img/Principal.png'
 import CakeIcon from './app/Img/icon.png'
 import CakeIco from './app/Img/icon1.png'
 
-import {Row,Col} from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
@@ -17,18 +17,18 @@ import Sliderprodutos from "../src/app/Paginas/SliderProdutos"
 
 function App() {
 
-  
+
   return (
     <>
-     
+
 
       <div className='Fundocima'  >
 
         <div className='grid1'>
-          <h5 style={{ fontSize: "30pt" }}>Encontre o Bolo<br /> perfeito para qualquer <br />hora do dia</h5>
+          <h5 >Encontre o  Bolo <br /> perfeito para qualquer <br />hora do dia</h5>
           <p>Com o Gestconf você recebe sua encomenda onde estiver, <br />a qualquer hora</p>
           <ShoppingCartOutlinedIcon className='f_social_icon' /><p>Compra simples e segura</p>
-          <LocalShippingOutlinedIcon className='f_social_icon'/><p>Entrega rápida e rastreada</p>
+          <LocalShippingOutlinedIcon className='f_social_icon' /><p>Entrega rápida e rastreada</p>
         </div>
 
         <div className='grid2' >
@@ -46,46 +46,46 @@ function App() {
       </div>
 
 
-<div>
-<Row xs={1} md={1} className="g-4">
+      <div>
+        <Row xs={1} md={1} className="g-4">
 
-<Col >
+          <Col >
 
-<div style={{display:"flex" , justifyContent:"center" , margin:"30px"}}>
-<div className='Ver'>
+            <div style={{ display: "flex", justifyContent: "center", margin: "30px" }}>
+              <div className='Ver'>
 
-<div style={{ display:"inline-block", border:"2px" , background:"white", width:"35vh" , borderRadius:"5px 50px" , margin:"12px"}}>
-              <img src={CakeIcon} alt="#" className='img1' /><br />
-              <button style={{ padding: "6px 20px", border: "none", borderRadius: "12px", position: "relative", top: "-80px" , left:"73px" }}>Saber Mais</button>
-              <h2 className='frase' style={{ background: "white", position: "relative", top: "-150px" }} ><span className='Sp' style={{ color: "red" }}>C</span>onfeiteria</h2>
+                <div className='cartaoTamanho' style={{ display: "inline-block", border: "2px", background: "white", width: "35vh", borderRadius: "5px 50px", margin: "12px" }}>
+                  <img src={CakeIcon} alt="#" className='img1' /><br />
+                  <button id='but'style={{ padding: "6px 20px", border: "none", borderRadius: "12px", position: "relative", top: "-80px", left: "73px" }}>Saber Mais</button>
+                  <h2 className='frase' style={{ background: "white", position: "relative", top: "-150px" }} ><span className='Sp' style={{ color: "red" }}>C</span>onfeiteria</h2>
+                </div>
+                <div style={{ display: "inline-block", border: "2px", background: "white", width: "35vh", borderRadius: "5px 50px", margin: "12px" }}>
+                  <img src={CakeIco} alt="#" className='img2' /><br />
+                  <button id='but' style={{ padding: "6px 20px", border: "none", borderRadius: "12px", position: "relative", top: "-80px", left: "73px" }}>Saber Mais</button>
+                  <h2 className='frase' style={{ background: "white", position: "relative", top: "-150px" }} ><span className='Sp' style={{ color: "red" }}>C</span>onfeiteria</h2>
+                </div>
+                <div style={{ display: "inline-block", border: "2px", background: "white", width: "35vh", borderRadius: "5px 50px", margin: "12px" }}>
+                  <img src={CakeIcon} alt="#" className='img1' /><br />
+                  <button id='but' style={{ padding: "6px 20px", border: "none", borderRadius: "12px", position: "relative", top: "-80px", left: "73px" }}>Saber Mais</button>
+                  <h2 className='frase' style={{ background: "white", position: "relative", top: "-150px" }} ><span className='Sp' style={{ color: "red" }}>C</span>onfeiteria</h2>
+                </div>
+                <div style={{ display: "inline-block", border: "2px", background: "white", width: "35vh", borderRadius: "5px 50px", margin: "12px" }}>
+                  <img src={CakeIcon} alt="#" className='img1' /><br />
+                  <button id='but' style={{ padding: "6px 20px", border: "none", borderRadius: "12px", position: "relative", top: "-80px", left: "73px" }}>Saber Mais</button>
+                  <h2 className='frase' style={{ background: "white", position: "relative", top: "-150px" }} ><span className='Sp' style={{ color: "red" }}>C</span>onfeiteria</h2>
+                </div>
+
+              </div>
             </div>
-            <div style={{ display:"inline-block", border:"2px" , background:"white", width:"35vh" , borderRadius:"5px 50px" , margin:"12px"}}>
-              <img src={CakeIco} alt="#" className='img2' /><br />
-              <button style={{ padding: "6px 20px", border: "none", borderRadius: "12px", position: "relative", top: "-80px" , left:"73px" }}>Saber Mais</button>
-              <h2 className='frase' style={{ background: "white", position: "relative", top: "-150px" }} ><span className='Sp' style={{ color: "red" }}>C</span>onfeiteria</h2>
-            </div>
-            <div style={{ display:"inline-block", border:"2px" , background:"white", width:"35vh" , borderRadius:"5px 50px" ,  margin:"12px"}}>
-              <img src={CakeIcon} alt="#" className='img1' /><br />
-              <button style={{ padding: "6px 20px", border: "none", borderRadius: "12px", position: "relative", top: "-80px" , left:"73px" }}>Saber Mais</button>
-              <h2 className='frase' style={{ background: "white", position: "relative", top: "-150px" }} ><span className='Sp' style={{ color: "red" }}>C</span>onfeiteria</h2>
-            </div>
-            <div style={{ display:"inline-block", border:"2px" , background:"white", width:"35vh" , borderRadius:"5px 50px" ,  margin:"12px"}}>
-              <img src={CakeIcon} alt="#" className='img1' /><br />
-              <button style={{ padding: "6px 20px", border: "none", borderRadius: "12px", position: "relative", top: "-80px" , left:"73px" }}>Saber Mais</button>
-              <h2 className='frase' style={{ background: "white", position: "relative", top: "-150px" }} ><span className='Sp' style={{ color: "red" }}>C</span>onfeiteria</h2>
-            </div>
-
-            </div>
-</div>
-</Col>
+          </Col>
 
 
-</Row>
-</div>
+        </Row>
+      </div>
 
 
 
-    
+
 
       <div className="Descricaodanossahistoria">
         <div className="P1">
@@ -115,10 +115,10 @@ function App() {
 
 
 
-{/* Slider Produtos */}
-<div>
-  <Sliderprodutos/>
-</div>
+      {/* Slider Produtos */}
+      <div>
+        <Sliderprodutos />
+      </div>
 
 
 
@@ -132,7 +132,7 @@ function App() {
                   <div className="f_widget company_widget wow fadeInLeft">
                     <h3 className="f-title f_600 t_color f_size_18">Sujeitões</h3>
                     <form action="#" className="f_subscribe_two mailchimp" >
-                      <input type="text" name="EMAIL" className="form-control memail" /><br/>
+                      <input type="text" name="EMAIL" className="form-control memail" /><br />
                       <button className="btn_get_two" type="submit">Subescrever</button>
 
                     </form>
@@ -168,27 +168,27 @@ function App() {
 
                       </ul>
                     </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="footer_bg">
-                <div className="footer_bg_one"></div>
-                <div className="footer_bg_two"></div>
-              </div>
-            </div>
-            <div className="footer_bottom">
-              <div className="container">
-                <div className="row align-items-center">
-                  <div className="col-lg-6 col-sm-7">
-                    <p className="mb-0 f_400">© sofware.. 2023 Todos direitos reservados.</p>
-                  </div>
-                  <div className="col-lg-6 col-sm-5 text-right">
-                    <p>Made in  <i className="icon_heart"></i> Angola </p>
                   </div>
                 </div>
               </div>
             </div>
+            <div className="footer_bg">
+              <div className="footer_bg_one"></div>
+              <div className="footer_bg_two"></div>
+            </div>
+          </div>
+          <div className="footer_bottom">
+            <div className="container">
+              <div className="row align-items-center">
+                <div className="col-lg-6 col-sm-7">
+                  <p className="mb-0 f_400">© sofware.. 2023 Todos direitos reservados.</p>
+                </div>
+                <div className="col-lg-6 col-sm-5 text-right">
+                  <p>Made in  <i className="icon_heart"></i> Angola </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </footer>
       </div>
 

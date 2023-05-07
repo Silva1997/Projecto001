@@ -2,6 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
+import '../Estilos/Estilos.css';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 export default function TemporaryDrawer(props) {
@@ -43,7 +44,7 @@ export default function TemporaryDrawer(props) {
 
        
         <p>total:{props.total}</p>
-        <button>Finalizar</button>
+        <button onClick={toggleDrawer(anchor, false)} >Finalizar</button>
 
     </Box>
   );
@@ -52,7 +53,7 @@ export default function TemporaryDrawer(props) {
     <div>
       {['right'].map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)} style={{ padding:"4px 6px", borderRadius:"1px 10px ", display:"flex" , background:"white" }}><ShoppingCartIcon style={{ color: "black" }} /></Button>
+          <Button id="iconButao" onClick={toggleDrawer(anchor, true)}><ShoppingCartIcon style={{ color: "black" }} /></Button>
           <Drawer
             anchor={anchor}
             open={state[anchor]}

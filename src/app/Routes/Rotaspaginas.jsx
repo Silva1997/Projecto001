@@ -47,28 +47,29 @@ const JanelaMenuPrincipal = () => {
 
         {[false].map((expand) => (
           <Navbar key={expand} bg="navbar-custom" expand={expand} className={"navbar fixed-top"}>
-            <Container fluid>
+            <Container fluid id="tel">
               <Navbar.Brand href="#" style={{ color: "white" }}>
                 GestConf
                 <Badge color="secondary" badgeContent={itemCount} style={{ position: 'fixed', marginLeft: '200px', top: '27px', justifyContent: "center" }}>
-     <Modal itemCount={itemCount} total={cart.getTotalCost().toFixed(2)} />
-                  
-                  
+                  <Modal itemCount={itemCount} total={cart.getTotalCost().toFixed(2)} />
+
+
                 </Badge>
               </Navbar.Brand>
+
               <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
               <Navbar.Offcanvas
                 id={`offcanvasNavbar-expand-${expand}`}
                 aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
                 placement="end"
-                className={"tel"}
+
               >
                 <Offcanvas.Header closeButton>
                   <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
                     GestConf: Menu
                   </Offcanvas.Title>
                 </Offcanvas.Header>
-                <Offcanvas.Body>
+                <Offcanvas.Body >
                   <Nav className="justify-content-end flex-grow-1 pe-3">
                     <Nav>
                       <Nav.Link as={Link} to={"/"}>Home</Nav.Link>
