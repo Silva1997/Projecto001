@@ -1,0 +1,58 @@
+
+import { Form, Row, Col } from 'react-bootstrap';
+import { Card, Button, ButtonGroup } from '@mui/material'
+import CardContent from '@mui/material/CardContent';
+import { Contexto } from '../Routes/Provedoracesso';
+import { useContext } from 'react';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import '../Estilos/Estilos.css';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+function ProductCard(props) { // props.product is the product we are selling
+    const { product } = props;
+
+    const cart = useContext(Contexto);
+    const productQuantity = cart.getProductQuantity(product.id)
+    // console.log(cart.items);
+    return (
+
+        <Card sx={{
+            background: "rgba(243, 239, 239, 0.5)",
+            borderRadius: "1px 10px",
+            marginTop: "84px",
+            marginLeft: "5px",
+            marginRight: "5px"
+
+        }} >
+            <div as={CardMedia} style={{ display: "flex" }}>
+                <img src={product.image} alt="FotoCartao" className='Cartao' />
+            </div>
+
+
+            <CardContent >
+                <Typography variant='p' style={{ fontWeight: "500", borderRadius: "20px", padding: "0.2px 20px", background: "blue" }}> {product.tipo}</Typography>
+                <Typography variant='h6' style={{ fontFamily: "Arial", fontSize: "15pt", fontWeight: "bold", color: "black" }}> {product.text1}</Typography>
+                <Typography variant='p'><span style={{ color: "black", fontWeight: "500", position: "relative", left: "-20px" }}>$kz: {product.preco}</span></Typography>
+
+                {productQuantity > 0 ?
+                    <>
+                        <Form as={Row}>
+                            <Form.Label column="true" sm="6">Quant: {productQuantity}</Form.Label>
+                            <Col sm="6">
+                                <ButtonGroup>
+                                    <Button onClick={() => { cart.addOneToCart(product.id) }} >+</Button>
+                                    <Button onClick={() => { cart.removeOneFromCart(product.id) }}>-</Button>
+                                </ButtonGroup>
+
+                            </Col>
+                        </Form>
+                        <Button variant="danger" onClick={() => { cart.deleteFromCart(product.id) }} className="my-2">Remover <ShoppingCartIcon style={{color:"gold"}}/></Button>
+                    </>
+                    : <Button variant="outline" onClick={() => { cart.addOneToCart(product.id) }}>Adicionar <ShoppingCartIcon style={{color:"gold"}}/></Button> 
+                }
+            </CardContent>
+        </Card>
+    )
+}
+
+export default ProductCard;
