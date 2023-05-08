@@ -24,7 +24,7 @@ function App() {
 
       <div className='Fundocima'  >
 
-        <div className='grid1'>
+        <div className='grid1' >
           <h5 >Encontre o  Bolo <br /> perfeito para qualquer <br />hora do dia</h5>
           <p>Com o Gestconf você recebe sua encomenda onde estiver, <br />a qualquer hora</p>
           <ShoppingCartOutlinedIcon className='f_social_icon' /><p>Compra simples e segura</p>
@@ -38,7 +38,8 @@ function App() {
         {/*  */}
 
       </div >
-      <h2 className='incio'>Bem-Vindo</h2>
+      
+      <h2 className='incio'>Bem <span className='Sp'>-</span>Vindo</h2>
 
       <div className='menu1'>
 
@@ -47,23 +48,18 @@ function App() {
 
 
       <div>
-        <Row xs={1} md={1} className="g-4">
+        <Row xs={1} md={1} className="g-3">
 
           <Col >
 
-            <div style={{ display: "flex", justifyContent: "center", margin: "30px" }}>
+            <div style={{ display:"flex" ,justifyContent:"center",margin: "30px" }}>
               <div className='Ver'>
-
-                <div className='cartaoTamanho' style={{ display: "inline-block", border: "2px", background: "white", width: "35vh", borderRadius: "5px 50px", margin: "12px" }}>
-                  <img src={CakeIcon} alt="#" className='img1' /><br />
-                  <button id='but'style={{ padding: "6px 20px", border: "none", borderRadius: "12px", position: "relative", top: "-80px", left: "73px" }}>Saber Mais</button>
-                  <h2 className='frase' style={{ background: "white", position: "relative", top: "-150px" }} ><span className='Sp' style={{ color: "red" }}>C</span>onfeiteria</h2>
-                </div>
-                <div style={{ display: "inline-block", border: "2px", background: "white", width: "35vh", borderRadius: "5px 50px", margin: "12px" }}>
+              <div id="Cartao001" style={{ display: "inline-block", background:"white", border: "2px", width: "35vh", borderRadius: "5px 50px", margin: "12px" }}>
                   <img src={CakeIco} alt="#" className='img2' /><br />
                   <button id='but' style={{ padding: "6px 20px", border: "none", borderRadius: "12px", position: "relative", top: "-80px", left: "73px" }}>Saber Mais</button>
                   <h2 className='frase' style={{ background: "white", position: "relative", top: "-150px" }} ><span className='Sp' style={{ color: "red" }}>C</span>onfeiteria</h2>
                 </div>
+                
                 <div style={{ display: "inline-block", border: "2px", background: "white", width: "35vh", borderRadius: "5px 50px", margin: "12px" }}>
                   <img src={CakeIcon} alt="#" className='img1' /><br />
                   <button id='but' style={{ padding: "6px 20px", border: "none", borderRadius: "12px", position: "relative", top: "-80px", left: "73px" }}>Saber Mais</button>
@@ -93,14 +89,14 @@ function App() {
         </div>
 
         <div className="P2">
-          <h3 className=''><span className='Sp'>P</span>astelaria</h3>
+          <h3 className='frase2'><span className='Sp'>P</span>astelaria</h3>
 
           <p className='PL'>Descubra o gosto do saber fazer de uma das mais populares pastelarias em todo o mundo, são diversos os tipos de pasteis em diversos tipos de massas, é so experimentar! </p>
 
         </div>
 
         <div className="P3">
-          <h3 className=''><span className='Sp'>S</span>algados</h3>
+          <h3 className='frase2'><span className='Sp'>S</span>algados</h3>
 
           <p className='PL'>Descubra o gosto do saber fazer de uma das mais populares pastelarias em todo o mundo, são diversos os tipos de pasteis em diversos tipos de massas, é so experimentar! </p>
 

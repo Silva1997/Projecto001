@@ -48,7 +48,7 @@ const JanelaMenuPrincipal = () => {
         {[false].map((expand) => (
           <Navbar key={expand} bg="navbar-custom" expand={expand} className={"navbar fixed-top"}>
             <Container fluid id="tel">
-              <Navbar.Brand href="#" style={{ color: "white" }}>
+              <Navbar.Brand as={Link} to="/" style={{ color: "white" }}>
                 GestConf
                 <Badge color="secondary" badgeContent={itemCount} style={{ position: 'fixed', marginLeft: '200px', top: '27px', justifyContent: "center" }}>
                   <Modal itemCount={itemCount} total={cart.getTotalCost().toFixed(2)} />

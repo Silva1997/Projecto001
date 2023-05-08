@@ -30,8 +30,8 @@ function ProductCard(props) { // props.product is the product we are selling
 
 
             <CardContent >
-                <Typography variant='p' style={{ fontWeight: "500", borderRadius: "20px", padding: "0.2px 20px", background: "blue" }}> {product.tipo}</Typography>
-                <Typography variant='h6' style={{ fontFamily: "Arial", fontSize: "15pt", fontWeight: "bold", color: "black" }}> {product.text1}</Typography>
+                <Typography variant='p' className='frase3' style={{ fontWeight: "500", borderRadius: "20px", padding: "0.2px 20px"}}> {product.tipo}</Typography>
+                <Typography variant='h6' style={{fontSize: "15pt", fontWeight: "bold", color: "black" }}> {product.text1}</Typography>
                 <Typography variant='p'><span style={{ color: "black", fontWeight: "500", position: "relative", left: "-20px" }}>$kz: {product.preco}</span></Typography>
 
                 {productQuantity > 0 ?
@@ -46,9 +46,9 @@ function ProductCard(props) { // props.product is the product we are selling
 
                             </Col>
                         </Form>
-                        <Button variant="danger" onClick={() => { cart.deleteFromCart(product.id) }} className="my-2">Remover <ShoppingCartIcon style={{color:"gold"}}/></Button>
+                        < Button color="error"  onClick={() => { cart.deleteFromCart(product.id) }} className="my-2" variant ="contained" >Remover <ShoppingCartIcon style={{color:"gold"}}/></Button>
                     </>
-                    : <Button variant="outline" onClick={() => { cart.addOneToCart(product.id) }}>Adicionar <ShoppingCartIcon style={{color:"gold"}}/></Button> 
+                    : <Button  color='success' variant="outlined" onClick={() => { cart.addOneToCart(product.id) }}>Adicionar <ShoppingCartIcon style={{color:"gold"}}/></Button> 
                 }
             </CardContent>
         </Card>
