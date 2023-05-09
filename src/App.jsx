@@ -52,7 +52,7 @@ function App() {
 
           <Col >
 
-            <div style={{ display:"flex" ,justifyContent:"center",margin: "30px" }}>
+            <div style={{ display:"flex" ,justifyContent:"center",margin: "40px" }}>
               <div className='Ver'>
               <div id="Cartao001" style={{ display: "inline-block", background:"white", border: "2px", width: "35vh", borderRadius: "5px 50px", margin: "12px" }}>
                   <img src={CakeIco} alt="#" className='img2' /><br />
@@ -85,6 +85,9 @@ function App() {
 
       <div className="Descricaodanossahistoria">
         <div className="P1">
+          <div className='PP1'>
+
+          </div>
 
         </div>
 
@@ -103,6 +106,9 @@ function App() {
         </div>
 
         <div className="P4">
+        <div className='PP1'>
+
+</div>
 
         </div>
 
