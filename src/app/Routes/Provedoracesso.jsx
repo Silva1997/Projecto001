@@ -6,12 +6,25 @@ export const Contexto = createContext({
     addOneToCart: () => {},
     removeOneFromCart: () => {},
     deleteFromCart: () => {},
-    getTotalCost: () => {}
+    getTotalCost: () => {},
+    getImage: () => {}
 })
 
 
 export const AcessoContexto = ({children})=>{
     const [cartProducts, setCartProducts] = useState([]);
+
+
+
+    function getImage(image) {
+        const quantity = cartProducts.find(product => product.image === image)?.quantity;
+            
+        if (quantity === undefined) {
+            return 0;
+        }
+    
+        return quantity;
+    }
 
     function getProductQuantity(id) {
         const quantity = cartProducts.find(product => product.id === id)?.quantity;
@@ -22,6 +35,8 @@ export const AcessoContexto = ({children})=>{
     
         return quantity;
     }
+    
+    
     
     function addOneToCart(id) {
         const quantity = getProductQuantity(id);
@@ -48,7 +63,7 @@ export const AcessoContexto = ({children})=>{
             )
         }
     }
-    
+  
     function removeOneFromCart(id) {
         const quantity = getProductQuantity(id);
     
@@ -94,7 +109,9 @@ export const AcessoContexto = ({children})=>{
         addOneToCart,
         removeOneFromCart,
         deleteFromCart,
-        getTotalCost
+        getTotalCost,
+        getImage
+        
     }
     
   return( 

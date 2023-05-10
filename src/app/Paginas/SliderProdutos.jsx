@@ -8,9 +8,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "../Estilos/Slider.css";
-import { Pagination } from "swiper";
+import SwiperCore,{ Pagination ,Autoplay} from "swiper/core";
 
 export default function App() {
+    SwiperCore.use([Autoplay,Pagination])
     return (
         <>
 
@@ -18,12 +19,17 @@ export default function App() {
             <Swiper
                 slidesPerView={1}
                 spaceBetween={30}
+                centeredSlides={true}
                 loop={true}
+                autoplay={{
+                    delay:2500,
+                    disableOnInteraction:false,
+                }}
                 pagination={{
                     clickable: true,
                 }}
                 // navigation={true}
-                modules={[Pagination]}
+                modules={[Autoplay,Pagination]}
                 className="mySwiper"
             >
                 

@@ -1,4 +1,12 @@
 @media only screen and (min-device-width: 1024px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        overflow-x: hidden;
+    }
     .menu1 {
         display: flex;
         justify-content: center;
@@ -8,20 +16,45 @@
         object-fit: cover;
         height: 40vh;
     }
-    .butao1 {
+    /* efeitos ovelay */
+    .Cartao001 {
+        transition: 0.2s;
+        background-color: #f8f8f8;
+        opacity: 0;
+    }
+    #Cartao001:hover {
+        opacity: 0.3;
+    }
+    .iconCarrinho {
+        display: flex;
+        top: -10px;
+        margin-left: 150px;
+    }
+    #iconButao {
+        display: flex;
+        top: -8px;
+        left: 10px;
+    }
+    /*  */
+    /* botoes */
+    #butao1 {
+        width: 23vh;
         cursor: pointer;
         border-radius: 5px;
         text-align: center;
-        padding: 5px 15px;
+        padding: 4px 14px;
         border-color: red;
+        align-items: center;
+        margin-bottom: 30px;
     }
     button {
-        transition-duration: 0.4s;
+        transition-duration: 0.1s;
     }
     button:hover {
         background-color: rgba(255, 99, 71, 0.5);
         color: white;
     }
+    /*  */
     .incio {
         padding: 5px;
         text-align: center;
@@ -33,6 +66,7 @@
         background: transparent;
         background-color: rgba(36, 35, 35, 0.5);
         padding: 20px;
+        width: auto;
     }
     .img-fluid {
         min-width: 100%;
@@ -63,13 +97,11 @@
         text-align: center;
     }
     /* parte de cima para grid 2fr para a divisao  */
-    * {
+    html,
+    body {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-    }
-    html,
-    body {
         width: 100%;
     }
     .Fundocima {
@@ -184,10 +216,11 @@
     #Foto3 {
         position: relative;
         top: -90px;
-        width: 60vh;
+        left: -20px;
+        width: 55vh;
     }
     body::-webkit-scrollbar {
-        width: 12px;
+        width: 10px;
     }
     body::-webkit-scrollbar-track {
         background: transparent;
@@ -197,7 +230,7 @@
         /* color of the scroll thumb */
         border-radius: 20px;
         /* roundness of the scroll thumb */
-        border: 3px solid rgb(241, 234, 219);
+        border: 2px solid rgb(241, 234, 219);
         /* creates padding around scroll thumb */
     }
     /*  footer*/
@@ -401,7 +434,7 @@
 
 /*  */
 
-@media screen and (min-width:0) and (max-width: 480px) and (max-height: 1560px) {
+@media screen and (max-width: 320px) and (max-height: 640px) {
     * {
         margin: 0;
         width: auto;
@@ -415,13 +448,16 @@
         display: flex;
         justify-content: center;
     }
-    .butao1 {
+    #butao1 {
         margin-bottom: 35px;
         cursor: pointer;
         border-radius: 5px;
         text-align: center;
         padding: 5px 15px;
         border-color: red;
+    }
+    #butao1:hover {
+        background: red;
     }
     button {
         transition-duration: 0.2s;
@@ -452,7 +488,7 @@
         background: transparent;
         background-color: rgba(36, 35, 35, 0.5);
         position: fixed;
-        max-width: 480px;
+        max-width: 320px;
     }
     .Fundocima {
         background-color: white;
@@ -465,11 +501,28 @@
     }
     .grid2 {
         order: -1;
-        margin: 0 auto;
+        justify-content: center;
+        object-fit: cover;
     }
+    /* card 320px para telefone  */
+    .Cartao320 {
+        display: flex;
+        flex-direction: column;
+    }
+    .div320 {
+        margin: 5px;
+        width: 100%;
+        gap: 1px;
+    }
+    /*  */
     .grid1 {
         margin: 30px;
-        text-align: justify;
+        text-align: left;
+    }
+    #Foto3 {
+        image-rendering: auto;
+        image-orientation: from-image;
+        width: 50vh;
     }
     .grid1 h5 {
         font-size: 25pt;
@@ -482,7 +535,7 @@
     #iconButao {
         display: flex;
         top: -15px;
-        left: -90px;
+        left: -0.1px;
     }
     .Ver {
         display: flex;

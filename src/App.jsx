@@ -43,7 +43,7 @@ function App() {
 
       <div className='menu1'>
 
-        <button className='butao1'>Nossa Historia</button>
+        <button id='butao1'>Nossa Historia</button>
       </div>
 
 
@@ -53,19 +53,24 @@ function App() {
           <Col >
 
             <div style={{ display:"flex" ,justifyContent:"center",margin: "40px" }}>
-              <div className='Ver'>
+              <div className='V'>
               <div id="Cartao001" style={{ display: "inline-block", background:"white", border: "2px", width: "35vh", borderRadius: "5px 50px", margin: "12px" }}>
+                
                   <img src={CakeIco} alt="#" className='img2' /><br />
-                  <button id='but' style={{ padding: "6px 20px", border: "none", borderRadius: "12px", position: "relative", top: "-80px", left: "73px" }}>Saber Mais</button>
-                  <h2 className='frase' style={{ background: "white", position: "relative", top: "-150px" }} ><span className='Sp' style={{ color: "red" }}>C</span>onfeiteria</h2>
+                  <button id='but' style={{ padding: "6px 20px", border: "none", borderRadius: "12px", position: "relative", top: "-80px", left: "73px" }}>
+                  Saber Mais</button>
+                  <h2 className='frase' style={{ background: "white", position: "relative", top: "-150px" }} ><span className='Sp' style={{ color: "red" }}>
+                  F</span>ormações</h2>
+                  
+
                 </div>
                 
-                <div style={{ display: "inline-block", border: "2px", background: "white", width: "35vh", borderRadius: "5px 50px", margin: "12px" }}>
+                <div id="Cartao001"  style={{ display: "inline-block", border: "2px", background: "white", width: "35vh", borderRadius: "5px 50px", margin: "12px" }}>
                   <img src={CakeIcon} alt="#" className='img1' /><br />
                   <button id='but' style={{ padding: "6px 20px", border: "none", borderRadius: "12px", position: "relative", top: "-80px", left: "73px" }}>Saber Mais</button>
                   <h2 className='frase' style={{ background: "white", position: "relative", top: "-150px" }} ><span className='Sp' style={{ color: "red" }}>C</span>onfeiteria</h2>
                 </div>
-                <div style={{ display: "inline-block", border: "2px", background: "white", width: "35vh", borderRadius: "5px 50px", margin: "12px" }}>
+                <div id="Cartao001"   style={{ display: "inline-block", border: "2px", background: "white", width: "35vh", borderRadius: "5px 50px", margin: "12px" }}>
                   <img src={CakeIcon} alt="#" className='img1' /><br />
                   <button id='but' style={{ padding: "6px 20px", border: "none", borderRadius: "12px", position: "relative", top: "-80px", left: "73px" }}>Saber Mais</button>
                   <h2 className='frase' style={{ background: "white", position: "relative", top: "-150px" }} ><span className='Sp' style={{ color: "red" }}>C</span>onfeiteria</h2>

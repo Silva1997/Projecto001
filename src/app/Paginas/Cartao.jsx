@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import imagem from '../Img/bolo.jpg'
+import '../Estilos/Estilos.css'
 export default class Cartao extends Component {
   render() {
     return (
@@ -17,7 +18,8 @@ export default class Cartao extends Component {
         
         }}
         image={imagem}
-        title="green iguana"
+        title="Bolos"
+        style={{objectFit:"contain" , width:"50vh"}}
       />
       <CardContent >
         <Typography gutterBottom variant="h5" component="div">

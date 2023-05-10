@@ -8,9 +8,9 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 export default function TemporaryDrawer(props) {
 
   const [state, setState] = React.useState({
-    // top: false,
-    // left: false,
-    // bottom: false,
+    top: false,
+    left: false,
+    bottom: false,
     right: false,
   });
 
@@ -26,7 +26,7 @@ export default function TemporaryDrawer(props) {
     <Box
       sx={{
         width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 450,
-        flexDirection: 'column',
+        flexDirection: 'row',
         '& > *': {
           marginBottom: 2,
         },
@@ -34,24 +34,26 @@ export default function TemporaryDrawer(props) {
           marginRight: 4,
         }
       }}
-
-
     >
 
-
-        <p>Quantidades:{props.itemCount}</p>
-
-
+          <aside style={{
+            backgroundColor:"red"
+          }}>
+         <img src={props.image} alt=""/>
+         </aside>
        
+      <div>
+        <p>Quantidades:{props.itemCount}</p>
         <p>total:{props.total}</p>
-        <button onClick={toggleDrawer(anchor, false)} >Finalizar</button>
 
+        <button onClick={toggleDrawer(anchor, false)} >Finalizar</button>
+      </div>
     </Box>
   );
 
   return (
     <div>
-      {['right'].map((anchor) => (
+      {['top'].map((anchor) => (
         <React.Fragment key={anchor}>
           <Button id="iconButao" onClick={toggleDrawer(anchor, true)}><ShoppingCartIcon style={{ color: "black" }} /></Button>
           <Drawer

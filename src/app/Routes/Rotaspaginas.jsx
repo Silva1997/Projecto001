@@ -39,7 +39,7 @@ const JanelaMenuPrincipal = () => {
   const cart = UserCarrinho();
   // const [count, setCount] = React.useState(1);
   const itemCount = cart.items.reduce((sum, product) => sum + product.quantity, 0)
-
+ 
 
   return (
     <>
@@ -50,7 +50,7 @@ const JanelaMenuPrincipal = () => {
             <Container fluid id="tel">
               <Navbar.Brand as={Link} to="/" style={{ color: "white" }}>
                 GestConf
-                <Badge color="secondary" badgeContent={itemCount} style={{ position: 'fixed', marginLeft: '200px', top: '27px', justifyContent: "center" }}>
+                <Badge className='iconCarrinho' color="error" badgeContent={itemCount} style={{ position: 'fixed', top: '27px', justifyContent: "center" }}>
                   <Modal itemCount={itemCount} total={cart.getTotalCost().toFixed(2)} />
 
 
