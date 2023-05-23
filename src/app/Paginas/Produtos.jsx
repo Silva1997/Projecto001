@@ -36,6 +36,41 @@ export const produtos = [
         text1:"Gingumba",
         tipo:"Bolo",
         preco:(19).toFixed(3)
+    },
+    {
+        id:6,
+        image:require("C:/Users/Eugenio Silva/Music/Meu/src/app/Paginas/imgP/BoloG.jpg"),
+        text1:"Gingumba",
+        tipo:"Bolo",
+        preco:(19).toFixed(3)
+    },
+    {
+        id:7,
+        image:require("C:/Users/Eugenio Silva/Music/Meu/src/app/Paginas/imgP/BoloG.jpg"),
+        text1:"Gingumba",
+        tipo:"Bolo",
+        preco:(19).toFixed(3)
+    },
+    {
+        id:8,
+        image:require("C:/Users/Eugenio Silva/Music/Meu/src/app/Paginas/imgP/BoloG.jpg"),
+        text1:"Gingumba",
+        tipo:"Bolo",
+        preco:(19).toFixed(3)
+    },
+    {
+        id:9,
+        image:require("C:/Users/Eugenio Silva/Music/Meu/src/app/Paginas/imgP/BoloG.jpg"),
+        text1:"Gingumba",
+        tipo:"Bolo",
+        preco:(19).toFixed(3)
+    },
+    {
+        id:10,
+        image:require("C:/Users/Eugenio Silva/Music/Meu/src/app/Paginas/imgP/BoloG.jpg"),
+        text1:"Gingumba",
+        tipo:"Bolo",
+        preco:(19).toFixed(3)
     }
     ]
     

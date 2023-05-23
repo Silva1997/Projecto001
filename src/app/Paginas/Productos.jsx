@@ -9,8 +9,7 @@ export default class Produtostabela extends Component {
   render() {
     
     return (
-      <div>
-        
+      <div>     
 <Row xs={2} md={5} className="g-1">
 {produtos.map((product,idx)=>(
 <Col align="center" key={idx}>

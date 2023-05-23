@@ -2,7 +2,6 @@
 import React from 'react';
 import '../src/app/Estilos/Estilos.css';
 import Icon from './app/Img/Principal.png'
-
 import CakeIcon from './app/Img/icon.png'
 import CakeIco from './app/Img/icon1.png'
 
@@ -14,6 +13,7 @@ import { Link } from 'react-router-dom';
 
 
 import Sliderprodutos from "../src/app/Paginas/SliderProdutos"
+<head title='Home'></head>
 
 function App() {
 
