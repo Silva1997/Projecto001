@@ -220,9 +220,9 @@
     /*  */
     #Foto3 {
         position: relative;
-        top: -90px;
-        left: -20px;
-        width: 55vh;
+        top: -10px;
+        left: -16px;
+        width: 60vh;
     }
     body::-webkit-scrollbar {
         width: 10px;
@@ -508,6 +508,397 @@
         order: -1;
         justify-content: center;
         object-fit: cover;
+    }
+    /* card 320px para telefone  */
+    .Cartao320 {
+        display: flex;
+        flex-direction: column;
+    }
+    .div320 {
+        margin: 5px;
+        width: 100%;
+    }
+    /*  */
+    .grid1 {
+        margin: 30px;
+        text-align: left;
+    }
+    #Foto3 {
+        image-rendering: auto;
+        image-orientation: from-image;
+        width: 50vh;
+    }
+    .grid1 h5 {
+        font-size: 25pt;
+    }
+    .f_social_icon {
+        border-radius: 12px;
+        color: #fbfbfd;
+        background-color: #f38282;
+    }
+    #iconButao {
+        display: flex;
+        top: -15px;
+        left: -0.1px;
+    }
+    .Ver {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .img2 {
+        position: relative;
+        top: -180px;
+        left: 30px;
+    }
+    .img1 {
+        position: relative;
+        top: -100px;
+        left: 55px;
+    }
+    .Cartao {
+        object-fit: cover;
+        width: 100%;
+        height: 50vh;
+    }
+    /* #but {
+        position: relative;
+        margin-left: 30px;
+    } */
+    .Descricaodanossahistoria {
+        display: grid;
+        grid-template-columns: 2fr;
+        grid-template-rows: 60vh 60vh 60vh;
+        grid-auto-rows: 100px;
+        grid-auto-flow: column;
+        margin: 0 auto;
+        margin-bottom: 300px;
+    }
+    .P2 {
+        /* margin-left: 100px; */
+        justify-content: stretch;
+        justify-items: center;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        object-fit: cover;
+        background: #FFFFFF;
+        text-align: center;
+    }
+    .P3 {
+        /* margin-left: 100px; */
+        justify-content: stretch;
+        justify-items: center;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        background: #FFFFFF;
+        text-align: center;
+    }
+    .P1 {
+        /* margin-left: 100px; */
+        object-fit: cover;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("pastel-de-belem-02-1200x901.jpg");
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .P4 {
+        width: 100%;
+        /* margin-left: 100px; */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("ilcao_bx__13_.jpg");
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: span 4;
+    }
+    .new_footer_area {
+        background: #fbfbfd;
+    }
+    .btn_get_two {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        background: #5e2ced;
+        border-color: #5e2ced;
+        color: #fff;
+    }
+    .btn_get_two:hover {
+        background: transparent;
+        color: #5e2ced;
+    }
+}
+
+
+/* aqui */
+
+
+/* @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600,700|Source+Sans+Pro:400,600,700&display=swap");
+body {
+    background: #ddeefc;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16px;
+} */
+
+@media screen and (max-width: 412px) {
+    /* * {
+        background-color: #f38282;
+    } */
+    .navbar.fixed-top {
+        background: transparent;
+        background-color: rgba(36, 35, 35, 0.5);
+        position: fixed;
+        max-width: 412px;
+    }
+    h2 {
+        text-align: center;
+    }
+    /* butoes */
+    .menu1 {
+        display: flex;
+        justify-content: center;
+    }
+    #butao1 {
+        margin-bottom: 35px;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: center;
+        padding: 5px 15px;
+        border-color: red;
+    }
+    #butao1:hover {
+        background: red;
+    }
+    button {
+        transition-duration: 0.2s;
+    }
+    button:hover {
+        background-color: rgba(255, 99, 71, 0.5);
+        color: white;
+    }
+    /*  */
+    /* cartao  */
+    #Cartao001 {
+        width: 50vh;
+    }
+    .img1 {
+        position: relative;
+        margin-left: -55px;
+    }
+    .img2 {
+        position: relative;
+        margin-left: -55px;
+    }
+    #but {
+        position: relative;
+        margin-left: -30px;
+    }
+    /*  */
+    .Fundocima {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("hero-background.png");
+        /* background-image: url('src/app/Img/hero-background.png'); */
+    }
+    .grid2 {
+        order: -1;
+        justify-content: center;
+        object-fit: cover;
+    }
+    /* card 320px para telefone  */
+    .Cartao320 {
+        display: flex;
+        flex-direction: column;
+    }
+    .div320 {
+        margin: 5px;
+        width: 100%;
+    }
+    /*  */
+    .grid1 {
+        margin: 30px;
+        text-align: left;
+    }
+    #Foto3 {
+        image-rendering: auto;
+        image-orientation: from-image;
+        width: 50vh;
+    }
+    .grid1 h5 {
+        font-size: 25pt;
+    }
+    .f_social_icon {
+        border-radius: 12px;
+        color: #fbfbfd;
+        background-color: #f38282;
+    }
+    #iconButao {
+        display: flex;
+        top: -15px;
+        left: -0.1px;
+    }
+    .Ver {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .img2 {
+        position: relative;
+        top: -180px;
+        left: 30px;
+    }
+    .img1 {
+        position: relative;
+        top: -100px;
+        left: 55px;
+    }
+    .Cartao {
+        object-fit: cover;
+        width: 100%;
+        height: 50vh;
+    }
+    /* #but {
+        position: relative;
+        margin-left: 30px;
+    } */
+    .Descricaodanossahistoria {
+        display: grid;
+        grid-template-columns: 2fr;
+        grid-template-rows: 60vh 60vh 60vh;
+        grid-auto-rows: 100px;
+        grid-auto-flow: column;
+        margin: 0 auto;
+        margin-bottom: 300px;
+    }
+    .P2 {
+        /* margin-left: 100px; */
+        justify-content: stretch;
+        justify-items: center;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        object-fit: cover;
+        background: #FFFFFF;
+        text-align: center;
+    }
+    .P3 {
+        /* margin-left: 100px; */
+        justify-content: stretch;
+        justify-items: center;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        background: #FFFFFF;
+        text-align: center;
+    }
+    .P1 {
+        /* margin-left: 100px; */
+        object-fit: cover;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("pastel-de-belem-02-1200x901.jpg");
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .P4 {
+        width: 100%;
+        /* margin-left: 100px; */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("ilcao_bx__13_.jpg");
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: span 4;
+    }
+    .new_footer_area {
+        background: #fbfbfd;
+    }
+    .btn_get_two {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        background: #5e2ced;
+        border-color: #5e2ced;
+        color: #fff;
+    }
+    .btn_get_two:hover {
+        background: transparent;
+        color: #5e2ced;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    * {
+        margin: 0;
+        width: auto;
+        padding: 0;
+    }
+    h2 {
+        text-align: center;
+    }
+    /* butoes */
+    .menu1 {
+        display: flex;
+        justify-content: center;
+    }
+    #butao1 {
+        margin-bottom: 35px;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: center;
+        padding: 5px 15px;
+        border-color: red;
+    }
+    #butao1:hover {
+        background: red;
+    }
+    button {
+        transition-duration: 0.2s;
+    }
+    button:hover {
+        background-color: rgba(255, 99, 71, 0.5);
+        color: white;
+    }
+    /*  */
+    /* cartao  */
+    #Cartao001 {
+        width: 50vh;
+    }
+    .img1 {
+        position: relative;
+        margin-left: -55px;
+    }
+    .img2 {
+        position: relative;
+        margin-left: -55px;
+    }
+    #but {
+        position: relative;
+        margin-left: -30px;
+    }
+    /*  */
+    .navbar.fixed-top {
+        background: transparent;
+        background-color: rgba(36, 35, 35, 0.5);
+        position: fixed;
+        max-width: 360px;
+    }
+    .Fundocima {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("hero-background.png");
+        /* background-image: url('src/app/Img/hero-background.png'); */
+    }
+    .grid2 {
+        order: -1;
+        justify-content: center;
+        object-fit: contain;
     }
     /* card 320px para telefone  */
     .Cartao320 {

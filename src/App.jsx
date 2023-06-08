@@ -1,7 +1,8 @@
 
 import React from 'react';
 import '../src/app/Estilos/Estilos.css';
-import Icon from './app/Img/Principal.png'
+// import Icon from './app/Img/Principal.png'
+import Icon from './app/Routes/icon.png'
 import CakeIcon from './app/Img/icon.png'
 import CakeIco from './app/Img/icon1.png'
 

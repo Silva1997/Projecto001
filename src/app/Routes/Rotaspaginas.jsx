@@ -11,15 +11,18 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Produto from '../Paginas/Productos';
 import { AcessoContexto, UserCarrinho } from './Provedoracesso';
+
 import Badge from '@mui/material/Badge';
 // import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import Pagamentos from '../Paginas/pagamentos'
+import Pagamentos from '../Paginas/imagens'
+import imagem from './icon.png'
 import Modal from '../Paginas/Modal'
 export default function Rotaspaginas() {
 
   return (
     <>
       <AcessoContexto>
+     
         <BrowserRouter >
           <Routes>
             <Route element={<JanelaMenuPrincipal />}>
@@ -30,6 +33,7 @@ export default function Rotaspaginas() {
             </Route>
           </Routes>
         </BrowserRouter>
+     
       </AcessoContexto>
     </>
   )
@@ -49,11 +53,10 @@ const JanelaMenuPrincipal = () => {
           <Navbar key={expand} bg="navbar-custom" expand={expand} className={"navbar fixed-top"}>
             <Container fluid id="tel">
               <Navbar.Brand as={Link} to="/" style={{ color: "white" }}>
-                GestConf
+                <img src={imagem} alt='icon' style={{width:"5vh" , color:"white" , background:"white"}} />
+                GestConfeiteria
                 <Badge className='iconCarrinho' color="error" badgeContent={itemCount} style={{ position: 'fixed', top: '27px', justifyContent: "center" }}>
                   <Modal itemCount={itemCount} total={cart.getTotalCost().toFixed(2)} />
-
-
                 </Badge>
               </Navbar.Brand>
 
@@ -66,7 +69,7 @@ const JanelaMenuPrincipal = () => {
               >
                 <Offcanvas.Header closeButton>
                   <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                    GestConf: Menu
+                  GestConfeiteria: Menu
                   </Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body >
@@ -77,14 +80,14 @@ const JanelaMenuPrincipal = () => {
 
 
                     </Nav>
-                    <Nav.Link href="#action2">Link</Nav.Link>
+                    <Nav.Link href="#action2">Localizar Mercadoria</Nav.Link>
                     <NavDropdown
                       title="Categoria"
                       id={`offcanvasNavbarDropdown-expand-${expand}`}
                     >
                       {/* <NavDropdown.Item href="#action3"> <Nav.Link as={Link} to={"/Produtostock"}>Bolos</Nav.Link></NavDropdown.Item> */}
                       <NavDropdown.Item as={Link} to={"/Pagamentos"}>
-                        Pagamentos
+                        Cadrastar Produtos
                       </NavDropdown.Item>
                       <NavDropdown.Divider />
                       <NavDropdown.Item href="#action5">

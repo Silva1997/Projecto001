@@ -113,10 +113,12 @@ export const AcessoContexto = ({children})=>{
         setCartProducts(
             cartProducts =>
             cartProducts.filter(currentProduct => {
+              
                 return currentProduct.id !== id;
             })  
         )
       
+       
         
      
 
@@ -126,7 +128,7 @@ export const AcessoContexto = ({children})=>{
         let totalCost = 0;
         cartProducts.map((cartItem) => {
             const productData = getProdutos(cartItem.id);
-            totalCost += (productData.preco * cartItem.quantity);
+        return    totalCost += (productData.preco * cartItem.quantity);
     })
 
         return (totalCost);

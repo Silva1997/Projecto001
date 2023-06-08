@@ -1,18 +1,14 @@
 import * as React from 'react';
 import Box  from '@mui/material/Box';
-import { Card, Typography, CardContent, CardMedia } from '@mui/material'
+import { Card, Typography, CardContent,} from '@mui/material'
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
 import '../Estilos/Estilos.css';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { UserCarrinho } from '../Routes/Provedoracesso'
-// import CartaoProdutos from './CartaoProdutos'
-// import { useState } from 'react';
-// import { PegarItem } from '../localarmazenamento/Localstore';
+
 import { CartItem } from '../Paginas/CartItem'
 export default function TemporaryDrawer(props) {
-  // const [data ,setData] = useState(PegarItem('carrinho'));
-
   const cart = UserCarrinho();
   const totalAmount = cart.getTotalCost();
   const [state, setState] = React.useState({
@@ -63,15 +59,6 @@ export default function TemporaryDrawer(props) {
       </div>
 
       {totalAmount > 0 ? (
-        // <div className="checkout">
-        //   <div className="subtotal">
-
-        //   <h5>Total: ${cart.getTotalCost().toFixed(3)}</h5>
-        //   </div>
-        //   <div className="buttons">
-
-        //   </div>
-        // </div>
         <Card sx={{
           background: "rgba(243, 239, 239, 0.5)",
         }}>
@@ -83,7 +70,6 @@ export default function TemporaryDrawer(props) {
 
               </CardContent>
         </Card>
-
       ) : (
         <p>O seu Carrinho esta sem item adicione </p>
       )}

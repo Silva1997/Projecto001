@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d204f2ba.css",
-    "main.js": "/static/js/main.0789423b.js",
+    "main.css": "/static/css/main.633d94e5.css",
+    "main.js": "/static/js/main.13df6905.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
     "static/media/bom.gif": "/static/media/bom.d3b3731e7ac2f8b85191.gif",
     "static/media/hero-background.png": "/static/media/hero-background.b088b254d436ddc9904b.png",
@@ -9,19 +9,18 @@
     "static/media/ilcao_bx__13_.jpg": "/static/media/ilcao_bx__13_.d641fc75039f2a495c7b.jpg",
     "static/media/BoloA.jpg": "/static/media/BoloA.8b2e42f80ad7854b7c97.jpg",
     "static/media/BoloG.jpg": "/static/media/BoloG.45a8a328e456f8200d94.jpg",
-    "static/media/Principal.png": "/static/media/Principal.4428ce4c89845240d055.png",
     "static/media/BoloCA.jpg": "/static/media/BoloCA.494df5e3306ac7770fb6.jpg",
     "static/media/pastel-de-belem-02-1200x901.jpg": "/static/media/pastel-de-belem-02-1200x901.a5fccb4771470e0b41b6.jpg",
+    "static/media/icon.png": "/static/media/icon.edff4c111a5cb30fafdd.png",
     "static/media/BoloC.jpg": "/static/media/BoloC.ef38acd22442a8ab2464.jpg",
     "static/media/icon1.png": "/static/media/icon1.73ffac44beb3e4f839db.png",
-    "static/media/icon.png": "/static/media/icon.edff4c111a5cb30fafdd.png",
     "index.html": "/index.html",
-    "main.d204f2ba.css.map": "/static/css/main.d204f2ba.css.map",
-    "main.0789423b.js.map": "/static/js/main.0789423b.js.map",
+    "main.633d94e5.css.map": "/static/css/main.633d94e5.css.map",
+    "main.13df6905.js.map": "/static/js/main.13df6905.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d204f2ba.css",
-    "static/js/main.0789423b.js"
+    "static/css/main.633d94e5.css",
+    "static/js/main.13df6905.js"
   ]
 }
