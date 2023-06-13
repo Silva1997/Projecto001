@@ -4,6 +4,9 @@
         padding: 0;
         box-sizing: border-box;
     }
+    #textP {
+        font-family: 'Pacifico', cursive;
+    }
     body {
         overflow-x: hidden;
     }
@@ -112,10 +115,11 @@
     .Fundocima {
         display: grid;
         background-size: contain;
-        background: #fc6969;
+        /* background: #fc6969; */
+        background-color: white;
         /* background-position: center; */
         background-repeat: no-repeat;
-        background-image: url("bom.gif");
+        background-image: url("hero-background.png");
         transition: 0.3s;
         grid-template-columns: 2fr 2fr;
         grid-template-rows: 40vh 40vh 10vh;
@@ -125,11 +129,15 @@
         grid-column-end: 2;
         margin: 150px;
     }
+    #h5p {
+        font-family: 'Kanit', sans-serif;
+    }
     .grid1 {
         color: #303030;
         grid-column-start: 1;
         grid-column-end: 1;
-        margin: 150px;
+        margin-top: 150px;
+        margin-left: 160px;
         font-weight: 400;
     }
     .grid1 h5 {
@@ -864,8 +872,13 @@ body {
     }
     /*  */
     /* cartao  */
+    .V {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
     #Cartao001 {
-        width: 50vh;
+        width: 20%;
     }
     .img1 {
         position: relative;
@@ -905,6 +918,34 @@ body {
         display: flex;
         flex-direction: column;
     }
+    .Cartao1 {
+        width: 100%;
+        object-fit: cover;
+    }
+    .Cartao1 {
+        height: 35vh;
+        background-color: #303030;
+    }
+    .frase3 {
+        background-color: rgb(243, 111, 59);
+    }
+    .frase {
+        font-family: 'Merienda', cursive;
+        font-weight: 400;
+    }
+    .frase2 {
+        font-family: 'Merienda', cursive;
+        font-weight: 400;
+    }
+    .Sp {
+        color: red;
+    }
+    .PL {
+        margin: 10px;
+    }
+    .frase2 {
+        margin: 20px;
+    }
     .div320 {
         margin: 5px;
         width: 100%;
@@ -921,6 +962,7 @@ body {
     }
     .grid1 h5 {
         font-size: 25pt;
+        font-weight: bold;
     }
     .f_social_icon {
         border-radius: 12px;

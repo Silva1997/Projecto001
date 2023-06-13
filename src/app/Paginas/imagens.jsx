@@ -7,22 +7,22 @@ import TextField from '@mui/material/TextField';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import { InputLabel } from '@mui/material';
-// import Tabela from './Tabelas'
+import Tabela from './Tabelas'
 
 
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+// import Table from '@mui/material/Table';
+// import TableBody from '@mui/material/TableBody';
+// import TableCell from '@mui/material/TableCell';
+// import TableContainer from '@mui/material/TableContainer';
+// import TableHead from '@mui/material/TableHead';
+// import TableRow from '@mui/material/TableRow';
+// import Paper from '@mui/material/Paper';
 export default function FormCadastro() {
 
   const [produto, setProduto] = useState('');
-  const [imagem, setImagem] = useState('');
+  const [imagem, setImagem] = useState(null);
   const [descricao, setDescricao] = useState('');
-  const [valor, setValor] = useState();
+  const [valor, setValor] = useState(0);
   const cart = useContext(ProdutosContext);
   const [disponibilidade, setDisponibilidade] = useState("");
   const [categoria, setCategoria] = useState("");
@@ -32,39 +32,55 @@ export default function FormCadastro() {
 
 
   const ImagePreview = () => {
-    const [selectedImage, setSelectedImage] = useState(null);
-  
+    // const [imagem, setImagem] = useState(null);
     const handleImageChange = (e) => {
       const file = e.target.files[0];
-  
+
       if (file) {
         const reader = new FileReader();
         reader.onloadend = () => {
-          setSelectedImage(reader.result);
+          setImagem(reader.result);
         };
         reader.readAsDataURL(file);
       }
     };
-  
+
     return (
       <div>
-        <input type="file" onChange={handleImageChange} />
-        {selectedImage && (
-          <img src={selectedImage} alt="Preview" style={{ width: '200px' }} />
-        )}
+
+        <Button
+          variant="outlined"
+          component="label"
+          color='info'
+          size='medium'
+          style={{ bottom: "-8px" }}
+        >
+          Carregar Imagem
+          <TextField
+
+            type="file"
+            hidden
+            name="produto" onChange={handleImageChange}
+          />
+        </Button>
+
+        {/* <input type="file" onChange={handleImageChange} /> */}
+        {/* {imagem && (
+          <img src={imagem} alt="Preview" style={{ width: '200px' }} />
+        )} */}
       </div>
     );
   };
-  
 
-  const Lista = [{
-    produto,
-    imagem,
-    descricao,
-    valor,
-    disponibilidade,
-    categoria
-  }]
+
+  // const Lista = [{
+  //   produto,
+  //   imagem,
+  //   descricao,
+  //   valor,
+  //   disponibilidade,
+  //   categoria
+  // }]
 
   function Limpar() {
     setProduto("")
@@ -113,7 +129,7 @@ export default function FormCadastro() {
   return (
     <>
       <section style={{ marginTop: "100px" }}>
-     
+
 
 
         <Box
@@ -123,37 +139,24 @@ export default function FormCadastro() {
           }}
           noValidate
           autoComplete="on"
-          style={{ display: "flex", flexDirection: "row", gap: "10px" }}
+          style={{ padding:"8px",backgroundColor:"white",display: "grid", gridTemplateColumns:"1fr 1fr 1fr",gridTemplateRows:"10vh 10vh 10vh", gap: "0.5px" }}
           onSubmit={Ver}
           target='_blank'
         >
 
 
-          <div>
-            {
-               ImagePreview()
+<div style={{marginLeft:"8px"}}>
+{
+              ImagePreview()
             }
-            {/* Imagem */}
-            <Button
-              variant="outlined"
-              component="label"
-              color='info'
-              size='medium'
-              style={{ bottom: "-8px" }}
-            >
-              Carregar Imagem
-              <TextField
 
-                type="file"
-                hidden
-                value={imagem} name="produto" onChange={(e) => {
-                  cart.getImgem(setImagem(e.target.value))
 
-                }}
-              />
-            </Button>
+<Button variant='contained' color='error' type='submit' style={{ bottom: "-22px", left: "10px" }}>Salvar</Button>
 
-            {/* Imagem */}
+</div>
+          <div>
+           
+
 
             <TextField
               required
@@ -178,6 +181,24 @@ export default function FormCadastro() {
               value={valor}
               onChange={(e) => { cart.capturarValor(setValor(e.target.value)) }}
             />
+
+<FormControl sx={{ width: 155, bottom: "-10px", left: "10px" }}
+              size='small'>
+              <InputLabel id="">Categoria</InputLabel>
+              <Select
+                label="Categoria"
+                value={categoria}
+                onChange={(e) => { cart.capturarDisponibilidade(setCategoria(e.target.value)) }}>
+                <MenuItem value="Bolo">Bolo</MenuItem>
+                <MenuItem value="Salgado">Salgado</MenuItem>
+                <MenuItem value="Doces">Doces</MenuItem>
+              </Select>
+
+            </FormControl>
+
+          </div>
+          <div>
+
             <TextField
               required
               id="outlined-number"
@@ -185,6 +206,16 @@ export default function FormCadastro() {
               label="Descricao"
               type="text"
               value={descricao} onChange={(e) => { cart.capturarDescricao(setDescricao(e.target.value)) }}
+            />
+
+<TextField
+              required
+              id="outlined-number"
+              size='small'
+              label="Estoque"
+              type="number"
+              value={valor}
+              onChange={(e) => { cart.capturarValor(setValor(e.target.value)) }}
             />
 
 
@@ -202,46 +233,28 @@ export default function FormCadastro() {
 
             </FormControl>
             {/* Categoria */}
-            <FormControl sx={{ width: 155, bottom: "-10px", left: "10px" }}
-              size='small'>
-              <InputLabel id="">Categoria</InputLabel>
-              <Select
-                label="Categoria"
-                value={categoria}
-                onChange={(e) => { cart.capturarDisponibilidade(setCategoria(e.target.value)) }}>
-                <MenuItem value="Bolo">Bolo</MenuItem>
-                <MenuItem value="Salgado">Salgado</MenuItem>
-                <MenuItem value="Doces">Doces</MenuItem>
-              </Select>
 
-            </FormControl>
 
 
 
 
           </div>
+       
 
-
-
-          <div>
-
-            <Button variant='contained' color='error' type='submit' style={{ bottom: "-10px", left: "10px" }}>Salvar</Button>
-
-
-          </div>
+         
 
 
 
         </Box>
 
       </section>
-
+  
 
       {/* <Tabela carrinhoArray={carrinhoArray}  producto={produto}/> */}
 
-      <div>
-
-        <TableContainer component={Paper}>
+      <div style={{marginTop:"20px"}}>
+      <Tabela /> 
+        {/* <TableContainer component={Paper}>
           <Table sx={{ minWidth: 600 }} aria-label="simple table">
             <TableHead>
               <TableRow>
@@ -263,8 +276,8 @@ export default function FormCadastro() {
                   {/* <TableCell component="th" scope="row">
                 {row.name}
               </TableCell> */}
-
-                  <TableCell align="right"><img src={row.imagem} alt="" /></TableCell>
+{/* 
+                  <TableCell align="right"><img src={row.imagem} style={{ width: "5vh" }} alt="" /></TableCell>
                   <TableCell align="right">{row.produto}</TableCell>
                   <TableCell align="right">{row.valor}</TableCell>
                   <TableCell align="right">{row.categoria}</TableCell>
@@ -275,7 +288,8 @@ export default function FormCadastro() {
               }
             </TableBody>
           </Table>
-        </TableContainer>
+        </TableContainer>  */}
+
 
 
       </div>

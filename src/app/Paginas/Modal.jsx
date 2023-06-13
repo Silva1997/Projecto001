@@ -1,22 +1,28 @@
 import * as React from 'react';
-import Box  from '@mui/material/Box';
-import { Card, Typography, CardContent,} from '@mui/material'
+import Box from '@mui/material/Box';
+import { Card, Typography, CardContent, } from '@mui/material'
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
 import '../Estilos/Estilos.css';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { UserCarrinho } from '../Routes/Provedoracesso'
-
+import imagem from './shopping-bag.svg'
 import { CartItem } from '../Paginas/CartItem'
-export default function TemporaryDrawer(props) {
+
+
+
+
+export default function TemporaryDrawer({ product }) {
   const cart = UserCarrinho();
   const totalAmount = cart.getTotalCost();
+
   const [state, setState] = React.useState({
     top: false,
     left: false,
     bottom: false,
     right: false,
   });
+
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -41,37 +47,34 @@ export default function TemporaryDrawer(props) {
     >
       <div style={{ display: "flex", flexDirection: "column", width: "50vh", marginLeft: "50px", justifyItems: "center" }}>
 
-        {/* {
-        produtos.map((product) =>{
-          if (cart.items[product.id] !== 0) {
-            return <CartItem product={product}/>
 
-              
-          
-            // return  <CartaoProdutos product={product}></CartaoProdutos>;
-      
-          
-        } })
-      
-      } */}
+
+
         <CartItem />
 
       </div>
+
+
 
       {totalAmount > 0 ? (
         <Card sx={{
           background: "rgba(243, 239, 239, 0.5)",
         }}>
-<CardContent className="Cartao320">
-                <Typography variant='h6' style={{ fontWeight: "500", borderRadius: "20px", padding: "0.2px 20px" }}> 
-                Total:
-                {cart.getTotalCost().toFixed(3)}Kz
-                </Typography>
-
-              </CardContent>
+          <CardContent className="Cartao320">
+            <Typography variant='h6' style={{ fontWeight: "500", borderRadius: "20px", padding: "0.2px 20px" }}>
+              Total:
+              {cart.getTotalCost().toFixed(3)}Kz
+            </Typography>
+          </CardContent>
         </Card>
       ) : (
-        <p>O seu Carrinho esta sem item adicione </p>
+        <div style={{ display: "flex", justifyContent: "center", flexDirection: "row" }}>
+         
+         <img src={imagem} alt='' style={{width:"10vh"}} />
+         
+          <p>Sua sacola de compras está vazia. Comece a comprar </p>
+        </div>
+
       )}
 
     </Box>
@@ -81,7 +84,7 @@ export default function TemporaryDrawer(props) {
     <div>
       {['left'].map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button id="iconButao" onClick={toggleDrawer(anchor, true)}><ShoppingCartIcon style={{ color: "black" }} /></Button>
+          <Button id="iconButao" onClick={toggleDrawer(anchor, true)}><ShoppingCartIcon style={{ color: "#2331fdeb" }} /></Button>
           <Drawer
             anchor={anchor}
             open={state[anchor]}

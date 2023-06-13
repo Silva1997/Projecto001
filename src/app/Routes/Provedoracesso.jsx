@@ -10,16 +10,21 @@ export const Contexto = createContext({
     deleteFromCart: () => {},
     getTotalCost: () => {},
     updateCartItemCount :() => {},
-    add: () => {}
+ 
    
+    
 })
 
 
+
+
 export const AcessoContexto = ({children})=>{
-    const [cartProducts, setCartProducts] = useState(PegarItem('carrinho') || []);
+    const [cartProducts, setCartProducts] = useState(PegarItem('carrinho') || [] );
 
+   
 
-
+     
+ 
     function getProductQuantity(id) {
         const quantity = cartProducts.find(product => product.id === id)?.quantity;
             
@@ -133,6 +138,7 @@ export const AcessoContexto = ({children})=>{
 
         return (totalCost);
     }
+   
     
     const contextValue = {
         items: cartProducts,
@@ -142,7 +148,7 @@ export const AcessoContexto = ({children})=>{
         deleteFromCart,
         getTotalCost,
         updateCartItemCount,
-      
+     
      
     }
     

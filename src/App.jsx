@@ -10,6 +10,8 @@ import { Row, Col } from 'react-bootstrap';
 
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
+import WatchLaterIcon from '@mui/icons-material/WatchLater';
+import Inventory2Icon from '@mui/icons-material/Inventory2';
 import { Link } from 'react-router-dom';
 
 
@@ -26,14 +28,20 @@ function App() {
       <div className='Fundocima'  >
 
         <div className='grid1' >
-          <h5 >Encontre o  Bolo <br /> perfeito para qualquer <br />hora do dia</h5>
-          <p>Com o Gestconf você recebe sua encomenda onde estiver, <br />a qualquer hora</p>
+          <h5 id='h5p' >Encontre o  Bolo <br /> perfeito para qualquer <br />hora do dia</h5>
+          <p >Com o Gestconf você recebe sua encomenda onde estiver, <br />a qualquer hora</p>
+          <div style={{display:"flex", flexDirection:"row" , gap:"10px", }}>
           <ShoppingCartOutlinedIcon className='f_social_icon' /><p>Compra simples e segura</p>
           <LocalShippingOutlinedIcon className='f_social_icon' /><p>Entrega rápida e rastreada</p>
+          </div>
+          <div style={{display:"flex", flexDirection:"row" , gap:"10px", }}>
+          <Inventory2Icon className='f_social_icon'/><p>Embalagem mantém o Bolo intacto</p>
+         <WatchLaterIcon className='f_social_icon'/> <p>O Bolo chega quentinho até você</p> 
+         </div>
         </div>
 
         <div className='grid2' >
-          <img src={Icon} alt="Foto2" id='Foto3' />
+          <img src={Icon} alt="Foto2" id='Foto3' style={{padding:"2px 5px" , borderRadius:"2px 30px"}} />
         </div>
 
         {/*  */}
@@ -53,7 +61,7 @@ function App() {
 
           <Col >
 
-            <div style={{ display:"flex" ,justifyContent:"center",margin: "40px" }}>
+            <div style={{ display:"flex" ,justifyContent:"center",marginTop: "40px" }}>
               <div className='V'>
               <div id="Cartao001" style={{ display: "inline-block", background:"white", border: "2px", width: "35vh", borderRadius: "5px 50px", margin: "12px" }}>
                 
@@ -138,8 +146,9 @@ function App() {
               <div className="row">
                 <div className="col-lg-3 col-md-6">
                   <div className="f_widget company_widget wow fadeInLeft">
-                    <h3 className="f-title f_600 t_color f_size_18">Sujeitões</h3>
+                   
                     <form action="#" className="f_subscribe_two mailchimp" >
+                     <h3 className="f-title f_600 t_color f_size_18">Sujeitões</h3>
                       <input type="text" name="EMAIL" className="form-control memail" /><br />
                       <button className="btn_get_two" type="submit">Subescrever</button>
 

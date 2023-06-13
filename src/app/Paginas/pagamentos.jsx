@@ -1,35 +1,75 @@
-import * as React from 'react';
+
+import * as React  from 'react';
 import Box from '@mui/material/Box';
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import StepContent from '@mui/material/StepContent';
 import Button from '@mui/material/Button';
+
+
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
+
+const Ver=()=>{
+
+  return(
+    <div style={{ display:"flex",gap:"5px", flexDirection:"column"}}>
+<TextField
+required
+id="outlined-number"
+size='small'
+label="Cidade"
+type="text"
+
+/>
+<TextField
+required
+id="outlined-number"
+size='small'
+label="Bairro"
+type="text"
+
+/>
+  <TextField
+  required
+  id="outlined-number"
+  size='small'
+  label="Numero"
+  type="number"
+ 
+/>
+<TextField
+required
+id="outlined-number"
+size='small'
+label="Rua"
+type="text"
+
+/>
+</div>
+)
+}
 
 const steps = [
   {
-    label: 'Select campaign settings',
-    description: `For each ad campaign that you create, you can control how much
-              you're willing to spend on clicks and conversions, which networks
-              and geographical locations you want your ads to show on, and more.`,
+    label: 'Preenche o Formulario da encomenda',
+    description: Ver()
   },
   {
-    label: 'Create an ad group',
+    label: 'Formas de Pagamento',
     description:
-      'An ad group contains one or more ads which target a shared set of keywords.',
+      'Cartao Multicaixa , Referencia..',
   },
   {
-    label: 'Create an ad',
-    description: `Try out different ad text to see what brings in the most customers,
-              and learn how to enhance your ads using features like ad extensions.
-              If you run into any problems with your ads, find out how to tell if
-              they're running and how to resolve approval issues.`,
+    label: 'Confirma os teus Dados Antes de Finalizar',
+    description: ``,
   },
 ];
 
-export default function VerticalLinearStepper() {
+
+export default function VerticalLinearStepper({product}) {
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = () => {
@@ -42,6 +82,13 @@ export default function VerticalLinearStepper() {
 
   const handleReset = () => {
     setActiveStep(0);
+
+    const carrinhoData = localStorage.removeItem('Carrinho');
+    alert('Removido com sucesso')
+
+    return (carrinhoData  )
+    
+
   };
 
   return (
@@ -67,14 +114,14 @@ export default function VerticalLinearStepper() {
                     onClick={handleNext}
                     sx={{ mt: 1, mr: 1 }}
                   >
-                    {index === steps.length - 1 ? 'Finish' : 'Continue'}
+                    {index === steps.length - 1 ? 'Finalizar' : 'Continua'}
                   </Button>
                   <Button
                     disabled={index === 0}
                     onClick={handleBack}
                     sx={{ mt: 1, mr: 1 }}
                   >
-                    Back
+                    Voltar
                   </Button>
                 </div>
               </Box>
@@ -86,10 +133,12 @@ export default function VerticalLinearStepper() {
         <Paper square elevation={0} sx={{ p: 3 }}>
           <Typography>All steps completed - you&apos;re finished</Typography>
           <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
-            Reset
+            Reniciar
           </Button>
+        
         </Paper>
       )}
+      
     </Box>
   );
 }

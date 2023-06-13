@@ -1,9 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.4bb5b5f3.css",
-    "main.js": "/static/js/main.417e9e21.js",
+    "main.css": "/static/css/main.b423cd45.css",
+    "main.js": "/static/js/main.ceccac01.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
-    "static/media/bom.gif": "/static/media/bom.d3b3731e7ac2f8b85191.gif",
     "static/media/hero-background.png": "/static/media/hero-background.b088b254d436ddc9904b.png",
     "static/media/bolo.jpg": "/static/media/bolo.b76860fb513052cefb58.jpg",
     "static/media/ilcao_bx__13_.jpg": "/static/media/ilcao_bx__13_.d641fc75039f2a495c7b.jpg",
@@ -14,13 +13,14 @@
     "static/media/icon.png": "/static/media/icon.edff4c111a5cb30fafdd.png",
     "static/media/BoloC.jpg": "/static/media/BoloC.ef38acd22442a8ab2464.jpg",
     "static/media/icon1.png": "/static/media/icon1.73ffac44beb3e4f839db.png",
+    "static/media/shopping-bag.svg": "/static/media/shopping-bag.c3758b46f6cac33d5b8f1c8ddd4a0c86.svg",
     "index.html": "/index.html",
-    "main.4bb5b5f3.css.map": "/static/css/main.4bb5b5f3.css.map",
-    "main.417e9e21.js.map": "/static/js/main.417e9e21.js.map",
+    "main.b423cd45.css.map": "/static/css/main.b423cd45.css.map",
+    "main.ceccac01.js.map": "/static/js/main.ceccac01.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4bb5b5f3.css",
-    "static/js/main.417e9e21.js"
+    "static/css/main.b423cd45.css",
+    "static/js/main.ceccac01.js"
   ]
 }
