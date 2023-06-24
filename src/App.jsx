@@ -2,28 +2,50 @@
 import React from 'react';
 import '../src/app/Estilos/Estilos.css';
 // import Icon from './app/Img/Principal.png'
+import Modal from './app/Paginas/1Modal'
 import Icon from './app/Routes/icon.png'
 import CakeIcon from './app/Img/icon.png'
 import CakeIco from './app/Img/icon1.png'
-
-import { Row, Col } from 'react-bootstrap';
-
+import { Row, Col } from 'react-bootstrap'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
 import WatchLaterIcon from '@mui/icons-material/WatchLater';
 import Inventory2Icon from '@mui/icons-material/Inventory2';
 import { Link } from 'react-router-dom';
-
-
 import Sliderprodutos from "../src/app/Paginas/SliderProdutos"
-<head title='Home'></head>
+// import { initializeApp } from "firebase/app";
+// import { collection,  getDocs, getFirestore } from "firebase/firestore";
 
+
+// const firebaseConfig = {
+//   apiKey: "AIzaSyC2RjorKdB0ue1PkrsaPxTTiZC6PPA3DqQ",
+//   authDomain: "pastelariabase.firebaseapp.com",
+//   projectId: "pastelariabase",
+// };
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
+// const db = getFirestore(app);
 function App() {
+//   // / Firebase
+
+// const conectar = collection(db , 'Login');
+// const [usuario1 , setUsario1]= React.useState([]);
+
+//   useEffect(()=>{
+//     const getUsario = async ()=> {
+//     const dados = await getDocs(conectar)
+//     console.log(dados.docs.map((doc)=>({...doc.data(),id:doc.id})));
+//     setUsario1(dados.docs.map((doc)=>({...doc.data(),id:doc.id})))
+//     }
+//     getUsario();
+//     },[]);
 
 
   return (
     <>
+   
 
+   
 
       <div className='Fundocima'  >
 
@@ -52,7 +74,9 @@ function App() {
 
       <div className='menu1'>
 
-        <button id='butao1'>Nossa Historia</button>
+        {/* <button id='butao1' onClick={()=>{}}> <Modal />Nossa Historia</button> */}
+        <Modal />
+
       </div>
 
 
@@ -61,7 +85,7 @@ function App() {
 
           <Col >
 
-            <div style={{ display:"flex" ,justifyContent:"center",marginTop: "40px" }}>
+            <div style={{ display:"flex" ,justifyContent:"center",marginTop: "39px" }}>
               <div className='V'>
               <div id="Cartao001" style={{ display: "inline-block", background:"white", border: "2px", width: "35vh", borderRadius: "5px 50px", margin: "12px" }}>
                 

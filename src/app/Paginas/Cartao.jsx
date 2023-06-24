@@ -4,13 +4,14 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import imagem from '../Img/bolo.jpg'
+import imagem from '../Img/A8.jpg'
+// import  Button  from '@mui/material/Button';
 import '../Estilos/Estilos.css'
 export default class Cartao extends Component {
   render() {
     return (
       <div>
-
+{/* <Button size='small'> */}
 
 <Card sx={{ maxWidth: 200 ,margin: 2 }} >
       <CardMedia
@@ -19,15 +20,17 @@ export default class Cartao extends Component {
         }}
         image={imagem}
         title="Bolos"
-        style={{objectFit:"contain" , width:"50vh"}}
+        style={{objectFit:"contain" , width:"50vh" , cursor:"pointer"}}
       />
       <CardContent >
+      {/* <span className='f_social_icon'>7%</span> */}
         <Typography gutterBottom variant="h5" component="div">
-          Bolo de Casamento
+          Bolo de Aniversario
         </Typography>
         <Typography variant="body2" color="text.secondary">
+         
           Bolo tipico para 
-          cerimonia de casamento
+          Aniversario
         </Typography>
         <Typography variant="body2" color="text.secondary">
           Preço: 15.000,00
@@ -35,10 +38,10 @@ export default class Cartao extends Component {
       </CardContent>
       <CardActions>
        {/* <Modal/> */}
-        {/* <Button size="small">Saber Mais</Button> */}
+        {/* <Button variant='outline' sx={{display:"flex",justifyContent:"center" , textAlign:"center"}}>Saber Mais</Button> */}
       </CardActions>
     </Card>
-
+    {/* </Button> */}
       </div>
     )
   }

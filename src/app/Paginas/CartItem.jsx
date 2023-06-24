@@ -1,9 +1,10 @@
 import React from "react";
 import { Row, Col } from 'react-bootstrap';
 import { Card, Typography, CardContent, CardMedia } from '@mui/material'
-import Pagamentos from './pagamentos'
+// import Pagamentos from './pagamentos'
 import { UserCarrinho } from '../Routes/Provedoracesso'
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
+import { EditarItem } from "../localarmazenamento/Localstore";
 import { useNavigate } from "react-router-dom";
 import  DeleteOutlineIcon  from "@mui/icons-material/DeleteOutline";
 
@@ -29,7 +30,10 @@ export const CartItem = () => {
     return null
   }
   const removeCard = (id) => {
-    setCards(cards.filter((card) => card.id !== id));
+    const  remover=cards.filter((card) => card.id !== id)
+    setCards(remover);
+    // localStorage.setItem('Carrinho',JSON.parse(remover));
+    EditarItem("Carrinho",remover);
   };
 
 
@@ -59,7 +63,7 @@ export const CartItem = () => {
                 <Typography variant='p' className='frase3' style={{ fontWeight: "500", borderRadius: "20px", padding: "0.2px 20px" }}> {item.tipo}</Typography>
                 <Typography variant='h6' style={{ fontSize: "15pt", fontWeight: "bold", color: "black" }}> {item.text1}</Typography>
                 <Typography variant='p'><span style={{ color: "black", fontWeight: "600", position: "relative", textAlign:"center" }}>$kz:{item.preco}</span></Typography>
-                <Button  disabled={open} variant="contained"  style={{width:"10%", background:"#6754e2" , left:"20px"}} onClick={()=>{removeCard(item.id) ; navigate("/"); setOpen(true); cart.deleteFromCart(item.id)}}><DeleteOutlineIcon style={{color:"#fdfdff"}}/></Button>
+                <button style={{textDecoration:"none", border:"none" , padding:"2px 4px" ,borderRadius:"2px 3px",marginLeft:"105px"}} onClick={()=>{removeCard(item.id) ; navigate("/"); setOpen(true); cart.deleteFromCart(item.id)}}><DeleteOutlineIcon style={{color:"red"}}/></button>
               </CardContent>
              
             </Card>
@@ -68,7 +72,7 @@ export const CartItem = () => {
         }
       </Row>
 <div style={{ marginTop:"50px"}}>
-<Pagamentos/>
+{/* <Pagamentos/> */}
 
 </div>
   
@@ -87,9 +91,9 @@ export const CartItem = () => {
               <CloseIcon fontSize="inherit" />
             </IconButton>
           }
-          sx={{ mb: 2 }}
+          sx={{ mb: 2, backgroundColor:"#ff7d7d",color:"white"}}
         >
-          Eliminado!
+          Eliminado o item!
         </Alert>
       </Collapse>
     </Box>
@@ -99,3 +103,51 @@ export const CartItem = () => {
 
 
 };
+
+
+
+
+// import {
+//   Card,
+//   CardHeader,
+//   CardBody,
+//   Typography,
+//   Button,
+//   CardFooter
+// } from "@material-tailwind/react";
+ 
+// export const CartItem = () => {
+//   return (
+//     <Card className="w-96">
+//       <CardHeader shadow={false} floated={false} className="h-96">
+//         <img 
+//           src="https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80" 
+//           className="w-full h-full object-cover"
+//           alt=""
+//         />
+//       </CardHeader>
+//       <CardBody>
+//         <div className="flex items-center justify-between mb-2">
+//           <Typography color="blue-gray" className="font-medium">
+//             Apple AirPods
+//           </Typography>
+//           <Typography color="blue-gray" className="font-medium">
+//             $95.00
+//           </Typography>
+//         </div>
+//         <Typography variant="small" color="gray" className="font-normal opacity-75">
+//           With plenty of talk and listen time, voice-activated Siri access, and an available wireless charging case.
+//         </Typography>
+//       </CardBody>
+//       <CardFooter className="pt-0">
+//         <Button
+//           ripple={false}
+//           fullWidth={true}
+//           className="bg-blue-gray-900/10 text-blue-gray-900 shadow-none hover:shadow-none hover:scale-105 focus:shadow-none focus:scale-105 active:scale-100"
+//         >
+//           Add to Cart
+//         </Button>
+//       </CardFooter>
+//     </Card>
+//   );
+// }

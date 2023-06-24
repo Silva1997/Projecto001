@@ -1,17 +1,18 @@
 import React from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-
-import Cartao1 from '../Paginas/Cartao'
-
+import Cartao from '../Paginas/Cartao'
+import Cartao1 from '../Paginas/Cartao1'
+import Cartao2 from '../Paginas/Cartao2'
+import Cartao3 from '../Paginas/Cartao3'
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "../Estilos/Slider.css";
-import SwiperCore,{ Pagination ,Autoplay} from "swiper/core";
+import SwiperCore, { Pagination, Autoplay } from "swiper/core";
 
 export default function App() {
-    SwiperCore.use([Autoplay,Pagination])
+    SwiperCore.use([Autoplay, Pagination])
     return (
         <>
 
@@ -22,31 +23,39 @@ export default function App() {
                 centeredSlides={true}
                 loop={true}
                 autoplay={{
-                    delay:2500,
-                    disableOnInteraction:false,
+                    delay: 2500,
+                    disableOnInteraction: false,
                 }}
                 pagination={{
                     clickable: true,
                 }}
                 // navigation={true}
-                modules={[Autoplay,Pagination]}
+                modules={[Autoplay, Pagination]}
                 className="mySwiper"
             >
-                
+
 
                 <SwiperSlide>
-
+                    <Cartao />
                     <Cartao1 />
+                    <Cartao2 />
+                    <Cartao3 />
                 </SwiperSlide>
                 <SwiperSlide>
                     <Cartao1 />
+                    <Cartao1 />
+                    <Cartao1 />
+                    <Cartao1 />
                 </SwiperSlide>
 
                 <SwiperSlide>
                     <Cartao1 />
+                    <Cartao1 />
+                    <Cartao1 />
+                    <Cartao1 />
                 </SwiperSlide>
 
-                
+
             </Swiper>
         </>
     );

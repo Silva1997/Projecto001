@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle'
+import { ThemeProvider } from "@material-tailwind/react";
 
 
 const container = document.getElementById('root');
@@ -15,7 +16,9 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
+    <ThemeProvider>
       <App />
+    </ThemeProvider>
     </Provider>
   </React.StrictMode>
 );

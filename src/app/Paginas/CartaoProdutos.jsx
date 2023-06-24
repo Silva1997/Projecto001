@@ -6,9 +6,10 @@ import { Contexto } from '../Routes/Provedoracesso';
 import { useContext} from 'react';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-
+import AddCircleIcon from '@mui/icons-material/AddCircle';
+import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
 import '../Estilos/Estilos.css';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+// import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 function ProductCard({product}) { // props.product is the product we are selling
 
@@ -19,12 +20,12 @@ function ProductCard({product}) { // props.product is the product we are selling
     return (
 <div className='div320'>
 
-
         <Card sx={{
             background: "rgba(243, 239, 239, 0.5)",
             borderRadius: "1px 10px",
             marginLeft: "5px",
-            marginRight: "5px"
+            marginRight: "5px",
+            marginBottom:"15px"
 
         }}  >
             <div as={CardMedia} style={{ display: "flex" }}>
@@ -52,10 +53,10 @@ function ProductCard({product}) { // props.product is the product we are selling
                                
                             </Col>
                         </Form>
-                        < Button color="error" onClick={() => { cart.deleteFromCart(product.id) }} className="my-2" variant="contained" >Remover <ShoppingCartIcon style={{ color: "gold" }} /></Button>
+                        < button style={{textDecoration:"none", border:"none" , padding:"2px 4px" ,borderRadius:"2px 3px"}} onClick={() => { cart.deleteFromCart(product.id) }}  ><RemoveCircleIcon style={{ color: "red" }} /></button>
                      
                     </>
-                    :  <Button color='success'  variant="outlined" onClick={() => { cart.addOneToCart(product.id,product)} }>Adicionar <ShoppingCartIcon style={{ color: "gold" }} /> </Button>
+                    :  <button style={{textDecoration:"none", border:"none" , padding:"2px 4px" ,borderRadius:"2px 3px", marginLeft:"105px"}}  onClick={() => { cart.addOneToCart(product.id,product)} }><AddCircleIcon  style={{ color: "red" }} /> </button>
                 }
             </CardContent>
         

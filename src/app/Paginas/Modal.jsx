@@ -8,10 +8,6 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { UserCarrinho } from '../Routes/Provedoracesso'
 import imagem from './shopping-bag.svg'
 import { CartItem } from '../Paginas/CartItem'
-
-
-
-
 export default function TemporaryDrawer({ product }) {
   const cart = UserCarrinho();
   const totalAmount = cart.getTotalCost();
@@ -47,21 +43,22 @@ export default function TemporaryDrawer({ product }) {
     >
       <div style={{ display: "flex", flexDirection: "column", width: "50vh", marginLeft: "50px", justifyItems: "center" }}>
 
-
-
-
         <CartItem />
 
       </div>
 
-
-
       {totalAmount > 0 ? (
         <Card sx={{
           background: "rgba(243, 239, 239, 0.5)",
+          display:"flex"
+          ,
+          justifyContent:"center",
+          textAlign:"center",
+          m:12,
+     
         }}>
           <CardContent className="Cartao320">
-            <Typography variant='h6' style={{ fontWeight: "500", borderRadius: "20px", padding: "0.2px 20px" }}>
+            <Typography variant='h6' style={{ fontWeight: "500", borderRadius: "20px", padding: "0.2px 20px",color:"black" }}>
               Total:
               {cart.getTotalCost().toFixed(3)}Kz
             </Typography>
@@ -72,7 +69,7 @@ export default function TemporaryDrawer({ product }) {
          
          <img src={imagem} alt='' style={{width:"10vh"}} />
          
-          <p>Sua sacola de compras está vazia. Comece a comprar </p>
+          <p>Seu Saco de compras está vazia. Comece a comprar  </p>
         </div>
 
       )}

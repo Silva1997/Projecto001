@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState} from 'react';
 import { ProdutosContext } from '../Routes/ProdutosContext';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -10,6 +10,7 @@ import { InputLabel } from '@mui/material';
 import Tabela from './Tabelas'
 
 
+
 // import Table from '@mui/material/Table';
 // import TableBody from '@mui/material/TableBody';
 // import TableCell from '@mui/material/TableCell';
@@ -17,18 +18,21 @@ import Tabela from './Tabelas'
 // import TableHead from '@mui/material/TableHead';
 // import TableRow from '@mui/material/TableRow';
 // import Paper from '@mui/material/Paper';
+
+
+
+
 export default function FormCadastro() {
 
   const [produto, setProduto] = useState('');
   const [imagem, setImagem] = useState(null);
   const [descricao, setDescricao] = useState('');
   const [valor, setValor] = useState(0);
+  const [estoque, setEstoque] = useState(0);
   const cart = useContext(ProdutosContext);
   const [disponibilidade, setDisponibilidade] = useState("");
   const [categoria, setCategoria] = useState("");
-
-
-
+// aqui 
 
 
   const ImagePreview = () => {
@@ -73,17 +77,16 @@ export default function FormCadastro() {
   };
 
 
-  // const Lista = [{
-  //   produto,
-  //   imagem,
-  //   descricao,
-  //   valor,
-  //   disponibilidade,
-  //   categoria
-  // }]
+ 
 
   function Limpar() {
     setProduto("")
+    setCategoria("")
+    setDescricao("")
+    setEstoque("")
+    setValor("")
+    setDisponibilidade("")
+    
   }
 
   const salvarProduto = () => {
@@ -96,7 +99,8 @@ export default function FormCadastro() {
       descricao,
       valor,
       disponibilidade,
-      imagem
+      imagem,
+      estoque
     };
 
     const getProdutoLs = JSON.parse(localStorage.getItem('Produtos'));
@@ -113,9 +117,9 @@ export default function FormCadastro() {
 
 
   }
-  // const carrinhoData = localStorage.Produtos;
+  const carrinhoData = localStorage.Produtos;
 
-  // const carrinhoArray = localStorage.Produtos ? JSON.parse(carrinhoData) : null;
+  const carrinhoArray = localStorage.Produtos ? JSON.parse(carrinhoData) : null;
 
 
   const Ver = (event) => {
@@ -128,7 +132,8 @@ export default function FormCadastro() {
 
   return (
     <>
-      <section style={{ marginTop: "100px" }}>
+
+      <section style={{margin:"30px",marginTop:"120px" }}>
 
 
 
@@ -214,8 +219,8 @@ export default function FormCadastro() {
               size='small'
               label="Estoque"
               type="number"
-              value={valor}
-              onChange={(e) => { cart.capturarValor(setValor(e.target.value)) }}
+              value={estoque}
+              onChange={(e) => { cart.capturarValor(setEstoque(e.target.value)) }}
             />
 
 
@@ -252,53 +257,9 @@ export default function FormCadastro() {
 
       {/* <Tabela carrinhoArray={carrinhoArray}  producto={produto}/> */}
 
-      <div style={{marginTop:"20px"}}>
-      <Tabela /> 
-        {/* <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 600 }} aria-label="simple table">
-            <TableHead>
-              <TableRow>
-                <TableCell align="right">imagem</TableCell>
-                <TableCell align="right">Produto</TableCell>
-                <TableCell align="right">Preco kz</TableCell>
-                <TableCell align="right">Categoria</TableCell>
-                <TableCell align="right">Descricao</TableCell>
-                <TableCell align="right">Status</TableCell>
-              </TableRow>
-            </TableHead>
-
-            <TableBody>
-              {Lista.map((row) => (
-                <TableRow
-                  key={row}
-                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                >
-                  {/* <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell> */}
-{/* 
-                  <TableCell align="right"><img src={row.imagem} style={{ width: "5vh" }} alt="" /></TableCell>
-                  <TableCell align="right">{row.produto}</TableCell>
-                  <TableCell align="right">{row.valor}</TableCell>
-                  <TableCell align="right">{row.categoria}</TableCell>
-                  <TableCell align="right">{row.descricao}</TableCell>
-                  <TableCell align="right">{row.disponibilidade}</TableCell>
-                </TableRow>
-              ))
-              }
-            </TableBody>
-          </Table>
-        </TableContainer>  */}
-
-
-
-      </div>
-
-
-
-
-
-
+      <div style={{marginTop:"20px", margin:"30px"}}>
+      <Tabela carrinhoArray={carrinhoArray} /> 
+       </div>
 
     </>
   )

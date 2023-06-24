@@ -10,7 +10,8 @@ export default class Produtostabela extends Component {
     
     return (
       <div>     
-<Row xs={2} md={5} className="g-1">
+<span className="frase2" style={{textAlign:"start", top:"78px" , position:"relative" , marginLeft:"5px"}}><span style={{color:"red"}}>O</span>fertas Bolos</span>
+<Row xs={2} md={5} className="g-0" style={{marginTop:"75px"}}>
 {produtos.map((product,idx)=>(
 <Col align="center" key={idx}>
 <Cartao product={product}/>

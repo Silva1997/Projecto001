@@ -11,7 +11,6 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Produto from '../Paginas/Productos';
 import { AcessoContexto, UserCarrinho } from './Provedoracesso';
-
 import Badge from '@mui/material/Badge';
 // import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Pagamentos from '../Paginas/imagens'
@@ -21,7 +20,6 @@ import Localizar from '../Paginas/LocalizarProdutos'
 import Etapas from '../Paginas/EtapasProduto'
 import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
 export default function Rotaspaginas() {
-
   return (
     <>
       <AcessoContexto>
@@ -58,13 +56,12 @@ const JanelaMenuPrincipal = () => {
             <Container fluid id="tel">
               <Navbar.Brand as={Link} to="/" style={{ color: "white"}}>
                 <img src={imagem} alt='icon' style={{width:"5vh" , color:"white" , background:"white"}} />
-              <span id='textP'>GestConfeiteria</span>  
+              {/* <span id='textP'>GestConfeiteria</span>   */}
                 <Badge className='iconCarrinho' color="error" badgeContent={itemCount} style={{ position: 'fixed', top: '27px', justifyContent: "center" }}>
                   <Modal itemCount={itemCount} total={cart.getTotalCost().toFixed(2)} />
                 </Badge>
                 <p  style={{position: 'fixed', top: '27px', justifyContent: "center", fontSize:"12pt" ,left:"1040px" ,backgroundColor:"rgba(231, 230, 230, 0.5)" , borderRadius:"10px 10px" , padding:"2px 7px"}}><AddLocationAltIcon style={{color:"#2331fdeb",}}/>Angola,Lobito</p>
               </Navbar.Brand>
-
               <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
               <Navbar.Offcanvas
                 id={`offcanvasNavbar-expand-${expand}`}
@@ -74,7 +71,7 @@ const JanelaMenuPrincipal = () => {
               >
                 <Offcanvas.Header closeButton>
                   <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  GestConfeiteria: Menu
+                  Confeiteria: Menu
                   </Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body >
