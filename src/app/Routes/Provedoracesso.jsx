@@ -1,5 +1,5 @@
 import { useContext,createContext, useState } from "react";
-import { getProdutos } from "../Paginas/Produtos";
+import { getProdutos } from "../Paginas/Produtos/Produtos";
 import { PegarItem,EditarItem } from "../localarmazenamento/Localstore";
 
 export const Contexto = createContext({

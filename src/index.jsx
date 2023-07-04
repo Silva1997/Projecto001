@@ -7,6 +7,8 @@ import reportWebVitals from './reportWebVitals';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle'
+
+
 import { ThemeProvider } from "@material-tailwind/react";
 
 

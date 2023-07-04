@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { BrowserRouter, Route, Routes, Link, Outlet } from 'react-router-dom'
 import App from '../../App'
-import '../Estilos/Estilos.css'
+import '../Paginas/Estilos/Estilos.css'
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -9,15 +9,14 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import Produto from '../Paginas/Productos';
+import Produto from '../Paginas/Produtos/Productos';
 import { AcessoContexto, UserCarrinho } from './Provedoracesso';
 import Badge from '@mui/material/Badge';
-// import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import Pagamentos from '../Paginas/imagens'
+import CadrastarProdutos from '../Paginas/Cadrastos/CadrastarProdutos'
 import imagem from './icon.png'
-import Modal from '../Paginas/Modal'
-import Localizar from '../Paginas/LocalizarProdutos'
-import Etapas from '../Paginas/EtapasProduto'
+import Modal from '../Paginas/Produtos/Modal'
+import Localizar from '../Paginas/Mercadoria/LocalizarProdutos'
+import Etapas from '../Paginas/Mercadoria/EtapasProduto'
 import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
 export default function Rotaspaginas() {
   return (
@@ -29,7 +28,7 @@ export default function Rotaspaginas() {
             <Route element={<JanelaMenuPrincipal />}>
               <Route exact path="/*" element={<App />} />
               <Route exact path="/Produtos" element={<Produtos />} />
-              <Route exact path='/Pagamentos' element={<Pagamentos />} />
+              <Route exact path='/CadrastarProdutos' element={<CadrastarProdutos />} />
               <Route exact path='/Localizar' element={<Localizar />} />
               <Route exact path='/Etapas' element={<Etapas />} />
             </Route>
@@ -88,12 +87,12 @@ const JanelaMenuPrincipal = () => {
                       id={`offcanvasNavbarDropdown-expand-${expand}`}
                     >
                       {/* <NavDropdown.Item href="#action3"> <Nav.Link as={Link} to={"/Produtostock"}>Bolos</Nav.Link></NavDropdown.Item> */}
-                      <NavDropdown.Item as={Link} to={"/Pagamentos"}>
+                      <NavDropdown.Item as={Link} to={"/CadrastarProdutos"}>
                         Cadrastar Produtos
                       </NavDropdown.Item>
                       <NavDropdown.Divider />
                       <NavDropdown.Item href="#action5">
-                        Something else here
+                       Cadrastar Cliente
                       </NavDropdown.Item>
                     </NavDropdown>
                   </Nav>

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f1307c53.css",
-    "main.js": "/static/js/main.9c080d84.js",
+    "main.css": "/static/css/main.6a572cd2.css",
+    "main.js": "/static/js/main.4b8768fd.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
     "static/media/hero-background.png": "/static/media/hero-background.b088b254d436ddc9904b.png",
     "static/media/ilcao_bx__13_.jpg": "/static/media/ilcao_bx__13_.d641fc75039f2a495c7b.jpg",
@@ -18,12 +18,12 @@
     "static/media/icon1.png": "/static/media/icon1.73ffac44beb3e4f839db.png",
     "static/media/shopping-bag.svg": "/static/media/shopping-bag.c3758b46f6cac33d5b8f1c8ddd4a0c86.svg",
     "index.html": "/index.html",
-    "main.f1307c53.css.map": "/static/css/main.f1307c53.css.map",
-    "main.9c080d84.js.map": "/static/js/main.9c080d84.js.map",
+    "main.6a572cd2.css.map": "/static/css/main.6a572cd2.css.map",
+    "main.4b8768fd.js.map": "/static/js/main.4b8768fd.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f1307c53.css",
-    "static/js/main.9c080d84.js"
+    "static/css/main.6a572cd2.css",
+    "static/js/main.4b8768fd.js"
   ]
 }

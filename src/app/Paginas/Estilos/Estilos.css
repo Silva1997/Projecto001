@@ -1,0 +1,1005 @@
+    @media only screen and (min-device-width: 1024px) {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: 0;
+            outline: 0;
+        }
+        #especial {
+            margin-left: 20px;
+        }
+        /*  */
+        /* * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            list-style: none;
+            text-decoration: none;
+        } */
+         :root {
+            --theme-col: #2d4bf0;
+        }
+        .space-y-2> :not([hidden])~ :not([hidden]) {
+            --tw-space-y-reverse: 0;
+            margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+            margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+        }
+        footer {
+            background-color: #111010;
+        }
+        .f-item-con {
+            padding: 1.5rem 4rem;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-gap: 2rem;
+        }
+        footer .app-name {
+            color: white;
+            border-left: 4px solid var(--theme-col);
+            padding-left: 1.5rem;
+            font-size: 1.875rem;
+            line-height: 2.25rem;
+            font-weight: 700;
+        }
+        .app-name .app-initial {
+            color: var(--theme-col);
+        }
+        footer .app-info p {
+            color: white;
+            padding-left: 1.65rem;
+        }
+        footer .footer-title {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            color: white;
+            border-left: 4px solid var(--theme-col);
+            padding-left: 1.5rem;
+            height: fit-content;
+        }
+        footer ul {
+            padding-left: 1.75rem;
+            color: white;
+            font-size: 0.875rem/* 14px */
+            ;
+            line-height: 1.25rem;
+            margin-top: .5rem;
+        }
+        footer ul li {
+            margin: .25rem 0;
+            cursor: pointer;
+            color: #d4d4d4;
+            width: fit-content;
+        }
+        footer ul li:hover {
+            color: white;
+        }
+        footer .help-sec {
+            grid-column-start: 2;
+        }
+        footer .cr-con {
+            background-color: #232127;
+            color: white;
+            padding: 1rem 4rem;
+            text-align: center;
+        }
+        .g-i-t {
+            display: grid;
+            grid-column-start: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        .g-i-t form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            --tw-space-y-reverse: 0;
+            margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+            margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+        }
+        form .g-inp {
+            padding: .25rem .5rem;
+            font-size: 16px;
+        }
+        .g-inp textarea {
+            height: 150px;
+        }
+        .f-btn {
+            padding: .25rem 1rem;
+            background-color: var(--theme-col);
+            border-radius: .25rem;
+            font-size: 16px;
+            color: white;
+            font-weight: 500;
+        }
+        /* circular */
+        .imagemCircular {
+            display: inline-block;
+            position: relative;
+            width: 50px;
+            height: 50px;
+            overflow: hidden;
+            border-radius: 50%;
+            background-color: #ddd;
+        }
+        #imagemCir {
+            width: auto;
+            height: 100%;
+        }
+        #btnTabela {
+            background-color: white;
+        }
+        #btnTabela:hover {
+            background-color: #f8f8f8;
+        }
+        /*  */
+        #textP {
+            font-family: 'Pacifico', cursive;
+        }
+        body {
+            overflow-x: hidden;
+        }
+        .menu1 {
+            display: flex;
+            justify-content: center;
+        }
+        .Cartao {
+            width: 100%;
+            object-fit: cover;
+            height: 40vh;
+        }
+        .Cartao1 {
+            width: 100%;
+            object-fit: cover;
+            height: 35vh;
+        }
+        /* efeitos ovelay */
+        .Cartao001 {
+            transition: 0.2s;
+            background-color: #f8f8f8;
+            opacity: 0;
+        }
+        #Cartao001:hover {
+            opacity: 0.3;
+        }
+        .iconCarrinho {
+            display: flex;
+            top: -10px;
+            margin-left: 150px;
+        }
+        #iconButao {
+            display: flex;
+            top: -8px;
+            left: 10px;
+        }
+        /*  */
+        .bntPrimeiro {
+            width: 23vh;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            padding: 4px 14px;
+            border-color: red;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        /* botoes */
+        button {
+            transition-duration: 0.1s;
+        }
+        button:hover {
+            background-color: rgba(255, 99, 71, 0.5);
+            color: white;
+        }
+        /*  */
+        .incio {
+            padding: 5px;
+            text-align: center;
+            font-family: "cursive";
+            font-weight: bold;
+            font-size: 30pt;
+        }
+        .navbar.fixed-top {
+            background: transparent;
+            background-color: rgba(36, 35, 35, 0.5);
+            padding: 20px;
+            width: auto;
+        }
+        .img-fluid {
+            min-width: 100%;
+        }
+        #Pfoto {
+            height: 89vh;
+        }
+        .img1 {
+            border-radius: 500px;
+            /* background-color: black; */
+            width: 30vh;
+            position: relative;
+            top: -100px;
+            left: 35px;
+            display: inline-block;
+        }
+        .img2 {
+            border-radius: 500px;
+            width: 30vh;
+            left: 25px;
+            position: relative;
+            top: -140px;
+            display: inline-block;
+        }
+        .frase {
+            border-radius: 15px 50px;
+            font-size: 18pt;
+            text-align: center;
+        }
+        /* parte de cima para grid 2fr para a divisao  */
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            width: 100%;
+        }
+        .Fundocima {
+            display: grid;
+            background-size: contain;
+            /* background: #fc6969; */
+            background-color: white;
+            /* background-position: center; */
+            background-repeat: no-repeat;
+            background-image: url("hero-background.png");
+            transition: 0.3s;
+            grid-template-columns: 2fr 2fr;
+            grid-template-rows: 40vh 40vh 10vh;
+        }
+        .grid2 {
+            grid-column-start: 2;
+            grid-column-end: 2;
+            margin: 150px;
+        }
+        #h5p {
+            font-family: 'Kanit', sans-serif;
+        }
+        #frasesPrincipal {
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+        .grid1 {
+            color: #303030;
+            grid-column-start: 1;
+            grid-column-end: 1;
+            margin-top: 150px;
+            margin-left: 160px;
+            font-weight: 400;
+        }
+        .grid1 h5 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 3rem;
+            font-weight: 400;
+            color: #303030;
+        }
+        /* parte de cima para grid 2fr para a divisao  */
+        /* Os textos */
+        .frase3 {
+            background-color: rgb(243, 111, 59);
+        }
+        .frase {
+            font-family: 'Merienda', cursive;
+            font-weight: 400;
+        }
+        .frase2 {
+            font-family: 'Merienda', cursive;
+            font-weight: 400;
+        }
+        .Sp {
+            color: red;
+        }
+        .PL {
+            margin: 10px;
+        }
+        .frase2 {
+            margin: 20px;
+        }
+        .incio {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+        }
+        /*fim das frases*/
+        /* grid 2fr  para cada texto e imagem por 4*/
+        .Descricaodanossahistoria {
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            grid-template-rows: 70vh 70vh 10vh;
+            grid-auto-rows: 300px;
+        }
+        .P1 {
+            object-fit: cover;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url("pastel-de-belem-02-1200x901.jpg");
+            grid-column-start: 1;
+            grid-column-end: 1;
+        }
+        .PP1 {
+            width: 100%;
+            height: 100%;
+            transition: 0.4s;
+            background-color: #303030;
+            opacity: 0;
+        }
+        .PP1:hover {
+            opacity: 0.5;
+        }
+        .P1 {
+            overflow: hidden;
+        }
+        .P4 {
+            overflow: hidden;
+        }
+        .P4 {
+            background-size: cover;
+            width: 100%;
+            background-color: yellow;
+            background-repeat: no-repeat;
+            background-image: url("ilcao_bx__13_.jpg");
+            grid-column-start: 2;
+            grid-column-end: 2;
+        }
+        .P2 {
+            background: #FFFFFF;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .P3 {
+            background: #FFFFFF;
+            text-align: center;
+            margin: 0 auto;
+        }
+        /* grid 2fr  para cada texto e imagem por 4*/
+        /*  */
+        #Foto3 {
+            position: relative;
+            top: -10px;
+            left: -16px;
+            width: 60vh;
+        }
+        body::-webkit-scrollbar {
+            width: 10px;
+        }
+        body::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #fc6969;
+            /* color of the scroll thumb */
+            border-radius: 20px;
+            /* roundness of the scroll thumb */
+            border: 2px solid rgb(241, 234, 219);
+            /* creates padding around scroll thumb */
+        }
+        /*  footer*/
+        .f_social_icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            font-size: 14px;
+            line-height: 45px;
+            color: #f38282;
+            display: inline-block;
+            background: #fdfdff;
+            text-align: center;
+            -webkit-transition: all 0.2s linear;
+            -o-transition: all 0.2s linear;
+            transition: all 0.2s linear;
+        }
+    }
+    /*  */
+    
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+        * {
+            margin: 0;
+            width: auto;
+            padding: 0;
+        }
+        h2 {
+            text-align: center;
+        }
+        /* butoes */
+        .menu1 {
+            display: flex;
+            justify-content: center;
+        }
+        #butao1 {
+            margin-bottom: 35px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            padding: 5px 15px;
+            border-color: red;
+        }
+        #butao1:hover {
+            background: red;
+        }
+        button {
+            transition-duration: 0.2s;
+        }
+        button:hover {
+            background-color: rgba(255, 99, 71, 0.5);
+            color: white;
+        }
+        /*  */
+        /* cartao  */
+        #Cartao001 {
+            width: 50vh;
+        }
+        .img1 {
+            position: relative;
+            margin-left: -55px;
+        }
+        .img2 {
+            position: relative;
+            margin-left: -55px;
+        }
+        #but {
+            position: relative;
+            margin-left: -30px;
+        }
+        /*  */
+        .navbar.fixed-top {
+            background: transparent;
+            background-color: rgba(36, 35, 35, 0.5);
+            position: fixed;
+            max-width: auto;
+        }
+        .Fundocima {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url("hero-background.png");
+            /* background-image: url('src/app/Img/hero-background.png'); */
+        }
+        .grid2 {
+            order: -1;
+            justify-content: center;
+            object-fit: cover;
+        }
+        /* card 320px para telefone  */
+        .Cartao320 {
+            display: flex;
+            flex-direction: column;
+        }
+        .div320 {
+            margin-top: 100px;
+            width: 100%;
+        }
+        /*  */
+        .grid1 {
+            margin: 30px;
+            text-align: left;
+        }
+        #Foto3 {
+            image-rendering: auto;
+            image-orientation: from-image;
+            width: 50vh;
+        }
+        .grid1 h5 {
+            font-size: 25pt;
+        }
+        .f_social_icon {
+            border-radius: 12px;
+            color: #fbfbfd;
+            background-color: #f38282;
+        }
+        #iconButao {
+            display: flex;
+            top: -15px;
+            left: -0.1px;
+        }
+        .Ver {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 50px;
+        }
+        .img2 {
+            position: relative;
+            top: -180px;
+            left: 30px;
+        }
+        .img1 {
+            position: relative;
+            top: -100px;
+            left: 55px;
+        }
+        .Cartao {
+            object-fit: cover;
+            width: 100%;
+            height: 50vh;
+        }
+        /* #but {
+        position: relative;
+        margin-left: 30px;
+    } */
+        .Descricaodanossahistoria {
+            display: grid;
+            grid-template-columns: 2fr;
+            grid-template-rows: 60vh 60vh 60vh;
+            grid-auto-rows: 100px;
+            grid-auto-flow: column;
+            margin: 0 auto;
+            margin-bottom: 300px;
+        }
+        .P2 {
+            /* margin-left: 100px; */
+            justify-content: stretch;
+            justify-items: center;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            object-fit: cover;
+            background: #FFFFFF;
+            text-align: center;
+        }
+        .P3 {
+            /* margin-left: 100px; */
+            justify-content: stretch;
+            justify-items: center;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            background: #FFFFFF;
+            text-align: center;
+        }
+        .P1 {
+            /* margin-left: 100px; */
+            object-fit: cover;
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url("pastel-de-belem-02-1200x901.jpg");
+            grid-column-start: 1;
+            grid-column-end: 1;
+        }
+        .P4 {
+            width: 100%;
+            /* margin-left: 100px; */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url("ilcao_bx__13_.jpg");
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row: span 4;
+        }
+        .new_footer_area {
+            background: #fbfbfd;
+        }
+        .btn_get_two {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            background: #5e2ced;
+            border-color: #5e2ced;
+            color: #fff;
+        }
+        .btn_get_two:hover {
+            background: transparent;
+            color: #5e2ced;
+        }
+    }
+    
+    @media screen and (max-width: 412px) {
+        /* * {
+        background-color: #f38282;
+    } */
+        .navbar.fixed-top {
+            background: transparent;
+            background-color: rgba(36, 35, 35, 0.5);
+            position: fixed;
+            max-width: 412px;
+        }
+        h2 {
+            text-align: center;
+        }
+        /* butoes */
+        .menu1 {
+            display: flex;
+            justify-content: center;
+        }
+        #butao1 {
+            margin-bottom: 35px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            padding: 5px 15px;
+            border-color: red;
+        }
+        #butao1:hover {
+            background: red;
+        }
+        button {
+            transition-duration: 0.2s;
+        }
+        button:hover {
+            background-color: rgba(255, 99, 71, 0.5);
+            color: white;
+        }
+        /*  */
+        /* cartao  */
+        #Cartao001 {
+            width: 50vh;
+        }
+        .img1 {
+            position: relative;
+            margin-left: -55px;
+        }
+        .img2 {
+            position: relative;
+            margin-left: -55px;
+        }
+        #but {
+            position: relative;
+            margin-left: -30px;
+        }
+        /*  */
+        .Fundocima {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url("hero-background.png");
+            /* background-image: url('src/app/Img/hero-background.png'); */
+        }
+        .grid2 {
+            order: -1;
+            justify-content: center;
+            object-fit: cover;
+        }
+        /* card 320px para telefone  */
+        .Cartao320 {
+            display: flex;
+            flex-direction: column;
+        }
+        .div320 {
+            margin: 5px;
+            width: 100%;
+        }
+        /*  */
+        .grid1 {
+            margin: 30px;
+            text-align: left;
+        }
+        #Foto3 {
+            image-rendering: auto;
+            image-orientation: from-image;
+            width: 50vh;
+        }
+        .grid1 h5 {
+            font-size: 25pt;
+        }
+        .f_social_icon {
+            border-radius: 12px;
+            color: #fbfbfd;
+            background-color: #f38282;
+        }
+        #iconButao {
+            display: flex;
+            top: -15px;
+            left: -0.1px;
+        }
+        .Ver {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 50px;
+        }
+        .img2 {
+            position: relative;
+            top: -180px;
+            left: 30px;
+        }
+        .img1 {
+            position: relative;
+            top: -100px;
+            left: 55px;
+        }
+        .Cartao {
+            object-fit: cover;
+            width: 100%;
+            height: 50vh;
+        }
+        /* #but {
+        position: relative;
+        margin-left: 30px;
+    } */
+        .Descricaodanossahistoria {
+            display: grid;
+            grid-template-columns: 2fr;
+            grid-template-rows: 60vh 60vh 60vh;
+            grid-auto-rows: 100px;
+            grid-auto-flow: column;
+            margin: 0 auto;
+            margin-bottom: 300px;
+        }
+        .P2 {
+            /* margin-left: 100px; */
+            justify-content: stretch;
+            justify-items: center;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            object-fit: cover;
+            background: #FFFFFF;
+            text-align: center;
+        }
+        .P3 {
+            /* margin-left: 100px; */
+            justify-content: stretch;
+            justify-items: center;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            background: #FFFFFF;
+            text-align: center;
+        }
+        .P1 {
+            /* margin-left: 100px; */
+            object-fit: cover;
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url("pastel-de-belem-02-1200x901.jpg");
+            grid-column-start: 1;
+            grid-column-end: 1;
+        }
+        .P4 {
+            width: 100%;
+            /* margin-left: 100px; */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url("ilcao_bx__13_.jpg");
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row: span 4;
+        }
+        .new_footer_area {
+            background: #fbfbfd;
+        }
+        .btn_get_two {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            background: #5e2ced;
+            border-color: #5e2ced;
+            color: #fff;
+        }
+        .btn_get_two:hover {
+            background: transparent;
+            color: #5e2ced;
+        }
+    }
+    
+    @media screen and (max-width: 360px) {
+        * {
+            margin: 0;
+            width: auto;
+            padding: 0;
+        }
+        h2 {
+            text-align: center;
+        }
+        /* butoes */
+        .menu1 {
+            display: flex;
+            justify-content: center;
+        }
+        #butao1 {
+            margin-bottom: 35px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            padding: 5px 15px;
+            border-color: red;
+        }
+        #butao1:hover {
+            background: red;
+        }
+        button {
+            transition-duration: 0.2s;
+        }
+        button:hover {
+            background-color: rgba(255, 99, 71, 0.5);
+            color: white;
+        }
+        /*  */
+        /* cartao  */
+        .V {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        #Cartao001 {
+            width: 20%;
+        }
+        .img1 {
+            position: relative;
+            margin-left: -55px;
+        }
+        .img2 {
+            position: relative;
+            margin-left: -55px;
+        }
+        #but {
+            position: relative;
+            margin-left: -30px;
+        }
+        /*  */
+        .navbar.fixed-top {
+            background: transparent;
+            background-color: rgba(36, 35, 35, 0.5);
+            position: fixed;
+            max-width: 360px;
+        }
+        .Fundocima {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url("hero-background.png");
+            /* background-image: url('src/app/Img/hero-background.png'); */
+        }
+        .grid2 {
+            order: -1;
+            justify-content: center;
+            object-fit: contain;
+        }
+        /* card 320px para telefone  */
+        .Cartao320 {
+            display: flex;
+            flex-direction: column;
+        }
+        .Cartao1 {
+            width: 100%;
+            object-fit: cover;
+        }
+        .Cartao1 {
+            height: 35vh;
+            background-color: #303030;
+        }
+        .frase3 {
+            background-color: rgb(243, 111, 59);
+        }
+        .frase {
+            font-family: 'Merienda', cursive;
+            font-weight: 400;
+        }
+        .frase2 {
+            font-family: 'Merienda', cursive;
+            font-weight: 400;
+        }
+        .Sp {
+            color: red;
+        }
+        .PL {
+            margin: 10px;
+        }
+        .frase2 {
+            margin: 20px;
+        }
+        .div320 {
+            margin: 5px;
+            width: 100%;
+        }
+        /*  */
+        .grid1 {
+            margin: 30px;
+            text-align: left;
+        }
+        #Foto3 {
+            image-rendering: auto;
+            image-orientation: from-image;
+            width: 50vh;
+        }
+        .grid1 h5 {
+            font-size: 25pt;
+            font-weight: bold;
+        }
+        .f_social_icon {
+            border-radius: 12px;
+            color: #fbfbfd;
+            background-color: #f38282;
+        }
+        #iconButao {
+            display: flex;
+            top: -15px;
+            left: -0.1px;
+        }
+        .Ver {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 50px;
+        }
+        .img2 {
+            position: relative;
+            top: -180px;
+            left: 30px;
+        }
+        .img1 {
+            position: relative;
+            top: -100px;
+            left: 55px;
+        }
+        .Cartao {
+            object-fit: cover;
+            width: 100%;
+            height: 50vh;
+        }
+        /* #but {
+        position: relative;
+        margin-left: 30px;
+    } */
+        .Descricaodanossahistoria {
+            display: grid;
+            grid-template-columns: 2fr;
+            grid-template-rows: 60vh 60vh 60vh;
+            grid-auto-rows: 100px;
+            grid-auto-flow: column;
+            margin: 0 auto;
+            margin-bottom: 300px;
+        }
+        .P2 {
+            /* margin-left: 100px; */
+            justify-content: stretch;
+            justify-items: center;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            object-fit: cover;
+            background: #FFFFFF;
+            text-align: center;
+        }
+        .P3 {
+            /* margin-left: 100px; */
+            justify-content: stretch;
+            justify-items: center;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            background: #FFFFFF;
+            text-align: center;
+        }
+        .P1 {
+            /* margin-left: 100px; */
+            object-fit: cover;
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url("pastel-de-belem-02-1200x901.jpg");
+            grid-column-start: 1;
+            grid-column-end: 1;
+        }
+        .P4 {
+            width: 100%;
+            /* margin-left: 100px; */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url("ilcao_bx__13_.jpg");
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row: span 4;
+        }
+        .new_footer_area {
+            background: #fbfbfd;
+        }
+        .btn_get_two {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            background: #5e2ced;
+            border-color: #5e2ced;
+            color: #fff;
+        }
+        .btn_get_two:hover {
+            background: transparent;
+            color: #5e2ced;
+        }
+    }

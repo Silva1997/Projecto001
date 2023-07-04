@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
-// import Button from '@mui/material/Button';
+import '../../app/Paginas/Estilos/Estilos.css';
 
 const style = {
   position: 'absolute',
@@ -17,35 +17,8 @@ const style = {
   pb: 3,
 };
 
-function ChildModal() {
-  // const [open, setOpen] = React.useState(false);
-  // const handleOpen = () => {
-  //   setOpen(true);
-  // };
-  // const handleClose = () => {
-  //   setOpen(false);
-  // };
 
-  return (
-    <React.Fragment>
-      {/* <Button   onClick={handleOpen}>Nossa Historia</Button>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="child-modal-title"
-        aria-describedby="child-modal-description"
-      >
-        <Box sx={{ ...style, width: 200 }}>
-          <h2 id="child-modal-title">Text in a child modal</h2>
-          <p id="child-modal-description">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          </p>
-          <Button onClick={handleClose}>Close Child Modal</Button>
-        </Box>
-      </Modal> */}
-    </React.Fragment>
-  );
-}
+
 
 export default function NestedModal() {
   const [open, setOpen] = React.useState(false);
@@ -57,8 +30,13 @@ export default function NestedModal() {
   };
 
   return (
+
+ 
     <div>
-      <button id='butao1' onClick={handleOpen}>Nossa Historia</button>
+      <div>
+      <button style={{width:"23vh",cursor:"pointer", borderRadius:"5px", textAlign:"center",padding:"4px 14px",borderColor:"red",}} 
+       onClick={handleOpen}>Nossa Historia</button>
+      </div>
       <Modal
         open={open}
         onClose={handleClose}
@@ -75,7 +53,7 @@ Dias difíceis são inevitáveis. A única solução é levantar a cabeça e com
 
             
           </p>
-          <ChildModal />
+      
         </Box>
       </Modal>
     </div>
