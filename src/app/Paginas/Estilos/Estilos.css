@@ -790,7 +790,7 @@
         }
     }
     
-    @media screen and (max-width: 360px) {
+    @media screen and (max-width: 360px) and (max-height:740px) {
         * {
             margin: 0;
             width: auto;
@@ -855,22 +855,18 @@
         }
         #but {
             position: relative;
-            left: 75px;
+            left: 100px;
         }
         #Cartao001 {
             width: 10%;
         }
         .img1 {
             position: relative;
-            margin-left: -55px;
+            margin-left: -29px;
         }
         .img2 {
             position: relative;
-            margin-left: -55px;
-        }
-        #but {
-            position: relative;
-            margin-left: -30px;
+            margin-left: -29px;
         }
         /*  */
         .navbar.fixed-top {
