@@ -14,7 +14,7 @@ import { AcessoContexto, UserCarrinho } from './Provedoracesso';
 import Badge from '@mui/material/Badge';
 import CadrastarProdutos from '../Paginas/Cadrastos/CadrastarProdutos'
 import imagem from './icon.png'
-import Modal from '../Paginas/Produtos/Modal'
+import Modal from '../Paginas/Produtos/ModalItemProdutos'
 import Localizar from '../Paginas/Mercadoria/LocalizarProdutos'
 import Etapas from '../Paginas/Mercadoria/EtapasProduto'
 import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
@@ -59,7 +59,7 @@ const JanelaMenuPrincipal = () => {
                 <Badge className='iconCarrinho' color="error" badgeContent={itemCount} style={{ position: 'fixed', top: '27px', justifyContent: "center" }}>
                   <Modal itemCount={itemCount} total={cart.getTotalCost().toFixed(2)} />
                 </Badge>
-                <p  style={{position: 'fixed', top: '27px', justifyContent: "center", fontSize:"12pt" ,left:"1040px" ,backgroundColor:"rgba(231, 230, 230, 0.5)" , borderRadius:"10px 10px" , padding:"2px 7px"}}><AddLocationAltIcon style={{color:"#2331fdeb",}}/>Angola,Lobito</p>
+                <p  style={{position: 'fixed', top: '27px', justifyContent: "center", fontSize:"12pt" ,left:"1040px" ,backgroundColor:"rgba(231, 230, 230, 0.5)" , borderRadius:"10px 10px" , padding:"2px 7px"}}><AddLocationAltIcon style={{color:"##2d4bf0",}}/>Angola,Lobito</p>
               </Navbar.Brand>
               <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
               <Navbar.Offcanvas

@@ -6,19 +6,39 @@
             border: 0;
             outline: 0;
         }
+        /* { padding:"8px",backgroundColor:"white",display: "grid", gridTemplateColumns:"1fr 1fr 1fr",gridTemplateRows:"10vh 10vh 10vh", gap: "0.5px" }} */
+        .CampoCadrastos {
+            display: flex;
+            flex-direction: row;
+            gap: 12px;
+        }
+        .FormularioCampo {
+            top: 8px;
+            left: 0px;
+        }
+        .V {
+            display: flex;
+            justify-content: center;
+            margin-top: 39px;
+        }
+        #but {
+            position: relative;
+            left: 60px;
+        }
         #especial {
             margin-left: 20px;
         }
-        /*  */
-        /* * {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            outline: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            list-style: none;
-            text-decoration: none;
-        } */
+        #butao {
+            margin-bottom: 35px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            padding: 5px 15px;
+            border-color: red;
+        }
+        #butao1:hover {
+            background: red;
+        }
          :root {
             --theme-col: #2d4bf0;
         }
@@ -175,19 +195,10 @@
             left: 10px;
         }
         /*  */
-        .bntPrimeiro {
-            width: 23vh;
-            cursor: pointer;
-            border-radius: 5px;
-            text-align: center;
-            padding: 4px 14px;
-            border-color: red;
-            align-items: center;
-            margin-bottom: 30px;
-        }
         /* botoes */
         button {
             transition-duration: 0.1s;
+            ;
         }
         button:hover {
             background-color: rgba(255, 99, 71, 0.5);
@@ -785,6 +796,29 @@
             width: auto;
             padding: 0;
         }
+        /* circular */
+        .imagemCircular {
+            display: inline-block;
+            position: relative;
+            width: 50px;
+            height: 50px;
+            overflow: hidden;
+            border-radius: 50%;
+            background-color: #ddd;
+        }
+        #imagemCir {
+            width: auto;
+            height: 100%;
+        }
+        .CampoCadrastos {
+            display: flex;
+            flex-direction: column;
+            gap: 2.6rem;
+        }
+        .FormularioCampo {
+            top: 0px;
+            left: 8px;
+        }
         h2 {
             text-align: center;
         }
@@ -814,12 +848,17 @@
         /*  */
         /* cartao  */
         .V {
+            margin-top: 55px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            align-items: center;
+        }
+        #but {
+            position: relative;
+            left: 75px;
         }
         #Cartao001 {
-            width: 20%;
+            width: 10%;
         }
         .img1 {
             position: relative;
@@ -1001,5 +1040,100 @@
         .btn_get_two:hover {
             background: transparent;
             color: #5e2ced;
+        }
+         :root {
+            --theme-col: #2d4bf0;
+        }
+        .space-y-2> :not([hidden])~ :not([hidden]) {
+            --tw-space-y-reverse: 0;
+            margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+            margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+        }
+        footer {
+            background-color: #111010;
+        }
+        .f-item-con {
+            padding: 1.5rem 4rem;
+            display: flex;
+            flex-direction: column;
+            grid-gap: 2rem;
+        }
+        footer .app-name {
+            color: white;
+            border-left: 4px solid var(--theme-col);
+            padding-left: 1.5rem;
+            font-size: 1.875rem;
+            line-height: 2.25rem;
+            font-weight: 700;
+        }
+        .app-name .app-initial {
+            color: var(--theme-col);
+        }
+        footer .app-info p {
+            color: white;
+            padding-left: 1.65rem;
+        }
+        footer .footer-title {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            color: white;
+            border-left: 4px solid var(--theme-col);
+            padding-left: 1.5rem;
+            height: fit-content;
+        }
+        footer ul {
+            padding-left: 1.75rem;
+            color: white;
+            font-size: 0.875rem/* 14px */
+            ;
+            line-height: 1.25rem;
+            margin-top: .5rem;
+        }
+        footer ul li {
+            margin: .25rem 0;
+            cursor: pointer;
+            color: #d4d4d4;
+            width: fit-content;
+        }
+        footer ul li:hover {
+            color: white;
+        }
+        footer .help-sec {
+            grid-column-start: 2;
+        }
+        footer .cr-con {
+            background-color: #232127;
+            color: white;
+            padding: 1rem 4rem;
+            text-align: center;
+        }
+        .g-i-t {
+            display: grid;
+            grid-column-start: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        .g-i-t form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            --tw-space-y-reverse: 0;
+            margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+            margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+        }
+        form .g-inp {
+            padding: .25rem .5rem;
+            font-size: 16px;
+        }
+        .g-inp textarea {
+            height: 150px;
+        }
+        .f-btn {
+            padding: .25rem 1rem;
+            background-color: var(--theme-col);
+            border-radius: .25rem;
+            font-size: 16px;
+            color: white;
+            font-weight: 500;
         }
     }

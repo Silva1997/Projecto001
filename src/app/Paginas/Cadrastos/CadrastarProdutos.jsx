@@ -1,4 +1,4 @@
-import React, { useContext, useState} from 'react';
+import React, { useContext, useState } from 'react';
 import { ProdutosContext } from '../../Routes/ProdutosContext';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -8,9 +8,16 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import { InputLabel } from '@mui/material';
 import Tabela from '../Mercadoria/Tabelas'
+import '../Estilos/Estilos.css'
 
+///
+import Alert from '@mui/material/Alert';
+import IconButton from '@mui/material/IconButton';
+import Collapse from '@mui/material/Collapse';
+import CloseIcon from '@mui/icons-material/Close';
+
+//
 export default function FormCadastro() {
-
   const [produto, setProduto] = useState('');
   const [imagem, setImagem] = useState(null);
   const [descricao, setDescricao] = useState('');
@@ -19,9 +26,9 @@ export default function FormCadastro() {
   const cart = useContext(ProdutosContext);
   const [disponibilidade, setDisponibilidade] = useState("");
   const [categoria, setCategoria] = useState("");
-// aqui 
-
-
+  // aqui 
+  const [open, setOpen] = React.useState(false);
+  //
   const ImagePreview = () => {
     // const [imagem, setImagem] = useState(null);
     const handleImageChange = (e) => {
@@ -44,11 +51,10 @@ export default function FormCadastro() {
           component="label"
           color='info'
           size='medium'
-          style={{ bottom: "-8px" }}
+          style={{ bottom: "0px", textDecoration: "none", textTransform: "none", textAlign: "center" }}
         >
           Carregar Imagem
           <TextField
-
             type="file"
             hidden
             name="produto" onChange={handleImageChange}
@@ -64,7 +70,7 @@ export default function FormCadastro() {
   };
 
 
- 
+
 
   function Limpar() {
     setProduto("")
@@ -73,7 +79,7 @@ export default function FormCadastro() {
     setEstoque("")
     setValor("")
     setDisponibilidade("")
-    
+
   }
 
   const salvarProduto = () => {
@@ -110,9 +116,9 @@ export default function FormCadastro() {
 
 
   const Ver = (event) => {
-    alert("adicionado com sucesso o item")
+
     event.preventDefault();
-    return (salvarProduto(),
+    return (salvarProduto(), setOpen(true),
       Limpar())
 
   }
@@ -120,9 +126,7 @@ export default function FormCadastro() {
   return (
     <>
 
-      <section style={{margin:"30px",marginTop:"120px" }}>
-
-
+      <section style={{ margin: "30px", marginTop: "120px" }}>
 
         <Box
           component="form"
@@ -131,25 +135,26 @@ export default function FormCadastro() {
           }}
           noValidate
           autoComplete="on"
-          style={{ padding:"8px",backgroundColor:"white",display: "grid", gridTemplateColumns:"1fr 1fr 1fr",gridTemplateRows:"10vh 10vh 10vh", gap: "0.5px" }}
+          className='CampoCadrastos'
           onSubmit={Ver}
           target='_blank'
         >
 
 
-<div style={{marginLeft:"8px"}}>
-{
-              ImagePreview()
-            }
+          <div >
+            <div style={{ marginLeft: "8px" }}>
+              {/* 1 campo */}
+              {
+
+                ImagePreview()
 
 
-<Button variant='contained' color='error' type='submit' style={{ bottom: "-22px", left: "10px" }}>Salvar</Button>
+              }
+              <Button variant='contained' color='error' type='submit' style={{ marginTop: "10px" }}>Salvar</Button>
 
-</div>
-          <div>
-           
+            </div>
 
-
+            {/* 2 campo */}
             <TextField
               required
               id="outlined-required"
@@ -168,14 +173,17 @@ export default function FormCadastro() {
               required
               id="outlined-number"
               size='small'
-              label="Preco do produto"
+              label="Preço do produto"
               type="number"
               value={valor}
               onChange={(e) => { cart.capturarValor(setValor(e.target.value)) }}
             />
 
-<FormControl sx={{ width: 155, bottom: "-10px", left: "10px" }}
-              size='small'>
+            <FormControl
+              size='small'
+              sx={{ width: '155px' }}
+              className='FormularioCampo'
+            >
               <InputLabel id="">Categoria</InputLabel>
               <Select
                 label="Categoria"
@@ -188,19 +196,18 @@ export default function FormCadastro() {
 
             </FormControl>
 
-          </div>
-          <div>
 
+            {/* 3 campo */}
             <TextField
               required
               id="outlined-number"
               size='small'
-              label="Descricao"
+              label="Descrição"
               type="text"
               value={descricao} onChange={(e) => { cart.capturarDescricao(setDescricao(e.target.value)) }}
             />
 
-<TextField
+            <TextField
               required
               id="outlined-number"
               size='small'
@@ -212,8 +219,11 @@ export default function FormCadastro() {
 
 
             {/*  */}
-            <FormControl sx={{ width: 155, bottom: "-10px" }}
-              size='small'>
+            <FormControl
+              size='small'
+              className='FormularioCampo'
+              sx={{ width: '155px' }}
+            >
               <InputLabel id="">Disponibilidade</InputLabel>
               <Select
                 label="disponibilidade"
@@ -222,34 +232,53 @@ export default function FormCadastro() {
                 <MenuItem value="Sim">Sim</MenuItem>
                 <MenuItem value="Nao">Nao</MenuItem>
               </Select>
-
             </FormControl>
-            {/* Categoria */}
-
-
 
 
 
           </div>
-       
 
-         
+
+
 
 
 
         </Box>
 
       </section>
-  
+
+
+      <Box sx={{ width: '80%', position: "absolute", alignContent: "center", justifyContent: "center", left: "100px", m: "20px" }}>
+        <Collapse in={open}>
+          <Alert
+            action={
+              <IconButton
+                aria-label="close"
+                color="inherit"
+                size="small"
+                onClick={() => {
+                  setOpen(false);
+                }}
+              >
+                <CloseIcon fontSize="inherit" />
+              </IconButton>
+            }
+            sx={{ mb: 2, backgroundColor: "#ff7d7d", color: "white" }}
+          >
+            Salvo o cadrasto!
+          </Alert>
+        </Collapse>
+      </Box>
+
 
       {/* <Tabela carrinhoArray={carrinhoArray}  producto={produto}/> */}
 
-      <div style={{marginTop:"20px", margin:"30px"}}>
-      <Tabela carrinhoArray={carrinhoArray} /> 
-       </div>
+      <div style={{ marginTop: "20px", margin: "30px" }}>
+        <Tabela carrinhoArray={carrinhoArray} />
+      </div>
 
 
-       <div>
+      <div>
         <footer>
           <div className="f-item-con">
             <div className="app-info">
@@ -276,10 +305,10 @@ export default function FormCadastro() {
             </div>
             <div className="g-i-t">
               <div className="footer-title">Sugestoes</div>
-              <form action="/" method="post" class="space-y-2">
-                <input type="text" name="g-name" class="g-inp" id="g-name" placeholder='Nome' />
-                <input type="email" name="g-email" class="g-inp" id="g-email" placeholder='Email' />
-                <textarea type="text" name="g-msg" class="g-inp h-40 resize-none" id="g-msg"
+              <form action="/" method="post" className="space-y-2">
+                <input type="text" name="g-name" className="g-inp" id="g-name" placeholder='Nome' />
+                <input type="email" name="g-email" className="g-inp" id="g-email" placeholder='Email' />
+                <textarea type="text" name="g-msg" className="g-inp h-40 resize-none" id="g-msg"
                   placeholder='Escrever aqui Mensagem...'></textarea>
                 <button type="submit" className='f-btn'>Enviar</button>
               </form>
