@@ -85,10 +85,10 @@ export default function BasicTable() {
             </div>
             <div className="g-i-t">
               <div className="footer-title">Sugestoes</div>
-              <form action="/" method="post" class="space-y-2">
-                <input type="text" name="g-name" class="g-inp" id="g-name" placeholder='Nome' />
-                <input type="email" name="g-email" class="g-inp" id="g-email" placeholder='Email' />
-                <textarea type="text" name="g-msg" class="g-inp h-40 resize-none" id="g-msg"
+              <form action="/" method="post" className="space-y-2">
+                <input type="text" name="g-name" className="g-inp" id="g-name" placeholder='Nome' />
+                <input type="email" name="g-email" className="g-inp" id="g-email" placeholder='Email' />
+                <textarea type="text" name="g-msg" className="g-inp h-40 resize-none" id="g-msg"
                   placeholder='Escrever aqui Mensagem...'></textarea>
                 <button type="submit" className='f-btn'>Enviar</button>
               </form>

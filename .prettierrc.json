@@ -1,0 +1,16 @@
+{
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "proseWrap": "always",
+    "semi": true,
+    "quoteProps": "as-needed",
+    "tabWidth": 5,
+    "trailingComma": "es5",
+    "endOfLine": "auto",
+    "overrides": [{
+        "files": "*.jsx*",
+        "options": {
+            "prettir.printWidth": 50
+        }
+    }]
+}

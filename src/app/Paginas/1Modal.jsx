@@ -35,7 +35,7 @@ export default function NestedModal() {
     <div>
       <div>
       
-      <button id="butao" style={{cursor:"pointer",padding: "6px 20px", border: "none", borderRadius: "12px" ,marginBottom:"20px"}}
+      <button id="butao" style={{cursor:"pointer",padding: "6px 20px", border: "none", borderRadius: "12px" ,marginBottom:"35px"}}
        onClick={handleOpen}>Nossa Historia</button>
       </div>
       <Modal

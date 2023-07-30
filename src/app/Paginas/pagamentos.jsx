@@ -1,5 +1,5 @@
 
-import * as React  from 'react';
+import * as React from 'react';
 import Box from '@mui/material/Box';
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
@@ -8,60 +8,94 @@ import StepContent from '@mui/material/StepContent';
 import Button from '@mui/material/Button';
 
 
+import {Typography} from '@mui/material'
 import Paper from '@mui/material/Paper';
-import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 
-const Ver=()=>{
+const Ver = () => {
 
-  return(
-    <div style={{ display:"flex",gap:"5px", flexDirection:"column"}}>
-<TextField
-required
-id="outlined-number"
-size='small'
-label="Cidade"
-type="text"
+  return (
+    <div style={{ display: "flex", gap: "5px", flexDirection: "column" }}>
+      <TextField
+        required
+        id="outlined-number"
+        size='small'
+        label="Nome completo"
+        type="text"
 
-/>
-<TextField
-required
-id="outlined-number"
-size='small'
-label="Bairro"
-type="text"
+      />
+      <TextField
+        required
+        id="outlined-number"
+        size='small'
+        label="Endereco de email"
+        type="email"
 
-/>
-  <TextField
-  required
-  id="outlined-number"
-  size='small'
-  label="Numero"
-  type="number"
- 
-/>
-<TextField
-required
-id="outlined-number"
-size='small'
-label="Rua"
-type="text"
+      />
+      <TextField
+        required
+        id="outlined-number"
+        size='small'
+        label="Numero"
+        type="number"
 
-/>
-</div>
-)
+      />
+
+      <div style={{textAlign:"start"}}>
+      <h5 style={{fontSize:"10pt"}}>Pais</h5>
+      <h5  style={{fontSize:"10pt"}}>Angola</h5>
+      </div>
+      <TextField
+        required
+        id="outlined-number"
+        size='small'
+        label="Nome da Rua e numero da casa"
+        type="text"
+
+      />
+        <TextField
+        required
+        id="outlined-number"
+        size='small'
+        label="Numero BI/Passaporte da"
+        type="text"
+
+      />
+       <TextField
+        required
+        id="outlined-number"
+        size='small'
+        label="Local de referencia"
+        type="text"
+      />
+      
+
+      
+    </div>
+  )
 }
+
+// const Formas = () => {
+ 
+//   return (
+
+    
+//     <div>
+
+//     </div>
+//   )
+
+// }
 
 const steps = [
   {
-    label: 'Preenche o Formulario da encomenda',
+    label: 'Preenche o Formulario das encomendas',
     description: Ver()
   },
-  {
-    label: 'Formas de Pagamento',
-    description:
-      'Cartao Multicaixa , Referencia..',
-  },
+  // {
+  //   label: 'Formas de Pagamento',
+  //   description: Formas()
+  // },
   {
     label: 'Confirma os teus Dados Antes de Finalizar',
     description: ``,
@@ -69,7 +103,7 @@ const steps = [
 ];
 
 
-export default function VerticalLinearStepper({product}) {
+export default function VerticalLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = () => {
@@ -83,11 +117,11 @@ export default function VerticalLinearStepper({product}) {
   const handleReset = () => {
     setActiveStep(0);
 
-    const carrinhoData = localStorage.removeItem('Carrinho');
-    alert('Removido com sucesso')
+    // const carrinhoData = localStorage.removeItem('Carrinho');
+    // alert('Removido com sucesso')
 
-    return (carrinhoData  )
-    
+    // return (carrinhoData  )
+
 
   };
 
@@ -99,7 +133,7 @@ export default function VerticalLinearStepper({product}) {
             <StepLabel
               optional={
                 index === 2 ? (
-                  <Typography variant="caption">Last step</Typography>
+                  <Typography variant="caption">Ultima etapa</Typography>
                 ) : null
               }
             >
@@ -131,14 +165,14 @@ export default function VerticalLinearStepper({product}) {
       </Stepper>
       {activeStep === steps.length && (
         <Paper square elevation={0} sx={{ p: 3 }}>
-          <Typography>All steps completed - you&apos;re finished</Typography>
+          <Typography>Completa as etapas</Typography>
           <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
             Reniciar
           </Button>
-        
+
         </Paper>
       )}
-      
+
     </Box>
   );
 }

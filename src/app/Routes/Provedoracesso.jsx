@@ -1,6 +1,8 @@
+import React from "react";
 import { useContext,createContext, useState } from "react";
 import { getProdutos } from "../Paginas/Produtos/Produtos";
 import { PegarItem,EditarItem } from "../localarmazenamento/Localstore";
+import  PropTypes  from "prop-types";
 
 export const Contexto = createContext({
     items: [],
@@ -10,21 +12,12 @@ export const Contexto = createContext({
     deleteFromCart: () => {},
     getTotalCost: () => {},
     updateCartItemCount :() => {},
- 
-   
     
 })
-
-
-
-
+// aqui
 export const AcessoContexto = ({children})=>{
     const [cartProducts, setCartProducts] = useState(PegarItem('carrinho') || [] );
 
-   
-
-     
- 
     function getProductQuantity(id) {
         const quantity = cartProducts.find(product => product.id === id)?.quantity;
             
@@ -38,15 +31,6 @@ export const AcessoContexto = ({children})=>{
     const updateCartItemCount = (newAmount, id) => {
         setCartProducts((prev) => ({ ...prev, [id]: newAmount }));
       };
-
-
-
-    // / function add (product){
-
-    //     EditarItem("Carrinho", [...cartProducts,product])
-        
-    //  }
-     
 
 
     function addOneToCart(id,product) {
@@ -154,10 +138,14 @@ export const AcessoContexto = ({children})=>{
     
   return( 
      <Contexto.Provider value={contextValue}>
-        {children}
+      {children}
     </Contexto.Provider>
   )
+  
 }
+AcessoContexto.prototype = {
+    children: PropTypes.node
+  }
 
 
 export const UserCarrinho=()=>{

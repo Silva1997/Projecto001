@@ -17,35 +17,33 @@ import imagem from './icon.png'
 import Modal from '../Paginas/Produtos/ModalItemProdutos'
 import Localizar from '../Paginas/Mercadoria/LocalizarProdutos'
 import Etapas from '../Paginas/Mercadoria/EtapasProduto'
+import Perfil from '../Paginas/Cadrastos/Perfil';
 import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
 export default function Rotaspaginas() {
   return (
     <>
       <AcessoContexto>
-     
         <BrowserRouter >
           <Routes>
             <Route element={<JanelaMenuPrincipal />}>
               <Route exact path="/*" element={<App />} />
               <Route exact path="/Produtos" element={<Produtos />} />
-              <Route exact path='/CadrastarProdutos' element={<CadrastarProdutos />} />
+              <Route exact path='/CadrastarProdutos/:id' element={<CadrastarProdutos />} />
               <Route exact path='/Localizar' element={<Localizar />} />
               <Route exact path='/Etapas' element={<Etapas />} />
+              <Route exact path='/Perfil' element={<Perfil />} />
+              <Route exact path='*' element={console.log("erro")} />
             </Route>
           </Routes>
         </BrowserRouter>
-     
       </AcessoContexto>
     </>
   )
-
 }
 const JanelaMenuPrincipal = () => {
   const cart = UserCarrinho();
-  // const [count, setCount] = React.useState(1);
   const itemCount = cart.items.reduce((sum, product) => sum + product.quantity, 0)
  
-
   return (
     <>
       <div className='menuprincipal' >
@@ -53,13 +51,13 @@ const JanelaMenuPrincipal = () => {
         {[false].map((expand) => (
           <Navbar key={expand} bg="navbar-custom" expand={expand} className={"navbar fixed-top"}>
             <Container fluid id="tel">
-              <Navbar.Brand as={Link} to="/" style={{ color: "white"}}>
-                <img src={imagem} alt='icon' style={{width:"5vh" , color:"white" , background:"white"}} />
-              {/* <span id='textP'>GestConfeiteria</span>   */}
-                <Badge className='iconCarrinho' color="error" badgeContent={itemCount} style={{ position: 'fixed', top: '27px', justifyContent: "center" }}>
-                  <Modal itemCount={itemCount} total={cart.getTotalCost().toFixed(2)} />
+              <Navbar.Brand as={Link} to="/" style={{ color: "white" }}>
+                <img src={imagem} alt='icon' style={{ width: "6vh", color: "white", background: "white" }} />
+                <Badge  className='iconCarrinho' color="error" badgeContent={itemCount} style={{ position: 'fixed', top: '27px', justifyContent: "center" }}>
+                  <Modal  itemCount={itemCount} total={cart.getTotalCost().toFixed(2)} />
+                
                 </Badge>
-                <p  style={{position: 'fixed', top: '27px', justifyContent: "center", fontSize:"12pt" ,left:"1040px" ,backgroundColor:"rgba(231, 230, 230, 0.5)" , borderRadius:"10px 10px" , padding:"2px 7px"}}><AddLocationAltIcon style={{color:"##2d4bf0",}}/>Angola,Lobito</p>
+                <p style={{ position: 'fixed', top: '27px', justifyContent: "center", fontSize: "12pt", left: "1040px", backgroundColor: "rgba(231, 230, 230, 0.5)", borderRadius: "10px 10px", padding: "2px 7px" }}><AddLocationAltIcon style={{ color: "##2d4bf0", }} />Angola,Lobito</p>
               </Navbar.Brand>
               <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
               <Navbar.Offcanvas
@@ -70,7 +68,7 @@ const JanelaMenuPrincipal = () => {
               >
                 <Offcanvas.Header closeButton>
                   <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Confeiteria: Menu
+                    Confeiteria: Menu
                   </Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body >
@@ -87,12 +85,12 @@ const JanelaMenuPrincipal = () => {
                       id={`offcanvasNavbarDropdown-expand-${expand}`}
                     >
                       {/* <NavDropdown.Item href="#action3"> <Nav.Link as={Link} to={"/Produtostock"}>Bolos</Nav.Link></NavDropdown.Item> */}
-                      <NavDropdown.Item as={Link} to={"/CadrastarProdutos"}>
+                      <NavDropdown.Item as={Link} to={"/CadrastarProdutos/:id"}>
                         Cadrastar Produtos
                       </NavDropdown.Item>
                       <NavDropdown.Divider />
-                      <NavDropdown.Item href="#action5">
-                       Cadrastar Cliente
+                      <NavDropdown.Item as={Link} to="/Perfil">
+                        Cadrastar Cliente
                       </NavDropdown.Item>
                     </NavDropdown>
                   </Nav>
@@ -112,27 +110,7 @@ const JanelaMenuPrincipal = () => {
         ))}
 
       </div>
-      {/* {
-                  itemCount > 0 ?
-                <>     
-                <p>Cartao</p>    
-                    { cart.items.map( (currentProduct) => (
-
-                    <h1>{currentProduct.id}</h1>
-                  
-                        
-                  ))}
-                  <p>Total : {cart.getTotalCost().toFixed(2)}</p>
-
-                  </>
-
-                  :
-                  <p>not</p>
-                } */}
       <Outlet />
-
-
-
     </>
   )
 }

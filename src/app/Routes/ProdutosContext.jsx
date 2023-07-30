@@ -1,6 +1,7 @@
 
 import React, { useState,createContext  } from 'react';
- 
+import  PropTypes  from "prop-types";
+
 export const ProdutosContext  = createContext({
   getImgem:()=>{},
     capturarProduto: ()=>{} ,
@@ -8,11 +9,7 @@ export const ProdutosContext  = createContext({
     capturarValor: ()=>{} ,
     capturarDisponibilidade: ()=>{} ,
 });
-
-
-
-
-export  const ProdutosProvider = ({ children }) => {
+export  const ProdutosProvider = ({children}) => {
   
     const [produto, setProduto] = useState('');
     const [descricao, setDescricao] = useState('');
@@ -62,7 +59,10 @@ export  const ProdutosProvider = ({ children }) => {
     
     return (
       <ProdutosContext.Provider value={contextValue}>
-        { children }
+    {children}
       </ProdutosContext.Provider>
     )
+  }
+  ProdutosProvider.prototype = {
+    children: PropTypes.node
   }

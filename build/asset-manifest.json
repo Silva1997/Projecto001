@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.abcaa9db.css",
-    "main.js": "/static/js/main.6afeeddf.js",
+    "main.css": "/static/css/main.6b004f9d.css",
+    "main.js": "/static/js/main.d0f3c4be.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
     "static/media/hero-background.png": "/static/media/hero-background.b088b254d436ddc9904b.png",
     "static/media/ilcao_bx__13_.jpg": "/static/media/ilcao_bx__13_.d641fc75039f2a495c7b.jpg",
@@ -15,15 +15,19 @@
     "static/media/pastel-de-belem-02-1200x901.jpg": "/static/media/pastel-de-belem-02-1200x901.a5fccb4771470e0b41b6.jpg",
     "static/media/icon.png": "/static/media/icon.edff4c111a5cb30fafdd.png",
     "static/media/BoloC.jpg": "/static/media/BoloC.ef38acd22442a8ab2464.jpg",
+    "static/media/boxentrega.png": "/static/media/boxentrega.26cbf951122585ec6f24.png",
+    "static/media/boxlogistica.png": "/static/media/boxlogistica.a99da7e465283e55e5b7.png",
     "static/media/icon1.png": "/static/media/icon1.73ffac44beb3e4f839db.png",
+    "static/media/boxs.png": "/static/media/boxs.a8c4e7981163f7aab492.png",
+    "static/media/W.svg": "/static/media/W.cb202816a231be147782580fc1c462d5.svg",
     "static/media/shopping-bag.svg": "/static/media/shopping-bag.c3758b46f6cac33d5b8f1c8ddd4a0c86.svg",
     "index.html": "/index.html",
-    "main.abcaa9db.css.map": "/static/css/main.abcaa9db.css.map",
-    "main.6afeeddf.js.map": "/static/js/main.6afeeddf.js.map",
+    "main.6b004f9d.css.map": "/static/css/main.6b004f9d.css.map",
+    "main.d0f3c4be.js.map": "/static/js/main.d0f3c4be.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.abcaa9db.css",
-    "static/js/main.6afeeddf.js"
+    "static/css/main.6b004f9d.css",
+    "static/js/main.d0f3c4be.js"
   ]
 }

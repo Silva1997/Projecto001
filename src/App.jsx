@@ -5,6 +5,8 @@ import Icon from '../../Cliente/src/app/Routes/icon.png' // imagem
 import CakeIcon from '../src/app/Paginas/Publicidade/Img/icon.png' // imagem
 import CakeIco from '../src/app/Paginas/Publicidade/Img/icon1.png' // imagem
 import { Row, Col } from 'react-bootstrap'
+import {Link} from 'react-router-dom' // importacao do routeamento
+import whatsapp from './W.svg'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'; // iconCarrinho
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined'; // Icon Local
 import WatchLaterIcon from '@mui/icons-material/WatchLater';
@@ -24,7 +26,7 @@ function App() {
           </div>
           <div style={{ display: "flex", flexDirection: "row", gap: "10px", }}>
             <Inventory2Icon className='f_social_icon'  /><p id='frasesPrincipal'>Embalagem mantém o <br/>bolo intacto</p>
-            <WatchLaterIcon  id="especial" className='f_social_icon' /><p id='frasesPrincipal'>O Bolo chega quentinho até <br/>você</p>
+            <WatchLaterIcon  id="especial" className='f_social_icon' /><p id='frasesPrincipal'>Produto 100% Angolano</p>
           </div>
         </div>
         <div className='grid2' >
@@ -45,22 +47,23 @@ function App() {
         <Row xs={1} md={1} className="g-3">
           <Col >
             <div className='V'>
-                <div id="Cartao001" style={{ display: "inline-block", background: "white", border: "2px", width: "35vh", borderRadius: "5px 50px", margin: "12px" }}>
+                <div id="Cartao002" style={{background: "white", border: "2px", width: "35vh", borderRadius: "5px 40px", margin: "12px" }}>
                   <img src={CakeIco} alt="#" className='img2' /><br />
-                  <button id='but' style={{padding: "6px 20px", border: "none", borderRadius: "12px", position: "relative", top: "-80px"}}>
+                  <button className='Btn001' style={{padding: "6px 20px", border: "none", borderRadius: "12px",}}>
                     Saber Mais</button>
-                  <h2 className='frase' style={{ background: "white", position: "relative", top: "-150px" }} ><span className='Sp' style={{ color: "red" }}>
+                  <h2 className='frase'  ><span className='Sp' style={{ color: "red" }}>
                     F</span>ormações</h2>
-                </div>
-                <div id="Cartao001" style={{ display: "inline-block", border: "2px", background: "white", width: "35vh", borderRadius: "5px 50px", margin: "12px" }}>
+                </div>  
+
+                <div id="Cartao001" style={{  border: "2px", background: "white", width: "35vh", borderRadius: "5px 40px", margin: "12px" }}>
                   <img src={CakeIcon} alt="#" className='img1' /><br />
-                  <button id='but' style={{ padding: "6px 20px", border: "none", borderRadius: "12px", position: "relative", top: "-80px"}}>Saber Mais</button>
-                  <h2 className='frase' style={{ background: "white", position: "relative", top: "-150px" }} ><span className='Sp' style={{ color: "red" }}>C</span>onfeiteria</h2>
+                  <button className='Btn001'  style={{ padding: "6px 20px", border: "none", borderRadius: "12px",}}>Saber Mais</button>
+                  <h2 className='frase' ><span className='Sp' style={{ color: "red" }}>C</span>onfeiteria</h2>
                 </div>
-                <div id="Cartao001" style={{ display: "inline-block", border: "2px", background: "white", width: "35vh", borderRadius: "5px 50px", margin: "12px" }}>
+                <div id="Cartao001" style={{  border: "2px", background: "white", width: "35vh", borderRadius: "5px 40px", margin: "12px" }}>
                   <img src={CakeIcon} alt="#" className='img1' /><br />
-                  <button id='but' style={{ padding: "6px 20px", border: "none", borderRadius: "12px", position: "relative", top: "-80px" }}>Saber Mais</button>
-                  <h2 className='frase' style={{ background: "white", position: "relative", top: "-150px" }} ><span className='Sp' style={{ color: "red" }}>C</span>onfeiteria</h2>
+                  <button  className='Btn001' style={{ padding: "6px 20px", border: "none", borderRadius: "12px"}}>Saber Mais</button>
+                  <h2 className='frase'><span className='Sp' style={{ color: "red" }}>C</span>onfeiteria</h2>
                 </div>
             </div>
           </Col>
@@ -99,7 +102,7 @@ function App() {
       </div>
 
       <div>
-        <footer>
+        <footer style={{backgroundColor:"#0004"}}>
           <div className="f-item-con">
             <div className="app-info">
               <span className='app-name'>
@@ -136,6 +139,13 @@ function App() {
           </div>
           <div className='cr-con'>Copyright &copy; 2023 | Made by Angola</div>
         </footer>
+      </div>
+
+      <div className='Whatsapp'>
+        <Link href="http://wa.me/+244958045687" to="http://wa.me/+244958045687" target='_blank'>
+        <img src={whatsapp} className='whatsappImagem' alt="whatsapp" />
+        </Link>
+     
       </div>
     </>
   );
