@@ -1,0 +1,186 @@
+@media only screen and (min-device-width: 1024px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: 0;
+        outline: 0;
+    }
+    section:hover {
+        cursor: pointer;
+        background-color: #fbfbfd;
+    }
+    .buttnFormulario {
+        padding: .25rem 1rem;
+        background-color: #2d4bf0;
+        border-radius: .25rem;
+        font-size: 16px;
+        color: white;
+        font-weight: 500;
+    }
+    .Corazul {
+        color: #2d4bf0
+    }
+    .Corazul1 {
+        color: white;
+        border-left: 4px solid #111010;
+    }
+    .Rodape {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        justify-content: space-between;
+        position: relative;
+        bottom: -120px;
+        background-color: #ffffff;
+        padding: 70px;
+        margin-left: 190px;
+        margin-right: 190px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
+    }
+    #A1 {
+        margin-top: 70px;
+        color: white;
+        border-left: 4px solid #2d4bf0;
+        padding-left: 1.5rem;
+        border-left-width: 4px 2px;
+        font-size: 1.875rem;
+        /* line-height: 2.25rem; */
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .Formulario {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .inputEntrada {
+        padding: .25rem .5rem;
+        font-size: 16px;
+    }
+    #A2 {
+        margin-top: 70px;
+        color: white;
+        border-left: 4px solid #2d4bf0;
+        border-left-width: 4px 2px;
+        padding-left: 1.5rem;
+        font-size: 0.875rem;
+        text-align: start;
+        font-weight: 100;
+        /* line-height: 2.25rem;
+        font-weight: 700; */
+    }
+    li:hover {
+        color: #232127;
+        cursor: pointer;
+    }
+    .footerFim {
+        background-color: #2d4bf0;
+        color: #fbfbfd;
+    }
+    #A3 {
+        margin-top: 70px;
+        color: white;
+        border-left: 4px solid #2d4bf0;
+        border-left-width: 4px 2px;
+        padding-left: 1.5rem;
+        font-size: 0.875rem;
+    }
+    .Rodagride {
+        display: flex;
+        width: 100%;
+        padding: 70px 50px;
+        flex-direction: row;
+        background-color: #111010;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .buttnFormulario {
+        padding: .25rem 1rem;
+        background-color: #2d4bf0;
+        border-radius: .25rem;
+        font-size: 16px;
+        color: white;
+        font-weight: 500;
+    }
+    .Corazul {
+        color: #2d4bf0
+    }
+    .Corazul1 {
+        color: white;
+        border-left: 4px solid #111010;
+    }
+    .Rodape {
+        display: none;
+        /* display: flex;
+        flex-direction: row;
+        justify-items: center;
+        justify-content: space-between;
+        position: relative;
+        bottom: -120px;
+        background-color: #ffffff;
+        padding: 70px;
+        margin-left: 190px;
+        margin-right: 190px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px; */
+    }
+    #A1 {
+        margin-top: 70px;
+        color: white;
+        border-left: 4px solid #2d4bf0;
+        padding-left: 1.5rem;
+        border-left-width: 4px 2px;
+        font-size: 1.875rem;
+        /* line-height: 2.25rem; */
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .Formulario {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .inputEntrada {
+        padding: .25rem .5rem;
+        font-size: 16px;
+    }
+    #A2 {
+        margin-top: 70px;
+        color: white;
+        border-left: 4px solid #2d4bf0;
+        border-left-width: 4px 2px;
+        padding-left: 1.5rem;
+        font-size: 0.875rem;
+        text-align: start;
+        font-weight: 100;
+        /* line-height: 2.25rem;
+        font-weight: 700; */
+    }
+    li:hover {
+        color: #232127;
+        cursor: pointer;
+    }
+    .footerFim {
+        background-color: #2d4bf0;
+        color: #fbfbfd;
+        text-align: center;
+    }
+    #A3 {
+        margin-top: 70px;
+        color: white;
+        border-left: 4px solid #2d4bf0;
+        border-left-width: 4px 2px;
+        padding-left: 1.5rem;
+        font-size: 0.875rem;
+    }
+    .Rodagride {
+        display: flex;
+        width: 100%;
+        padding: 70px 50px;
+        flex-direction: column;
+        background-color: #111010;
+        justify-content: space-between;
+    }
+}

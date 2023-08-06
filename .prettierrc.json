@@ -4,7 +4,7 @@
     "proseWrap": "always",
     "semi": true,
     "quoteProps": "as-needed",
-    "tabWidth": 5,
+    "tabWidth": 10,
     "trailingComma": "es5",
     "endOfLine": "auto",
     "overrides": [{

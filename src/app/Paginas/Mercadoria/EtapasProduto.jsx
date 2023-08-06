@@ -1,12 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-// import Stepper from '@mui/material/Stepper';
-// import Step from '@mui/material/Step';
-// import StepLabel from '@mui/material/StepLabel';
 import { Link } from 'react-router-dom';
-// import { Button} from '@mui/material'
-
-
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 import Stack from '@mui/material/Stack';
@@ -14,11 +8,8 @@ import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import Check from '@mui/icons-material/Check';
-// import SettingsIcon from '@mui/icons-material/Settings';
-// import GroupAddIcon from '@mui/icons-material/GroupAdd';
-// import VideoLabelIcon from '@mui/icons-material/VideoLabel';
 import StepConnector, { stepConnectorClasses } from '@mui/material/StepConnector';
-
+import Footer from '../Footer/Footer'
 // 
 import boxImagem from '../Cadrastos/boxs.png';
 import boxImagem1 from '../Cadrastos/boxlogistica.png';
@@ -174,60 +165,11 @@ export default function TabelaDeProdutosEncomendas() {
           </Step>
         ))}
       </Stepper>
-
-
       <button style={{background:"" , width:"30vh" , padding:"5px 5px" , borderRadius:"3px 4px"}}>Prazo de entrega 4h</button>
     </Stack>
-  
-
     </Box>
 
-
-
-
-
-
-
-
-    <div style={{marginTop:"200px"}}>
-        <footer>
-          <div className="f-item-con">
-            <div className="app-info">
-              <span className='app-name'>
-                <span className='app-initial'>C</span>onfeiteria
-              </span>
-              {/* <p>We provides you with <strong>Well organised</strong> and <strong>SEO friendly</strong> Website Designs.</p> */}
-            </div>
-            <div className="useful-links">
-              <div className="footer-title">Nossos Links</div>
-              <ul>
-                <li>Cursos</li>
-                <li>Sobre Nos</li>
-
-              </ul>
-            </div>
-            <div className="help-sec">
-              <div className="footer-title">Ajuda</div>
-              <ul>
-                <li>Ajuda me</li>
-                <li>Feedback</li>
-                <li>Reportar erros / Bug</li>
-              </ul>
-            </div>
-            <div className="g-i-t">
-              <div className="footer-title">Sugestoes</div>
-              <form action="/" method="post" className="space-y-2">
-                <input type="text" name="g-name" className="g-inp" id="g-name" placeholder='Nome' />
-                <input type="email" name="g-email" className="g-inp" id="g-email" placeholder='Email' />
-                <textarea type="text" name="g-msg" className="g-inp h-40 resize-none" id="g-msg"
-                  placeholder='Escrever aqui Mensagem...'></textarea>
-                <button type="submit" className='f-btn'>Enviar</button>
-              </form>
-            </div>
-          </div>
-          <div className='cr-con'>Copyright &copy; 2023 | Made by Angola</div>
-        </footer>
-      </div>
+<Footer />
     </>
   );
 }

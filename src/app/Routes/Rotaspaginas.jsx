@@ -15,7 +15,7 @@ import Badge from '@mui/material/Badge';
 import CadrastarProdutos from '../Paginas/Cadrastos/CadrastarProdutos'
 import imagem from './icon.png'
 import Modal from '../Paginas/Produtos/ModalItemProdutos'
-import Localizar from '../Paginas/Mercadoria/LocalizarProdutos'
+import Localizar from '../Paginas/Publicidade/Effeito'
 import Etapas from '../Paginas/Mercadoria/EtapasProduto'
 import Perfil from '../Paginas/Cadrastos/Perfil';
 import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';

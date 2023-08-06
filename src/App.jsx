@@ -1,22 +1,26 @@
 import React from 'react';
 import './app/Paginas/Estilos/Estilos.css' // css global
-import Modal from './app/Paginas/1Modal' // Modal de apresentacao 
-import Icon from '../../Cliente/src/app/Routes/icon.png' // imagem
+// import Modal from './app/Paginas/1Modal' // Modal de apresentacao 
+// import Icon from '../../Cliente/src/app/Routes/icon.png' // imagem
 import CakeIcon from '../src/app/Paginas/Publicidade/Img/icon.png' // imagem
 import CakeIco from '../src/app/Paginas/Publicidade/Img/icon1.png' // imagem
-import { Row, Col } from 'react-bootstrap'
-import {Link} from 'react-router-dom' // importacao do routeamento
+import { Link } from 'react-router-dom' // importacao do routeamento
 import whatsapp from './W.svg'
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'; // iconCarrinho
-import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined'; // Icon Local
-import WatchLaterIcon from '@mui/icons-material/WatchLater';
-import Inventory2Icon from '@mui/icons-material/Inventory2';
+// import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'; // iconCarrinho
+// import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined'; // Icon Local
+// import WatchLaterIcon from '@mui/icons-material/WatchLater';
+// import Inventory2Icon from '@mui/icons-material/Inventory2';
 import Sliderprodutos from "./app/Paginas/Publicidade/SliderProdutos" // Slider ou  Carousell
-
+import Footer from './app/Paginas/Footer/Footer'
+import Teste2 from './app/Paginas/Publicidade/Effeito'
 function App() {
   return (
     <>
-      <div className='Fundocima'   >
+
+    <div>
+      <Teste2/>
+    </div>
+      {/* <div className='Fundocima'   >
         <div className='grid1' >
           <h5 id='h5p' >Encontre o  Bolo <br /> perfeito para qualquer <br />hora do dia</h5>
           <p id='frasesPrincipal' >Com o Gestconf você recebe sua encomenda onde estiver, a qualquer hora</p>
@@ -25,57 +29,60 @@ function App() {
             <LocalShippingOutlinedIcon className='f_social_icon' /><p id='frasesPrincipal' >Entrega rápida e rastreada</p>
           </div>
           <div style={{ display: "flex", flexDirection: "row", gap: "10px", }}>
-            <Inventory2Icon className='f_social_icon'  /><p id='frasesPrincipal'>Embalagem mantém o <br/>bolo intacto</p>
-            <WatchLaterIcon  id="especial" className='f_social_icon' /><p id='frasesPrincipal'>Produto 100% Angolano</p>
+            <Inventory2Icon className='f_social_icon' /><p id='frasesPrincipal'>Embalagem mantém o <br />bolo intacto</p>
+            <WatchLaterIcon id="especial" className='f_social_icon' /><p id='frasesPrincipal'>Feito na hora</p>
           </div>
         </div>
         <div className='grid2' >
           <img src={Icon} alt="Foto2" id='Foto3' style={{ padding: "2px 5px", borderRadius: "2px 30px" }} />
         </div>
 
-        {/* Termina aqui o 1* campo */}
-      </div >
+      
+      </div >  */}
+
 
       <h2 className='incio'>Bem <span className='Sp'>-</span>Vindo</h2>
 
-      <div className='menu1'>
+      {/* <div className='menu1'>
         <Modal />
-      </div>
-
-
-      <div>
-        <Row xs={1} md={1} className="g-3">
-          <Col >
-            <div className='V'>
-                <div id="Cartao002" style={{background: "white", border: "2px", width: "35vh", borderRadius: "5px 40px", margin: "12px" }}>
-                  <img src={CakeIco} alt="#" className='img2' /><br />
-                  <button className='Btn001' style={{padding: "6px 20px", border: "none", borderRadius: "12px",}}>
-                    Saber Mais</button>
-                  <h2 className='frase'  ><span className='Sp' style={{ color: "red" }}>
+      </div> */}
+        <div className='Centro'>
+                <div id='Divisor' > 
+                 <img src={CakeIco} alt="#" className='img2'  /><br />
+                 <div className='DivCard'>
+                 <button className='id' style={{padding: "6px 20px", border: "none", borderRadius: "12px",}}>
+                  Saber Mais</button>
+                  <h2 className='frase' ><span className='Sp' style={{ color: "red" }}>
                     F</span>ormações</h2>
-                </div>  
-
-                <div id="Cartao001" style={{  border: "2px", background: "white", width: "35vh", borderRadius: "5px 40px", margin: "12px" }}>
-                  <img src={CakeIcon} alt="#" className='img1' /><br />
-                  <button className='Btn001'  style={{ padding: "6px 20px", border: "none", borderRadius: "12px",}}>Saber Mais</button>
-                  <h2 className='frase' ><span className='Sp' style={{ color: "red" }}>C</span>onfeiteria</h2>
-                </div>
-                <div id="Cartao001" style={{  border: "2px", background: "white", width: "35vh", borderRadius: "5px 40px", margin: "12px" }}>
-                  <img src={CakeIcon} alt="#" className='img1' /><br />
-                  <button  className='Btn001' style={{ padding: "6px 20px", border: "none", borderRadius: "12px"}}>Saber Mais</button>
-                  <h2 className='frase'><span className='Sp' style={{ color: "red" }}>C</span>onfeiteria</h2>
-                </div>
-            </div>
-          </Col>
-        </Row>
-      </div>
+                 </div>
+                 </div>   
+                <div id='Divisor' >
+                 <img src={CakeIcon} alt="#" className='img3'  /><br />
+                 <div className='DivCard'>
+                 <button className='#' style={{padding: "6px 20px", border: "none", borderRadius: "12px",}}>
+                  Saber Mais</button>
+                  <h2 className='frase' > <span className='Sp' style={{ color: "red" }}>C</span>onfeiteria</h2>
+                  </div>
+                 </div>   
+                 <div id='Divisor' >
+                 <img src={CakeIcon} alt="#" className='img3'  /><br />
+                 <div className='DivCard'>
+                 <button className='Btn001' style={{padding: "6px 20px", border: "none", borderRadius: "12px",}}>
+                  Saber Mais</button>
+                  <h2 className='frase' ><span className='Sp' style={{ color: "red" }}>
+                    P</span>astelaria</h2>
+                 </div>
+                 </div>                      
+        </div>
+       
+   
+              
 
       <div className="Descricaodanossahistoria">
         <div className="P1">
           <div className='PP1'>
 
           </div>
-
         </div>
 
         <div className="P2">
@@ -100,55 +107,16 @@ function App() {
       <div>
         <Sliderprodutos />
       </div>
-
-      <div>
-        <footer style={{backgroundColor:"#0004"}}>
-          <div className="f-item-con">
-            <div className="app-info">
-              <span className='app-name'>
-                <span className='app-initial'>C</span>onfeiteria
-              </span>
-              {/* <p>We provides you with <strong>Well organised</strong> and <strong>SEO friendly</strong> Website Designs.</p> */}
-            </div>
-            <div className="useful-links">
-              <div className="footer-title">Nossos Links</div>
-              <ul>
-                <li>Cursos</li>
-                <li>Sobre Nos</li>
-
-              </ul>
-            </div>
-            <div className="help-sec">
-              <div className="footer-title">Ajuda</div>
-              <ul>
-                <li>Ajuda me</li>
-                <li>Feedback</li>
-                <li>Reportar erros / Bug</li>
-              </ul>
-            </div>
-            <div className="g-i-t">
-              <div className="footer-title">Sugestoes</div>
-              <form action="/" method="post"className="space-y-2">
-                <input type="text" name="g-name"className="g-inp" id="g-name" placeholder='Nome' />
-                <input type="email" name="g-email" className="g-inp" id="g-email" placeholder='Email' />
-                <textarea type="text" name="g-msg" className="g-inp h-40 resize-none" id="g-msg"
-                  placeholder='Escrever aqui Mensagem...'></textarea>
-                <button type="submit" className='f-btn'>Enviar</button>
-              </form>
-            </div>
-          </div>
-          <div className='cr-con'>Copyright &copy; 2023 | Made by Angola</div>
-        </footer>
-      </div>
-
       <div className='Whatsapp'>
         <Link href="http://wa.me/+244958045687" to="http://wa.me/+244958045687" target='_blank'>
-        <img src={whatsapp} className='whatsappImagem' alt="whatsapp" />
+          <img src={whatsapp} className='whatsappImagem' alt="whatsapp" />
         </Link>
-     
+      </div>
+      {/*  */}
+      <div>
+        <Footer />
       </div>
     </>
   );
 }
-
 export default App;

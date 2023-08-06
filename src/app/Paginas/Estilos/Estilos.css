@@ -7,10 +7,49 @@
             outline: 0;
         }
         /*  */
+        .img2 {
+            position: relative;
+            max-width: 100%;
+            margin-top: 50px;
+            width: 40vh;
+            left: 35px;
+            bottom: -50px;
+        }
+        .img3 {
+            position: relative;
+            max-width: 100%;
+            margin-top: 50px;
+            width: 30vh;
+            left: 45px;
+            bottom: -90px;
+        }
+        .Centro {
+            margin-top: -45px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            justify-items: center;
+            gap: 30px;
+            padding: 2.5rem;
+        }
+        #Divisor {
+            margin-top: -200px;
+        }
+        .DivCard {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            padding-bottom: 7rem;
+            background-color: #fff;
+            border: 2px;
+            width: 40vh;
+            height: 45vh;
+            border-radius: 5px 40px;
+        }
+        /*  */
         .DivTabela {
             margin: 100px;
             overflow-x: auto;
-            /* background-color: #2d4bf0; */
         }
         table {
             border-collapse: collapse;
@@ -94,32 +133,11 @@
         .CampoCadrastos {
             display: flex;
             flex-direction: row;
-            gap: 12px;
+            gap: 15rem;
         }
         .FormularioCampo {
             top: 8px;
             left: 0px;
-        }
-        .V {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-            margin-bottom: 30px;
-        }
-        #Cartao001 {
-            text-align: center;
-        }
-        #Cartao002 {
-            text-align: center;
-        }
-        .frase {
-            text-align: center;
-            position: relative;
-            top: -180px;
-        }
-        .Btn001 {
-            position: relative;
-            top: -100px;
         }
         #especial {
             margin-left: 20px;
@@ -134,103 +152,6 @@
         }
         #butao1:hover {
             background: red;
-        }
-         :root {
-            --theme-col: #2d4bf0;
-        }
-        .space-y-2> :not([hidden])~ :not([hidden]) {
-            --tw-space-y-reverse: 0;
-            margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
-            margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
-        }
-        footer {
-            background-color: #111010;
-        }
-        .f-item-con {
-            padding: 1.5rem 4rem;
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            grid-gap: 2rem;
-        }
-        footer .app-name {
-            color: white;
-            border-left: 4px solid var(--theme-col);
-            padding-left: 1.5rem;
-            font-size: 1.875rem;
-            line-height: 2.25rem;
-            font-weight: 700;
-        }
-        .app-name .app-initial {
-            color: var(--theme-col);
-        }
-        footer .app-info p {
-            color: white;
-            padding-left: 1.65rem;
-        }
-        footer .footer-title {
-            font-size: 1.25rem;
-            line-height: 1.75rem;
-            color: white;
-            border-left: 4px solid var(--theme-col);
-            padding-left: 1.5rem;
-            /* height: fit-content; */
-            height: auto;
-        }
-        footer ul {
-            padding-left: 1.75rem;
-            color: white;
-            font-size: 0.875rem/* 14px */
-            ;
-            line-height: 1.25rem;
-            margin-top: .5rem;
-        }
-        footer ul li {
-            margin: .25rem 0;
-            cursor: pointer;
-            color: #d4d4d4;
-            /* width: fit-content; */
-            width: auto
-        }
-        footer ul li:hover {
-            color: white;
-        }
-        footer .help-sec {
-            grid-column-start: 2;
-        }
-        footer .cr-con {
-            background-color: #232127;
-            color: white;
-            padding: 1rem 4rem;
-            text-align: center;
-        }
-        .g-i-t {
-            display: grid;
-            grid-column-start: 3;
-            grid-row-start: 1;
-            grid-row-end: 3;
-        }
-        .g-i-t form {
-            display: flex;
-            flex-direction: column;
-            margin-top: 1rem;
-            --tw-space-y-reverse: 0;
-            margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
-            margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
-        }
-        form .g-inp {
-            padding: .25rem .5rem;
-            font-size: 16px;
-        }
-        .g-inp textarea {
-            height: 150px;
-        }
-        .f-btn {
-            padding: .25rem 1rem;
-            background-color: var(--theme-col);
-            border-radius: .25rem;
-            font-size: 16px;
-            color: white;
-            font-weight: 500;
         }
         /* circular */
         .imagemCircular {
@@ -273,23 +194,6 @@
             object-fit: cover;
             height: 35vh;
         }
-        /* efeitos ovelay */
-        .Cartao001 {
-            transition: 0.2s;
-            background-color: #f8f8f8;
-            opacity: 0;
-        }
-        .Cartao002 {
-            transition: 0.2s;
-            background-color: #f8f8f8;
-            opacity: 0;
-        }
-        #Cartao002:hover {
-            opacity: 0.3;
-        }
-        #Cartao001:hover {
-            opacity: 0.3;
-        }
         .iconCarrinho {
             display: flex;
             top: -10px;
@@ -330,27 +234,9 @@
         #Pfoto {
             height: 89vh;
         }
-        .img1 {
-            border-radius: 500px;
-            /* background-color: black; */
-            width: 30vh;
-            position: relative;
-            top: -100px;
-            left: 10px;
-            display: inline-block;
-        }
         .img2 {
             border-radius: 500px;
             width: 30vh;
-            left: 0px;
-            position: relative;
-            top: -140px;
-            display: inline-block;
-        }
-        .frase {
-            border-radius: 15px 50px;
-            font-size: 18pt;
-            text-align: center;
         }
         /* parte de cima para grid 2fr para a divisao  */
         html,
@@ -417,9 +303,9 @@
         .PL {
             margin: 10px;
         }
-        .frase2 {
+        /* .frase2 {
             margin: 20px;
-        }
+        } */
         .incio {
             font-family: 'Roboto', sans-serif;
             font-size: 2.5rem;
@@ -500,15 +386,15 @@
         }
         /*  footer*/
         .f_social_icon {
-            width: 46px;
-            height: 46px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            font-size: 14px;
-            line-height: 45px;
-            color: #f38282;
+            position: relative;
+            top: 6.5px;
+            /* color: #f38282; */
+            color: #fc6969;
             display: inline-block;
             background: #fdfdff;
-            text-align: center;
             -webkit-transition: all 0.2s linear;
             -o-transition: all 0.2s linear;
             transition: all 0.2s linear;
@@ -516,394 +402,49 @@
     }
     /*  */
     
-    @media only screen and (min-width: 480px) and (max-width: 767px) {
-        * {
-            margin: 0;
-            width: auto;
-            padding: 0;
-        }
-        h2 {
-            text-align: center;
-        }
-        /* butoes */
-        .menu1 {
-            display: flex;
-            justify-content: center;
-        }
-        #butao1 {
-            margin-bottom: 35px;
-            cursor: pointer;
-            border-radius: 5px;
-            text-align: center;
-            padding: 5px 15px;
-            border-color: red;
-        }
-        #butao1:hover {
-            background: red;
-        }
-        button {
-            transition-duration: 0.2s;
-        }
-        button:hover {
-            background-color: rgba(255, 99, 71, 0.5);
-            color: white;
-        }
-        /*  */
-        /* cartao  */
-        #Cartao001 {
-            width: 50vh;
-        }
-        .img1 {
-            position: relative;
-            margin-left: -55px;
-        }
-        .img2 {
-            position: relative;
-            margin-left: -55px;
-        }
-        #but {
-            position: relative;
-            margin-left: -30px;
-        }
-        /*  */
-        .navbar.fixed-top {
-            background: transparent;
-            background-color: rgba(36, 35, 35, 0.5);
-            position: fixed;
-            max-width: auto;
-        }
-        .Fundocima {
-            background-color: white;
-            display: flex;
-            flex-direction: column;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-image: url("hero-background.png");
-            /* background-image: url('src/app/Img/hero-background.png'); */
-        }
-        .grid2 {
-            order: -1;
-            justify-content: center;
-            object-fit: cover;
-        }
-        /* card 320px para telefone  */
-        .Cartao320 {
-            display: flex;
-            flex-direction: column;
-        }
-        .div320 {
-            margin-top: 100px;
-            width: 100%;
-        }
-        /*  */
-        .grid1 {
-            margin: 30px;
-            text-align: left;
-        }
-        #Foto3 {
-            image-rendering: auto;
-            image-orientation: from-image;
-            width: 50vh;
-        }
-        .grid1 h5 {
-            font-size: 25pt;
-        }
-        .f_social_icon {
-            border-radius: 12px;
-            color: #fbfbfd;
-            background-color: #f38282;
-        }
-        #iconButao {
-            display: flex;
-            top: -15px;
-            left: -0.1px;
-        }
-        .Ver {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            gap: 50px;
-        }
-        .img2 {
-            position: relative;
-            top: -180px;
-            left: 30px;
-        }
-        .img1 {
-            position: relative;
-            top: -100px;
-            left: 55px;
-        }
-        .Cartao {
-            object-fit: cover;
-            width: 100%;
-            height: 50vh;
-        }
-        /* #but {
-        position: relative;
-        margin-left: 30px;
-    } */
-        .Descricaodanossahistoria {
-            display: grid;
-            grid-template-columns: 2fr;
-            grid-template-rows: 60vh 60vh 60vh;
-            grid-auto-rows: 100px;
-            grid-auto-flow: column;
-            margin: 0 auto;
-            margin-bottom: 300px;
-        }
-        .P2 {
-            /* margin-left: 100px; */
-            justify-content: stretch;
-            justify-items: center;
-            grid-column-start: 1;
-            grid-column-end: 2;
-            object-fit: cover;
-            background: #FFFFFF;
-            text-align: center;
-        }
-        .P3 {
-            /* margin-left: 100px; */
-            justify-content: stretch;
-            justify-items: center;
-            grid-column-start: 1;
-            grid-column-end: 2;
-            background: #FFFFFF;
-            text-align: center;
-        }
-        .P1 {
-            /* margin-left: 100px; */
-            object-fit: cover;
-            width: 100%;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-image: url("pastel-de-belem-02-1200x901.jpg");
-            grid-column-start: 1;
-            grid-column-end: 1;
-        }
-        .P4 {
-            width: 100%;
-            /* margin-left: 100px; */
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-image: url("ilcao_bx__13_.jpg");
-            grid-column-start: 1;
-            grid-column-end: 2;
-            grid-row: span 4;
-        }
-        .new_footer_area {
-            background: #fbfbfd;
-        }
-        .btn_get_two {
-            -webkit-box-shadow: none;
-            box-shadow: none;
-            background: #5e2ced;
-            border-color: #5e2ced;
-            color: #fff;
-        }
-        .btn_get_two:hover {
-            background: transparent;
-            color: #5e2ced;
-        }
-    }
-    
-    @media screen and (max-width: 412px) {
-        /* * {
-        background-color: #f38282;
-    } */
-        .navbar.fixed-top {
-            background: transparent;
-            background-color: rgba(36, 35, 35, 0.5);
-            position: fixed;
-            max-width: 412px;
-        }
-        h2 {
-            text-align: center;
-        }
-        /* butoes */
-        .menu1 {
-            display: flex;
-            justify-content: center;
-        }
-        #butao1 {
-            margin-bottom: 35px;
-            cursor: pointer;
-            border-radius: 5px;
-            text-align: center;
-            padding: 5px 15px;
-            border-color: red;
-        }
-        #butao1:hover {
-            background: red;
-        }
-        button {
-            transition-duration: 0.2s;
-        }
-        button:hover {
-            background-color: rgba(255, 99, 71, 0.5);
-            color: white;
-        }
-        /*  */
-        /* cartao  */
-        #Cartao001 {
-            width: 50vh;
-        }
-        .img1 {
-            position: relative;
-            margin-left: -55px;
-        }
-        .img2 {
-            position: relative;
-            margin-left: -55px;
-        }
-        #but {
-            position: relative;
-            margin-left: -30px;
-        }
-        /*  */
-        .Fundocima {
-            background-color: white;
-            display: flex;
-            flex-direction: column;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-image: url("hero-background.png");
-            /* background-image: url('src/app/Img/hero-background.png'); */
-        }
-        .grid2 {
-            order: -1;
-            justify-content: center;
-            object-fit: cover;
-        }
-        /* card 320px para telefone  */
-        .Cartao320 {
-            display: flex;
-            flex-direction: column;
-        }
-        .div320 {
-            margin: 5px;
-            width: 100%;
-        }
-        /*  */
-        .grid1 {
-            margin: 30px;
-            text-align: left;
-        }
-        #Foto3 {
-            image-rendering: auto;
-            image-orientation: from-image;
-            width: 50vh;
-        }
-        .grid1 h5 {
-            font-size: 25pt;
-        }
-        .f_social_icon {
-            border-radius: 12px;
-            color: #fbfbfd;
-            background-color: #f38282;
-        }
-        #iconButao {
-            display: flex;
-            top: -15px;
-            left: -0.1px;
-        }
-        .Ver {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            gap: 50px;
-        }
-        .img2 {
-            position: relative;
-            top: -180px;
-            left: 30px;
-        }
-        .img1 {
-            position: relative;
-            top: -100px;
-            left: 55px;
-        }
-        .Cartao {
-            object-fit: cover;
-            width: 100%;
-            height: 50vh;
-        }
-        /* #but {
-        position: relative;
-        margin-left: 30px;
-    } */
-        .Descricaodanossahistoria {
-            display: grid;
-            grid-template-columns: 2fr;
-            grid-template-rows: 60vh 60vh 60vh;
-            grid-auto-rows: 100px;
-            grid-auto-flow: column;
-            margin: 0 auto;
-            margin-bottom: 300px;
-        }
-        .P2 {
-            /* margin-left: 100px; */
-            justify-content: stretch;
-            justify-items: center;
-            grid-column-start: 1;
-            grid-column-end: 2;
-            object-fit: cover;
-            background: #FFFFFF;
-            text-align: center;
-        }
-        .P3 {
-            /* margin-left: 100px; */
-            justify-content: stretch;
-            justify-items: center;
-            grid-column-start: 1;
-            grid-column-end: 2;
-            background: #FFFFFF;
-            text-align: center;
-        }
-        .P1 {
-            /* margin-left: 100px; */
-            object-fit: cover;
-            width: 100%;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-image: url("pastel-de-belem-02-1200x901.jpg");
-            grid-column-start: 1;
-            grid-column-end: 1;
-        }
-        .P4 {
-            width: 100%;
-            /* margin-left: 100px; */
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-image: url("ilcao_bx__13_.jpg");
-            grid-column-start: 1;
-            grid-column-end: 2;
-            grid-row: span 4;
-        }
-        .new_footer_area {
-            background: #fbfbfd;
-        }
-        .btn_get_two {
-            -webkit-box-shadow: none;
-            box-shadow: none;
-            background: #5e2ced;
-            border-color: #5e2ced;
-            color: #fff;
-        }
-        .btn_get_two:hover {
-            background: transparent;
-            color: #5e2ced;
-        }
-    }
-    
     @media screen and (max-width: 360px) {
-        .V {
+        .Centro {
+            margin-top: -50px;
             display: flex;
-            flex-wrap: wrap;
-            flex-direction: column-reverse;
+            flex-direction: column;
             justify-content: center;
-            align-items: center;
+            justify-items: center;
+            padding: 2rem;
+            gap: -23px;
         }
+        .img2 {
+            position: relative;
+            max-width: 100%;
+            margin-top: 50px;
+            width: 32vh;
+            left: 3.3rem;
+            bottom: -50px;
+        }
+        .img3 {
+            position: relative;
+            max-width: 100%;
+            margin-top: 50px;
+            width: 32vh;
+            left: 3.8rem;
+            bottom: -90px;
+        }
+        #Divisor {
+            margin-top: -150px;
+        }
+        .DivCard {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            padding-bottom: 7rem;
+            background-color: white;
+            border: 2px;
+            width: 40vh;
+            height: 45vh;
+            border-radius: 5px 40px;
+            margin: 0px auto;
+        }
+        /*  style={{ display:"flex",flexDirection:"column-reverse",alignItems:"center",paddingBottom:"7rem",background: "white", border: "2px", width: "40vh" ,height:"45vh", borderRadius: "5px 40px", margin: "0px auto" }} */
+        /*  */
         table:hover {
             background-color: #d4d4d4;
         }
@@ -940,33 +481,6 @@
         .whatsappImagem {
             width: 20px;
             border-radius: 50rem;
-        }
-        #Cartao001 {
-            text-align: center;
-            height: 45vh;
-        }
-        #Cartao002 {
-            text-align: center;
-            height: 45vh;
-        }
-        .img2 {
-            position: relative;
-            max-width: 100%;
-            margin-top: 50px;
-        }
-        .img1 {
-            position: relative;
-            max-width: 100%;
-            margin-top: 20px;
-        }
-        .frase {
-            text-align: center;
-            position: relative;
-            top: -180px;
-        }
-        .Btn001 {
-            position: relative;
-            top: -100px;
         }
         /* Nesse código, foi adicionada uma regra @media para telas com no máximo 360 pixels de largura. Essa regra define algumas alterações para tornar o layout responsivo nessa resolução. A classe .V agora possui uma propriedade display: flex para centralizar os elementos filhos, e flex-wrap: wrap para quebrar a linha quando necessário. A propriedade width dos elementos #Cartao001 foi definida como 100% para ocupar a largura total do contêiner pai. A classe .img2 agora possui uma propriedade max-width definida como 100% para garantir que a imagem não exceda a largura disponível. Por fim, a classe .frase teve seu tamanho de fonte reduzido para 14px para melhor se adequar à tela menor. */
         * {
@@ -1038,14 +552,6 @@
             flex-direction: column;
             align-items: center;
         } */
-        .img1 {
-            /* position: relative; */
-            margin-left: -85px;
-        }
-        .img2 {
-            /* position: relative; */
-            margin-left: -55px;
-        }
         /*  */
         .navbar.fixed-top {
             background: transparent;
@@ -1134,16 +640,6 @@
             flex-direction: column;
             gap: 50px;
         }
-        .img2 {
-            position: relative;
-            top: -180px;
-            left: 30px;
-        }
-        .img1 {
-            position: relative;
-            top: -100px;
-            left: 55px;
-        }
         .Cartao {
             object-fit: cover;
             width: 100%;
@@ -1215,105 +711,5 @@
         .btn_get_two:hover {
             background: transparent;
             color: #5e2ced;
-        }
-         :root {
-            --theme-col: #2d4bf0;
-        }
-        .space-y-2> :not([hidden])~ :not([hidden]) {
-            --tw-space-y-reverse: 0;
-            margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
-            margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
-        }
-        .chao {
-            background-color: #111010;
-        }
-        .f-item-con {
-            padding: 1.5rem 3rem;
-            display: flex;
-            flex-direction: column;
-            grid-gap: 2rem;
-        }
-        footer .app-name {
-            color: white;
-            border-left: 4px solid var(--theme-col);
-            padding-left: 1.5rem;
-            font-size: 1.875rem;
-            line-height: 2.25rem;
-            font-weight: 700;
-        }
-        .app-name .app-initial {
-            color: var(--theme-col);
-        }
-        footer .app-info p {
-            color: white;
-            padding-left: 1.65rem;
-        }
-        footer .footer-title {
-            font-size: 1.25rem;
-            line-height: 1.75rem;
-            color: white;
-            border-left: 4px solid var(--theme-col);
-            padding-left: 1.5rem;
-            /* height: fit-content; */
-            height: auto;
-        }
-        footer ul {
-            padding-left: 1.75rem;
-            color: white;
-            font-size: 0.875rem/* 14px */
-            ;
-            line-height: 1.25rem;
-            margin-top: .5rem;
-        }
-        footer ul li {
-            margin: .25rem 0;
-            cursor: pointer;
-            color: #d4d4d4;
-            /* width: fit-content; */
-            width: auto;
-        }
-        footer {
-            background: #111010;
-        }
-        footer ul li:hover {
-            color: white;
-        }
-        footer .help-sec {
-            grid-column-start: 2;
-        }
-        footer .cr-con {
-            background-color: #232127;
-            color: white;
-            padding: 1rem 4rem;
-            text-align: center;
-        }
-        .g-i-t {
-            display: grid;
-            grid-column-start: 3;
-            grid-row-start: 1;
-            grid-row-end: 3;
-        }
-        .g-i-t form {
-            display: flex;
-            flex-direction: column;
-            margin-top: 1rem;
-            --tw-space-y-reverse: 0;
-            margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
-            margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
-        }
-        form .g-inp {
-            padding: .25rem .5rem;
-            font-size: 16px;
-        }
-        .g-inp textarea {
-            height: 150px;
-        }
-        .f-btn {
-            padding: .25rem 1rem;
-            background-color: var(--theme-col);
-            border-radius: .25rem;
-            font-size: 16px;
-            color: white;
-            font-weight: 500;
         }
     }

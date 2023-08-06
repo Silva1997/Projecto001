@@ -9,6 +9,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { Link } from 'react-router-dom';
 import  Button  from '@mui/material/Button';
+import Footer from '../Footer/Footer'
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import '../Estilos/Estilos.css'
 function createData(name, calories, fat, carbs, protein) {
@@ -56,47 +57,9 @@ export default function BasicTable() {
 
 
 
+<Footer/>
 
-
-    <div style={{marginTop:"265px"}}>
-        <footer>
-          <div className="f-item-con">
-            <div className="app-info">
-              <span className='app-name'>
-                <span className='app-initial'>C</span>onfeiteria
-              </span>
-              {/* <p>We provides you with <strong>Well organised</strong> and <strong>SEO friendly</strong> Website Designs.</p> */}
-            </div>
-            <div className="useful-links">
-              <div className="footer-title">Nossos Links</div>
-              <ul>
-                <li>Cursos</li>
-                <li>Sobre Nos</li>
-
-              </ul>
-            </div>
-            <div className="help-sec">
-              <div className="footer-title">Ajuda</div>
-              <ul>
-                <li>Ajuda me</li>
-                <li>Feedback</li>
-                <li>Reportar erros / Bug</li>
-              </ul>
-            </div>
-            <div className="g-i-t">
-              <div className="footer-title">Sugestoes</div>
-              <form action="/" method="post" className="space-y-2">
-                <input type="text" name="g-name" className="g-inp" id="g-name" placeholder='Nome' />
-                <input type="email" name="g-email" className="g-inp" id="g-email" placeholder='Email' />
-                <textarea type="text" name="g-msg" className="g-inp h-40 resize-none" id="g-msg"
-                  placeholder='Escrever aqui Mensagem...'></textarea>
-                <button type="submit" className='f-btn'>Enviar</button>
-              </form>
-            </div>
-          </div>
-          <div className='cr-con'>Copyright &copy; 2023 | Made by Angola</div>
-        </footer>
-      </div>
+    
     </>
   );
 }
