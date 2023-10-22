@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext,createContext, useState } from "react";
-import { getProdutos } from "../Paginas/Produtos/Produtos";
+import { getProdutos } from "../Page/Produtos/Produtos"
 import { PegarItem,EditarItem } from "../localarmazenamento/Localstore";
 import  PropTypes  from "prop-types";
 
@@ -112,6 +112,7 @@ export const AcessoContexto = ({children})=>{
      
 
 }
+
     
     function getTotalCost() {
         let totalCost = 0;

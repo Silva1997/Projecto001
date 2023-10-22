@@ -1,0 +1,152 @@
+@media only screen and (min-device-width: 1024px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: 0;
+        outline: 0;
+    }
+    #TP {
+        position: relative;
+        top: -45px
+    }
+    #frasesPrincipal {
+        font-Size: "1.5rem";
+    }
+    .EfeitoSilader {
+        width: 240px;
+        height: 320px;
+    }
+    .CentrP {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        padding: 5.5rem;
+        margin: 0 auto;
+        background-color: #5c5c5c;
+        background-repeat: no-repeat;
+        background-image: url("hero-background.png");
+    }
+    #btn:hover {
+        background-color: #5e2ced;
+        color: white;
+    }
+    #Imagem {
+        object-fit: contain;
+        width: 85vh;
+        height: 85vh;
+    }
+    #h5p {
+        font-size: 3.5rem;
+        font-family: 'Kanit', sans-serif;
+        /* color: #5e2ced; */
+        color: #fff;
+    }
+    .EfeitoSilader {
+        height: 85vh;
+        margin-top: -0.0rem;
+    }
+    .EfeitoSilader2 {
+        display: flex;
+        align-items: center;
+        border-radius: 23px;
+        justify-content: center;
+        height: 85vh;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #frasesPrincipal {
+        font-Size: "0.5rem";
+    }
+    .Whatsapp {
+        display: none;
+    }
+    #TP {
+        position: relative;
+        top: -40px
+    }
+    .CentrP {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 5.5rem;
+        margin: 0 auto;
+        background-color: #5c5c5c;
+        background-repeat: no-repeat;
+        background-image: url("hero-background.png");
+    }
+    #btn:hover {
+        background-color: #5e2ced;
+        color: white;
+    }
+    #Imagem {
+        object-fit: contain;
+        width: 85vh;
+        height: 85vh;
+    }
+    #h5p {
+        font-size: 3.5rem;
+        font-family: 'Kanit', sans-serif;
+        /* color: #5e2ced; */
+        color: #fff;
+    }
+    .EfeitoSilader2 {
+        display: none;
+        align-items: center;
+        border-radius: 23px;
+        justify-content: center;
+        height: 85vh;
+    }
+}
+
+
+/* Aqui */
+
+@media screen and (max-width: 320px) {
+    #frasesPrincipal {
+        font-Size: "0.5rem";
+    }
+    .Whatsapp {
+        display: none;
+    }
+    #TP {
+        position: relative;
+        top: -40px
+    }
+    .CentrP {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 5.5rem;
+        margin: 0 auto;
+        background-color: #5c5c5c;
+        background-repeat: no-repeat;
+        background-image: url("hero-background.png");
+    }
+    #btn:hover {
+        background-color: #5e2ced;
+        color: white;
+    }
+    #Imagem {
+        object-fit: contain;
+        width: 85vh;
+        height: 85vh;
+    }
+    #h5p {
+        font-size: 3.5rem;
+        font-family: 'Kanit', sans-serif;
+        /* color: #5e2ced; */
+        color: #fff;
+    }
+    .EfeitoSilader2 {
+        display: none;
+        align-items: center;
+        border-radius: 23px;
+        justify-content: center;
+        height: 85vh;
+    }
+}
