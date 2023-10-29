@@ -12,7 +12,7 @@ import Footer from '../../Footer/Footer'
 import DeleteForeverRoundedIcon from '@mui/icons-material/DeleteForeverRounded';
 import EditRoundedIcon from '@mui/icons-material/EditRounded';
 import People from './PP1.png';
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams,useNavigate } from 'react-router-dom'
 import Axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -20,6 +20,7 @@ import Tabela2 from '../../PDV/TabelaVendas'
 // importacao
 export default function FormularioCadastro() {
   const { id } = useParams(); // lidar com os parametros da url metodo Post 
+  const history = useNavigate(); // Obtenha a instância de history
   const idInt = parseInt(id); // conversao de string para inteiro 
   const [produto, setProduto] = useState(''); // lidar com o estado get e set
   const [imagem, setImagem] = useState(null); // lidar com o estado get e set
@@ -43,10 +44,7 @@ export default function FormularioCadastro() {
       maximumFractionDigits: 2,
     }).format(Number(textoNumero) / 100)
     setValor(formValor);
-    // const p =parseInt(formValor)
-    // setValor(p);
-
-    // if (textoNumero.length <= limiteValor) setValor(textoNumero);
+    
   };
   const limiteEstoque = 5;
   const handleLimiteEstoque = (e) => {
@@ -66,41 +64,61 @@ export default function FormularioCadastro() {
       }
     };
     buscarDados();
-  }, []);
-  // Listar Categoria  e  pegar o id para o inner join 
-  useEffect(() => {
-    Axios.get(`http://localhost:3001/Categoriaq/${id}`)
-      .then((response) => {
-        setIds(response.data[0].idCategoria_Produto);
-        console.log("Enviou com Tabela", response.data);
-        console.log('O seu ID Categoria é:', response.data);
-      })
-      .catch((err) => {
-        console.error("Erro ao Pesquisar o atributo", err);
-      });
-  }, [id]);
-  // listar os dados da tabela para fazer o update pelo id. 
-  useEffect(() => {
-    if (id) {
-      async function fetchProduto() {
-        try {
-          const response = await Axios.get(`http://localhost:3001/Tabela1/${id}`);
-          setDados(response.data);
-          console.log("Dados carregados com sucesso ", response.data);
-          setProduto(response.data[0].Nome_Produto);
-          setValor(response.data[0].Valor_Produto);
-          setDescricao(response.data[0].Descricao_Produto);
-          setEstoque(response.data[0].Estoque_Produto);
-          setCategoria(response.data[0].Nome_Categoria);
-          setDisponibilidade(response.data[0].Disponibilidade_Produto);
-        } catch (error) {
-          console.error("Erro ao obter dados do produto", error);
-        }
-      }
 
-      fetchProduto();
-    }
-  }, [id]);
+    
+      
+    
+    
+  }, []);
+
+  useContext(()=>{Axios.get(`http://localhost:3001/Categoriaq/${id}`)
+  .then((response) => {
+    setIds(response.data[0]?.idCategoria_Produto);
+    console.log("Enviou com Tabela", response.data);
+    console.log('O seu ID Categoria é:', response.data);
+  })
+  .catch((err) => {
+    console.error("Erro ao Pesquisar o atributo", err);
+  });
+},[id])
+  // Listar Categoria  e  pegar o id para o inner join 
+
+//  
+  
+
+  // useEffect(() => {
+  //   Axios.get(`http://localhost:3001/Categoriaq/${id}`)
+  //     .then((response) => {
+  //       setIds(response.data[0]?.idCategoria_Produto);
+  //       console.log("Enviou com Tabela", response.data);
+  //       console.log('O seu ID Categoria é:', response.data);
+  //     })
+  //     .catch((err) => {
+  //       console.error("Erro ao Pesquisar o atributo", err);
+  //     });
+  // }, []);
+  // // listar os dados da tabela para fazer o update pelo id. 
+  // useEffect(() => {
+  //   if (id) {
+  //     async function fetchProduto() {
+  //       try {
+  //         const response = await Axios.get(`http://localhost:3001/Tabela1/${id}`);
+  //         setDados(response.data);
+  //         console.log("Dados carregados com sucesso ", response.data);
+  //         setProduto(response.data[0]?.Nome_Produto);
+  //         setValor(response.data[0]?.Valor_Produto);
+  //         setDescricao(response.data[0]?.Descricao_Produto);
+  //         setEstoque(response.data[0]?.Estoque_Produto);
+  //         setCategoria(response.data[0]?.Nome_Categoria);
+  //         setDisponibilidade(response.data[0]?.Disponibilidade_Produto);
+  //       } catch (error) {
+  //         console.error("Erro ao obter dados do produto", error);
+  //       }
+  //     }
+
+  //     fetchProduto();
+  //   }
+  // }, [id]);
   // alerta para notificacao , erros e  cadrastos com sucessoa
   const notify = () => toast.error("Preencha todos os campos por favor!");
   // metodo para fazer  o  carregamento de imagens pelo file ou arquivo ou ficheiro
@@ -133,6 +151,9 @@ export default function FormularioCadastro() {
     setValor('');
     setDisponibilidade('');
     setTamanho('');
+    // Obtém a URL atual
+
+
   };
   // funcao assicrona para lidar com o nosso estado com onSubmit ou seja para submeter os dados do nosso formulario
   const handleSubmicaoEntrada = async (event) => {
@@ -145,7 +166,6 @@ export default function FormularioCadastro() {
       console.log("Erro! ID não encontrado");
       return;
     }
-
     try {
       console.log("Enviar os dados :");
       // salavar os dados
@@ -176,6 +196,16 @@ export default function FormularioCadastro() {
       toast.error("Erro ao enviar ao arquivo");
     }
   }
+
+
+
+
+
+
+
+
+
+
   // tamanho do input
   const handleChange = (event) => {
     setTamanho(event.target.value);
@@ -276,7 +306,8 @@ export default function FormularioCadastro() {
                 onChange={(e) => capturarDisponibilidade(setCategoria(e.target.value))}
               >
                 {categoria1.map((p) => (
-                  <MenuItem
+                  <MenuItem 
+                  style={{textDecoration:'none'}}
                     key={p.idCategoria_Produto}
                     as={Link}
                     to={`/CadrastarProdutos/${p.idCategoria_Produto}`}
@@ -414,144 +445,142 @@ export default function FormularioCadastro() {
 function TabelaBasica({ dados }) {
   const [dado, setDado] = useState([]);
   // para lidar com requisicoes da pagina
-  useEffect(() => {
-    BuscarDados();
-  },
+  // useEffect(() => {
+  //   BuscarDados();
+  // },
     //fim
-    [setDado]);
+    // [setDado]);
   //   funcao para buscar os dados da tabelo pelo metodo get 
-  const BuscarDados = async () => {
-    try {
-      await Axios.get('http://localhost:3001/Tabela').then((response) => {
-        console.log("Enviou com sucesso", setDado(response.data))
-      });
-    } catch (error) {
-      console.error("Erro ao Listar", error);
-    }
-  }
+  // const BuscarDados = async () => {
+  //   try {
+  //     await Axios.get('http://localhost:3001/Tabela').then((response) => {
+  //       console.log("Enviou com sucesso", setDado(response.data))
+  //     });
+  //   } catch (error) {
+  //     console.error("Erro ao Listar", error);
+  //   }
+  // }
 
 
 
 
   // fim 
   // funcao para lidar com o manuseio para pagar
-  const handleDetele = async (idProdutos_Cadrastar) => {
+  // const handleDetele = async (idProdutos_Cadrastar) => {
 
-    try {
-      if (window.confirm("Eliminar ?")) {
-        Axios.delete(`http://localhost:3001/Apagar/${idProdutos_Cadrastar}`);
-        toast.error("Apagado com sucesso", idProdutos_Cadrastar)
-        setDado(dado.filter((item) => item.idProdutos_Cadrastar !== idProdutos_Cadrastar));
-      }
+  //   try {
+  //     if (window.confirm("Eliminar ?")) {
+  //       Axios.delete(`http://localhost:3001/Apagar/${idProdutos_Cadrastar}`);
+  //       toast.error("Apagado com sucesso", idProdutos_Cadrastar)
+  //       setDado(dado.filter((item) => item.idProdutos_Cadrastar !== idProdutos_Cadrastar));
+  //     }
 
-    } catch (error) {
-      console.error(" Erro ao pagar  ", error)
-    }
-  }
+  //   } catch (error) {
+  //     console.error(" Erro ao pagar  ", error)
+  //   }
+  // }
   //
   return (
-
-    <div className={"DivTabela"} style={{ margin: "30px" }} >
-      <table className={"TabelasListas"} >
-        <thead>
-          <tr style={{ color: "white", backgroundColor: "black", textAlign: "center", borderRadius: "15px 15px" }} >
-            <th align='center' >Imagem-Produto</th>
-            <th align='center' >Nome-Produto</th>
-            <th align='center' >Preço-Produto</th>
-            <th align='center' >Categoria-Produto</th>
-            <th align='center' >Descrição-Produto</th>
-            <th align='center' >Quantidade</th>
-            <th align='center' >disponibilidade</th>
-            <th align='center' >Eliminar</th>
-            <th align='center' >Actualizar</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            typeof dados !== "undefined" && dados.map((linha) => (
-              <tr key={linha.idProdutos_Cadrastar} id="P23">
-                <td align='center'>
-                  <picture className="imagemCircular" >
-                    <img src={`http://localhost:3001/uploads/${linha.Ficheiro_Imagem}`} id='imagemCir' alt="ImagemItem" /></picture>
-                </td>
-                <td align='center'>{linha.Nome_Produto || dados.Nome_Produto}</td>
-                <td align='center' >{linha.Valor_Produto}</td>
-                <td align='center'>{linha.Nome_Categoria}</td>
-                <td align='center'>{linha.Descricao_Produto}</td>
-                <td align='center'>{linha.Estoque_Produto}</td>
-                <td align='center'>{linha.Disponibilidade_Produto}</td>
-                <td align='center'>
-                  <button id="btnTabela" style={{
-                    textDecoration: "none", border: "none", padding: "10px 20px", borderRadius: "8px 9px",
-                    backgroundColor: "#FF1111"
-                  }}
-                    onClick={() => handleDetele(linha.idProdutos_Cadrastar)}> Eliminar
-                    <DeleteForeverRoundedIcon />
-                  </button>
-                </td>
-                <td align='center'>
-                  <button id="btnTabela" style={{
-                    textDecoration: "none", border: "none", padding: "10px 20px", borderRadius: "8px 9px",
-                    backgroundColor: "#5e2ced"
-                  }} as={Link} to={`/CadrastarProdutos/${linha.idProdutos_Cadrastar}`}>
-                    Editar
-                    <EditRoundedIcon />
-                  </button>
-                </td>
-
-              </tr>
-            ))
-          }
-          {
-            typeof dado !== "undefined" && dado.map((linha) => (
-             
-              <tr id="P23" key={linha.idProdutos_Cadrastar}>
-                <td align='center'>
-                  <picture className="imagemCircular" >
-                    <img src={`http://localhost:3001/uploads/${linha.Ficheiro_Imagem}`} id='imagemCir' alt="ImagemItem" /></picture>
-                </td>
-                <td align='center'>{linha.Nome_Produto || dados.Nome_Produto}</td>
-                <td align='center' >{linha.Valor_Produto}</td>
-                <td align='center'>{linha.Nome_Categoria}</td>
-                <td align='center'>{linha.Descricao_Produto}</td>
-                <td align='center'>{linha.Estoque_Produto}</td>
-                <td align='center'>{linha.Disponibilidade_Produto}</td>
-                <td align='center'>
-                  <button id="btnTabela" style={{
-                    textDecoration: "none", border: "none", padding: "10px 20px", borderRadius: "8px 9px",
-                    backgroundColor: "#FF1111"
-                  }}
-                    onClick={() => handleDetele(linha.idProdutos_Cadrastar)}> Deletar
-                    <DeleteForeverRoundedIcon /></button></td>
-                <td align='center'>
-                  <Link style={{
-                    textDecoration: "none", border: "none", padding: "10px 20px", borderRadius: "8px 9px",
-                    backgroundColor: "#5e2ced", color: "white"
-                  }} to={`/CadrastarProdutos/${linha.idProdutos_Cadrastar}`} >
-                    Editar
-                    <EditRoundedIcon color='sucess' />
-                  </Link>
-                </td>
-              </tr>
-            ))
-
-          }
-
-
-        </tbody>
-      </table>
-{/* {
-  dado?.map((li)=>(
+   
     <>
-    
-    </>
-  
-  ))
-
-  
-} */}
-      <Tabela2 />
+    <div style={{margin:"20px"}}>
+    <Tabela2 />
     </div>
+ 
+    </>
+
+    // <div className={"DivTabela"} style={{ margin: "30px" }} >
+    //   <table className={"TabelasListas"} >
+    //     <thead>
+    //       <tr style={{ color: "white", backgroundColor: "black", textAlign: "center", borderRadius: "15px 15px" }} >
+    //         <th align='center' >Imagem-Produto</th>
+    //         <th align='center' >Nome-Produto</th>
+    //         <th align='center' >Preço-Produto</th>
+    //         <th align='center' >Categoria-Produto</th>
+    //         <th align='center' >Descrição-Produto</th>
+    //         <th align='center' >Quantidade</th>
+    //         <th align='center' >disponibilidade</th>
+    //         <th align='center' >Eliminar</th>
+    //         <th align='center' >Actualizar</th>
+    //       </tr>
+    //     </thead>
+    //     <tbody>
+    //       {
+    //         typeof dados !== "undefined" && dados.map((linha) => (
+    //           <tr key={linha.idProdutos_Cadrastar} id="P23">
+    //             <td align='center'>
+    //               <picture className="imagemCircular" >
+    //                 <img src={`http://localhost:3001/uploads/${linha.Ficheiro_Imagem}`} id='imagemCir' alt="ImagemItem" /></picture>
+    //             </td>
+    //             <td align='center'>{linha.Nome_Produto || dados.Nome_Produto}</td>
+    //             <td align='center' >{linha.Valor_Produto}</td>
+    //             <td align='center'>{linha.Nome_Categoria}</td>
+    //             <td align='center'>{linha.Descricao_Produto}</td>
+    //             <td align='center'>{linha.Estoque_Produto}</td>
+    //             <td align='center'>{linha.Disponibilidade_Produto}</td>
+    //             <td align='center'>
+    //               <button id="btnTabela" style={{
+    //                 textDecoration: "none", border: "none", padding: "10px 20px", borderRadius: "8px 9px",
+    //                 backgroundColor: "#FF1111"
+    //               }}
+    //                 onClick={() => handleDetele(linha.idProdutos_Cadrastar)}> Eliminar
+    //                 <DeleteForeverRoundedIcon />
+    //               </button>
+    //             </td>
+    //             <td align='center'>
+    //               <button id="btnTabela" style={{
+    //                 textDecoration: "none", border: "none", padding: "10px 20px", borderRadius: "8px 9px",
+    //                 backgroundColor: "#5e2ced"
+    //               }} as={Link} to={`/CadrastarProdutos/${linha.idProdutos_Cadrastar}`}>
+    //                 Editar
+    //                 <EditRoundedIcon />
+    //               </button>
+    //             </td>
+
+    //           </tr>
+    //         ))
+    //       }
+    //       {
+    //         typeof dado !== "undefined" && dado.map((linha) => (
+             
+    //           <tr id="P23" key={linha.idProdutos_Cadrastar}>
+    //             <td align='center'>
+    //               <picture className="imagemCircular" >
+    //                 <img src={`http://localhost:3001/uploads/${linha.Ficheiro_Imagem}`} id='imagemCir' alt="ImagemItem" /></picture>
+    //             </td>
+    //             <td align='center'>{linha.Nome_Produto || dados.Nome_Produto}</td>
+    //             <td align='center' >{linha.Valor_Produto}</td>
+    //             <td align='center'>{linha.Nome_Categoria}</td>
+    //             <td align='center'>{linha.Descricao_Produto}</td>
+    //             <td align='center'>{linha.Estoque_Produto}</td>
+    //             <td align='center'>{linha.Disponibilidade_Produto}</td>
+    //             <td align='center'>
+    //               <button id="btnTabela" style={{
+    //                 textDecoration: "none", border: "none", padding: "10px 20px", borderRadius: "8px 9px",
+    //                 backgroundColor: "#FF1111"
+    //               }}
+    //                 onClick={() => handleDetele(linha.idProdutos_Cadrastar)}> Deletar
+    //                 <DeleteForeverRoundedIcon /></button></td>
+    //             <td align='center'>
+    //               <Link style={{
+    //                 textDecoration: "none", border: "none", padding: "10px 20px", borderRadius: "8px 9px",
+    //                 backgroundColor: "#5e2ced", color: "white"
+    //               }} to={`/CadrastarProdutos/${linha.idProdutos_Cadrastar}`} >
+    //                 Editar
+    //                 <EditRoundedIcon color='sucess' />
+    //               </Link>
+    //             </td>
+    //           </tr>
+    //         ))
+
+    //       }
+
+
+    //     </tbody>
+    //   </table>
+
+    //   <Tabela2 />
+    // </div>
   );
 
 }

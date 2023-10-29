@@ -68,11 +68,11 @@ const JanelaMenuPrincipal = () => {
                 style={{ maxHeight: '100px' }}
                 navbarScroll
               >
-                <Nav.Link as={Link} to={"/"}>Home</Nav.Link>
-                <Nav.Link as={Link} to={"/Produtos"}>Produtos</Nav.Link>
-                <Nav.Link as={Link} to={"/Vendas"}>PDV</Nav.Link>
-                <NavDropdown title="Cadrasta" id="navbarScrollingDropdown">
-                  <NavDropdown.Item as={Link} to={"/CadrastarProdutos/:id"}>
+                <Nav.Link as={Link}  to={"/"} style={{color:"white"}}>Home</Nav.Link>
+                <Nav.Link as={Link} to={"/Produtos"} style={{color:"white"}}>Produtos</Nav.Link>
+                <Nav.Link as={Link} to={"/Vendas"} style={{color:"white"}}>PDV</Nav.Link>
+                <NavDropdown title="Cadrasta" color='danger' id="navbarScrollingDropdown" style={{color:"white"}}>
+                  <NavDropdown.Item as={Link} to={"/CadrastarProdutos/:id"} >
                     Produtos
                   </NavDropdown.Item>
                   <NavDropdown.Divider />

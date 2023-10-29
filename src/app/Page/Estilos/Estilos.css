@@ -1,837 +1,853 @@
-    @media only screen and (min-device-width: 1024px) {
-        .editable-cell {
-            position: relative;
-        }
-        .editable-cell-value-wrap {
-            padding: 5px 12px;
-            cursor: pointer;
-        }
-        .editable-row:hover .editable-cell-value-wrap {
-            padding: 4px 11px;
-            border: 1px solid #d9d9d9;
-            border-radius: 2px;
-        }
-        .Cards1 {
-            width: 50vh;
-        }
-        .Icons {
-            position: relative;
-            top: -63px;
-            left: 250px;
-            border-radius: 100%;
-            background-color: #9be79bcc;
-            padding: 2px 2px
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            border: 0;
-            outline: 0;
-        }
-        td {
-            background-color: white;
-            color: #111010;
-            border: 1px solid #111010;
-        }
-        td:hover {
-            background-color: #d4d4d4;
-        }
-        /* Teste */
-        #butaoCadrastar {
-            margin: 10px;
-            margin-left: 0px auto;
-            font-weight: 200;
-        }
-        .FormularioDadosCliente {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin: 12px;
-            gap: 12px;
-        }
-        #hr {
-            width: 100%;
-            border: none;
-            height: 10px;
-            size: 12px;
-            background: #111010;
-        }
-        #Aps {
-            margin: 5px;
-        }
-        #Aps:hover {
-            transform: scale(1.1);
-            transition: all 0.2s ease-in-out;
-        }
-        .Aps:hover {
-            transform: scale(1.1);
-            transition: all 0.2s ease-in-out;
-        }
-        .Teste200 {
-            padding: 5px 10px;
-            border-radius: 5px 5px;
-        }
-        .Teste200 {
-            background-color: transparent;
-        }
-        .Teste200:hover {
-            background-color: #5e2ced;
-        }
-        /*  */
-        .img2 {
-            position: relative;
-            max-width: 100%;
-            margin-top: 50px;
-            width: 40vh;
-            left: 35px;
-            bottom: -50px;
-        }
-        .img3 {
-            position: relative;
-            max-width: 100%;
-            margin-top: 50px;
-            width: 30vh;
-            left: 45px;
-            bottom: -90px;
-        }
-        .Centro {
-            margin-top: -45px;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            justify-items: center;
-            gap: 30px;
-            padding: 2.5rem;
-        }
-        #Divisor {
-            margin-top: -200px;
-        }
-        .DivCard {
-            display: flex;
-            flex-direction: column-reverse;
-            align-items: center;
-            padding-bottom: 7rem;
-            background-color: #fff;
-            border: 2px;
-            width: 40vh;
-            height: 45vh;
-            border-radius: 5px 40px;
-        }
-        /*  */
-        .DivTabela {
-            margin: 20px;
-            overflow-x: auto;
-        }
-        table {
-            border-collapse: collapse;
-        }
-        #P23 {
-            border: 1px solid #111010;
-        }
-        tr>th {
-            border: 1px solid black;
-            padding: 8px;
-        }
-        td {
-            border: 1px solid black;
-            padding: 8px;
-        }
-        .TabelasListas::-webkit-scrollbar {
-            width: 0.5rem;
-            height: 0.5rem;
-        }
-        .TabelasListas::-webkit-scrollbar-thumb {
-            border-radius: .5rem;
-            background-color: #0004;
-            visibility: hidden;
-        }
-        .TabelasListas::-webkit-scrollbar-thumb {
-            visibility: hidden;
-        }
-        .TabelasListas {
-            width: 100%;
-        }
-        /* // */
-        .Estilopalavras {
-            font-family: 'REM', sans-serif;
-        }
-        .Totalestilo {
-            display: flex;
-            flex-direction: column;
-        }
-        p {
-            text-align: center;
-        }
-        /* Perfil */
-        .PerfilCadrastos {
-            margin-top: 65px;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            gap: 10px;
-        }
-        /*  */
-        .Whatsapp {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-Index: 9999;
-        }
-        .whatsappImagem {
-            width: 70px;
-            border-radius: 30rem;
-        }
-        /*  sx={{ width: '80%', position: "absolute", alignContent: "center", justifyContent: "center", left: "100px", m: "20px" }} */
-        .AlertaMenu {
-            width: 80vh;
-            position: absolute;
-            left: 50%;
-            top: 30%;
-            transform: translate(-50%, 50%);
-        }
-        .LoginImagem {
-            background-image: url('C:\Users\Eugenio Silva\Music\Meu\Cliente\src\app\Page\imgP\BoloG.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .Centralizado {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        /* { padding:"8px",backgroundColor:"white",display: "grid", gridTemplateColumns:"1fr 1fr 1fr",gridTemplateRows:"10vh 10vh 10vh", gap: "0.5px" }} */
-        .CampoCadrastos {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-        .FormularioCampo {
-            top: 8px;
-            left: 0px;
-        }
-        #especial {
-            margin-left: 20px;
-        }
-        #butao {
-            margin-bottom: 35px;
-            cursor: pointer;
-            border-radius: 5px;
-            text-align: center;
-            padding: 5px 15px;
-            border-color: red;
-        }
-        #butao1:hover {
-            background: red;
-        }
-        /* circular */
-        .imagemCircular {
-            display: inline-block;
-            position: relative;
-            width: 50px;
-            height: 50px;
-            overflow: hidden;
-            border-radius: 50%;
-            background-color: #ddd;
-        }
-        #imagemCir {
-            width: auto;
-            height: 100%;
-        }
-        #btnTabela {
-            background-color: white;
-        }
-        #btnTabela:hover {
-            background-color: #f8f8f8;
-        }
-        /*  */
-        #textP {
-            font-family: 'Pacifico', cursive;
-        }
-        body {
-            overflow-x: hidden;
-        }
-        .menu1 {
-            display: flex;
-            justify-content: center;
-        }
-        .Cartao {
-            width: 100%;
-            object-fit: cover;
-            height: 40vh;
-        }
-        .Cartao1 {
-            width: 100%;
-            object-fit: cover;
-            height: 35vh;
-        }
-        .iconCarrinho {
-            display: flex;
-            top: -10px;
-            margin-left: 150px;
-        }
-        .Teste200 {
-            display: flex;
-            top: -8px;
-            left: 10px;
-        }
-        /*  */
-        /* botoes */
-        button {
-            transition-duration: 0.1s;
-            ;
-        }
-        button:hover {
-            background-color: rgba(255, 99, 71, 0.5);
-            color: white;
-        }
-        /*  */
-        .incio {
-            padding: 5px;
-            text-align: center;
-            font-family: "cursive";
-            font-weight: bold;
-            font-size: 30pt;
-        }
-        .navbar.fixed-top {
-            background: transparent;
-            background-color: rgba(36, 35, 35, 0.5);
-            padding: 10px;
-            width: auto;
-        }
-        .img-fluid {
-            min-width: 100%;
-        }
-        #Pfoto {
-            height: 89vh;
-        }
-        .img2 {
-            border-radius: 500px;
-            width: 30vh;
-        }
-        /* parte de cima para grid 2fr para a divisao  */
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            width: 100%;
-        }
-        .Fundocima {
-            display: grid;
-            background-size: contain;
-            /* background: #fc6969; */
-            background-color: white;
-            /* background-position: center; */
-            background-repeat: no-repeat;
-            background-image: url("hero-background.png");
-            transition: 0.3s;
-            grid-template-columns: 2fr 2fr;
-            grid-template-rows: 40vh 40vh 10vh;
-        }
-        .grid2 {
-            grid-column-start: 2;
-            grid-column-end: 2;
-            margin: 150px;
-        }
-        #h5p {
-            font-family: 'Kanit', sans-serif;
-        }
-        #frasesPrincipal {
-            font-size: 1.1rem;
-            text-align: justify;
-        }
-        .grid1 {
-            color: #303030;
-            grid-column-start: 1;
-            grid-column-end: 1;
-            margin-top: 150px;
-            margin-left: 160px;
-            font-weight: 400;
-        }
-        .grid1 h5 {
-            font-family: 'Roboto', sans-serif;
-            font-size: 3rem;
-            font-weight: 400;
-            color: #303030;
-        }
-        /* parte de cima para grid 2fr para a divisao  */
-        /* Os textos */
-        .frase3 {
-            background-color: rgb(243, 111, 59);
-        }
-        .frase {
-            font-family: 'Merienda', cursive;
-            font-weight: 400;
-        }
-        .frase2 {
-            font-family: 'Merienda', cursive;
-            font-weight: 400;
-        }
-        .Sp {
-            color: red;
-        }
-        .PL {
-            margin: 10px;
-        }
-        /* .frase2 {
+        @media only screen and (min-device-width: 1024px) {
+            .scroll-container {
+                width: 500px;
+                height: 500px;
+                display: flex;
+                justify-content: center;
+                overflow: auto;
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+            li {
+                margin: 0;
+                padding: 0;
+            }
+            /*  */
+            .editable-cell {
+                position: relative;
+            }
+            .editable-cell-value-wrap {
+                padding: 5px 12px;
+                cursor: pointer;
+            }
+            .editable-row:hover .editable-cell-value-wrap {
+                padding: 4px 11px;
+                border: 1px solid #d9d9d9;
+                border-radius: 2px;
+            }
+            .Cards1 {
+                width: 50vh;
+            }
+            .Icons {
+                position: relative;
+                top: -63px;
+                left: 250px;
+                border-radius: 100%;
+                background-color: #9be79bcc;
+                padding: 2px 2px
+            }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                border: 0;
+                outline: 0;
+            }
+            td {
+                background-color: white;
+                color: #111010;
+                border: 1px solid #111010;
+            }
+            td:hover {
+                background-color: #d4d4d4;
+            }
+            /* Teste */
+            #butaoCadrastar {
+                margin: 10px;
+                margin-left: 0px auto;
+                font-weight: 200;
+            }
+            .FormularioDadosCliente {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: 12px;
+                gap: 12px;
+            }
+            #hr {
+                width: 100%;
+                border: none;
+                height: 10px;
+                size: 12px;
+                background: #111010;
+            }
+            #Aps {
+                margin: 5px;
+            }
+            #Aps:hover {
+                transform: scale(1.1);
+                transition: all 0.2s ease-in-out;
+            }
+            .Aps:hover {
+                transform: scale(1.1);
+                transition: all 0.2s ease-in-out;
+            }
+            .Teste200 {
+                padding: 5px 10px;
+                border-radius: 5px 5px;
+            }
+            .Teste200 {
+                background-color: transparent;
+            }
+            .Teste200:hover {
+                background-color: #5e2ced;
+            }
+            /*  */
+            .img2 {
+                position: relative;
+                max-width: 100%;
+                margin-top: 50px;
+                width: 40vh;
+                left: 35px;
+                bottom: -50px;
+            }
+            .img3 {
+                position: relative;
+                max-width: 100%;
+                margin-top: 50px;
+                width: 30vh;
+                left: 45px;
+                bottom: -90px;
+            }
+            .Centro {
+                margin-top: -45px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                justify-items: center;
+                gap: 30px;
+                padding: 2.5rem;
+            }
+            #Divisor {
+                margin-top: -200px;
+            }
+            .DivCard {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                padding-bottom: 7rem;
+                background-color: #fff;
+                border: 2px;
+                width: 40vh;
+                height: 45vh;
+                border-radius: 5px 40px;
+            }
+            /*  */
+            .DivTabela {
+                margin: 20px;
+                overflow-x: auto;
+            }
+            table {
+                border-collapse: collapse;
+            }
+            #P23 {
+                border: 1px solid #111010;
+            }
+            tr>th {
+                border: 1px solid black;
+                padding: 8px;
+            }
+            td {
+                border: 1px solid black;
+                padding: 8px;
+            }
+            .TabelasListas::-webkit-scrollbar {
+                width: 0.5rem;
+                height: 0.5rem;
+            }
+            .TabelasListas::-webkit-scrollbar-thumb {
+                border-radius: .5rem;
+                background-color: #0004;
+                visibility: hidden;
+            }
+            .TabelasListas::-webkit-scrollbar-thumb {
+                visibility: hidden;
+            }
+            .TabelasListas {
+                width: 100%;
+            }
+            /* // */
+            .Estilopalavras {
+                font-family: 'REM', sans-serif;
+            }
+            .Totalestilo {
+                display: flex;
+                flex-direction: column;
+            }
+            p {
+                text-align: center;
+            }
+            /* Perfil */
+            .PerfilCadrastos {
+                margin-top: 65px;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                gap: 10px;
+            }
+            /*  */
+            .Whatsapp {
+                position: fixed;
+                bottom: 30px;
+                right: 30px;
+                z-Index: 9999;
+            }
+            .whatsappImagem {
+                width: 70px;
+                border-radius: 30rem;
+            }
+            /*  sx={{ width: '80%', position: "absolute", alignContent: "center", justifyContent: "center", left: "100px", m: "20px" }} */
+            .AlertaMenu {
+                width: 80vh;
+                position: absolute;
+                left: 50%;
+                top: 30%;
+                transform: translate(-50%, 50%);
+            }
+            .LoginImagem {
+                background-image: url('C:\Users\Eugenio Silva\Music\Meu\Cliente\src\app\Page\imgP\BoloG.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .Centralizado {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            /* { padding:"8px",backgroundColor:"white",display: "grid", gridTemplateColumns:"1fr 1fr 1fr",gridTemplateRows:"10vh 10vh 10vh", gap: "0.5px" }} */
+            .CampoCadrastos {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .FormularioCampo {
+                top: 8px;
+                left: 0px;
+            }
+            #especial {
+                margin-left: 20px;
+            }
+            #butao {
+                margin-bottom: 35px;
+                cursor: pointer;
+                border-radius: 5px;
+                text-align: center;
+                padding: 5px 15px;
+                border-color: red;
+            }
+            #butao1:hover {
+                background: red;
+            }
+            /* circular */
+            .imagemCircular {
+                display: inline-block;
+                position: relative;
+                width: 50px;
+                height: 50px;
+                overflow: hidden;
+                border-radius: 50%;
+                background-color: #ddd;
+            }
+            #imagemCir {
+                width: 100%;
+                height: 100%;
+            }
+            #btnTabela {
+                background-color: white;
+            }
+            #btnTabela:hover {
+                background-color: #f8f8f8;
+            }
+            /*  */
+            #textP {
+                font-family: 'Pacifico', cursive;
+            }
+            body {
+                overflow-x: hidden;
+            }
+            .menu1 {
+                display: flex;
+                justify-content: center;
+            }
+            .Cartao {
+                width: 100%;
+                object-fit: cover;
+                height: 40vh;
+            }
+            .Cartao1 {
+                width: 100%;
+                object-fit: cover;
+                height: 35vh;
+            }
+            .iconCarrinho {
+                display: flex;
+                top: -10px;
+                margin-left: 150px;
+            }
+            .Teste200 {
+                display: flex;
+                top: -8px;
+                left: 10px;
+            }
+            /*  */
+            /* botoes */
+            button {
+                transition-duration: 0.1s;
+                ;
+            }
+            button:hover {
+                background-color: rgba(255, 99, 71, 0.5);
+                color: white;
+            }
+            /*  */
+            .incio {
+                padding: 5px;
+                text-align: center;
+                font-family: "cursive";
+                font-weight: bold;
+                font-size: 30pt;
+            }
+            .navbar.fixed-top {
+                background: transparent;
+                background-color: rgba(36, 35, 35, 0.5);
+                padding: 10px;
+                width: auto;
+            }
+            .img-fluid {
+                min-width: 100%;
+            }
+            #Pfoto {
+                height: 89vh;
+            }
+            .img2 {
+                border-radius: 500px;
+                width: 30vh;
+            }
+            /* parte de cima para grid 2fr para a divisao  */
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                width: 100%;
+            }
+            .Fundocima {
+                display: grid;
+                background-size: contain;
+                /* background: #fc6969; */
+                background-color: white;
+                /* background-position: center; */
+                background-repeat: no-repeat;
+                background-image: url("hero-background.png");
+                transition: 0.3s;
+                grid-template-columns: 2fr 2fr;
+                grid-template-rows: 40vh 40vh 10vh;
+            }
+            .grid2 {
+                grid-column-start: 2;
+                grid-column-end: 2;
+                margin: 150px;
+            }
+            #h5p {
+                font-family: 'Kanit', sans-serif;
+            }
+            #frasesPrincipal {
+                font-size: 1.1rem;
+                text-align: justify;
+            }
+            .grid1 {
+                color: #303030;
+                grid-column-start: 1;
+                grid-column-end: 1;
+                margin-top: 150px;
+                margin-left: 160px;
+                font-weight: 400;
+            }
+            .grid1 h5 {
+                font-family: 'Roboto', sans-serif;
+                font-size: 3rem;
+                font-weight: 400;
+                color: #303030;
+            }
+            /* parte de cima para grid 2fr para a divisao  */
+            /* Os textos */
+            .frase3 {
+                background-color: rgb(243, 111, 59);
+            }
+            .frase {
+                font-family: 'Merienda', cursive;
+                font-weight: 400;
+            }
+            .frase2 {
+                font-family: 'Merienda', cursive;
+                font-weight: 400;
+            }
+            .Sp {
+                color: red;
+            }
+            .PL {
+                margin: 10px;
+            }
+            /* .frase2 {
             margin: 20px;
         } */
-        .incio {
-            font-family: 'Roboto', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 400;
-        }
-        /*fim das frases*/
-        /* grid 2fr  para cada texto e imagem por 4*/
-        .Descricaodanossahistoria {
-            display: grid;
-            grid-template-columns: 2fr 2fr;
-            grid-template-rows: 70vh 70vh 10vh;
-            grid-auto-rows: 300px;
-        }
-        .P1 {
-            object-fit: cover;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-image: url("pastel-de-belem-02-1200x901.jpg");
-            grid-column-start: 1;
-            grid-column-end: 1;
-        }
-        .PP1 {
-            width: 100%;
-            height: 100%;
-            transition: 0.4s;
-            background-color: #303030;
-            opacity: 0;
-        }
-        .PP1:hover {
-            opacity: 0.5;
-        }
-        .P1 {
-            overflow: hidden;
-        }
-        .P4 {
-            overflow: hidden;
-        }
-        .P4 {
-            background-size: cover;
-            width: 100%;
-            background-color: yellow;
-            background-repeat: no-repeat;
-            background-image: url("ilcao_bx__13_.jpg");
-            grid-column-start: 2;
-            grid-column-end: 2;
-        }
-        .P2 {
-            background: #FFFFFF;
-            text-align: center;
-            margin: 0 auto;
-        }
-        .P3 {
-            background: #FFFFFF;
-            text-align: center;
-            margin: 0 auto;
-        }
-        /* grid 2fr  para cada texto e imagem por 4*/
-        /*  */
-        #Foto3 {
-            position: relative;
-            top: -10px;
-            left: -16px;
-            width: 60vh;
-        }
-        body::-webkit-scrollbar {
-            width: 10px;
-        }
-        body::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        body::-webkit-scrollbar-thumb {
-            background-color: #fc6969;
-            /* color of the scroll thumb */
-            border-radius: 20px;
-            /* roundness of the scroll thumb */
-            border: 2px solid rgb(241, 234, 219);
-            /* creates padding around scroll thumb */
-        }
-        /*  footer*/
-        .f_social_icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            position: relative;
-            top: 6.5px;
-            /* color: #f38282; */
-            color: #fc6969;
-            display: inline-block;
-            background: #fdfdff;
-            -webkit-transition: all 0.2s linear;
-            -o-transition: all 0.2s linear;
-            transition: all 0.2s linear;
-        }
-    }
-    /*  */
-    
-    @media screen and (max-width: 360px) {
-        .Cards {
-            display: flex;
-            flex-direction: column;
-            max-height: 360;
-        }
-        .Cards1 {
-            max-width: 360;
-            width: 40vh;
-        }
-        .Icons {
-            position: relative;
-            top: -62px;
-            left: 150px;
-            border-radius: 100%;
-            background-color: #9be79bcc;
-            padding: 2px 2px
-        }
-        /* Teste */
-        #butaoCadrastar {
-            margin: 9px;
-            margin-left: 9px;
-        }
-        .EfeitoSilader {
-            display: none;
-        }
-        #hr {
-            width: 100%;
-            border: none;
-            height: 10px;
-            size: 12px;
-            background: #111010;
-        }
-        #Aps {
-            margin: 1.5px;
-        }
-        #Aps:hover {
-            transform: scale(1.1);
-            transition: all 0.2s ease-in-out;
-        }
-        .Teste200 {
-            padding: 2px 2px;
-            border-radius: 5px 5px;
-        }
-        .Teste200 {
-            border: none;
-            background-color: transparent;
-        }
-        .Teste200:hover {
-            background-color: #5e2ced;
-        }
-        .Centro {
-            margin-top: -50px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            justify-items: center;
-            padding: 2rem;
-            gap: -23px;
-        }
-        .img2 {
-            position: relative;
-            max-width: 100%;
-            margin-top: 50px;
-            width: 32vh;
-            left: 3.3rem;
-            bottom: -50px;
-        }
-        .img3 {
-            position: relative;
-            max-width: 100%;
-            margin-top: 50px;
-            width: 32vh;
-            left: 3.8rem;
-            bottom: -90px;
-        }
-        #Divisor {
-            margin-top: -150px;
-        }
-        .DivCard {
-            display: flex;
-            flex-direction: column-reverse;
-            align-items: center;
-            padding-bottom: 7rem;
-            background-color: white;
-            border: 2px;
-            width: 40vh;
-            height: 45vh;
-            border-radius: 5px 40px;
-            margin: 0px auto;
-        }
-        /*  style={{ display:"flex",flexDirection:"column-reverse",alignItems:"center",paddingBottom:"7rem",background: "white", border: "2px", width: "40vh" ,height:"45vh", borderRadius: "5px 40px", margin: "0px auto" }} */
-        /*  */
-        table:hover {
-            background-color: #d4d4d4;
-        }
-        #P23 {
-            border: 1px solid #111010;
-        }
-        .DivTabela {
-            overflow-x: auto;
-        }
-        .TabelasListas {
-            font-size: 12px;
-        }
-        th {
-            min-width: 100px;
-            max-width: 150px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        td {
-            min-width: 100px;
-            max-width: 150px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            .incio {
+                font-family: 'Roboto', sans-serif;
+                font-size: 2.5rem;
+                font-weight: 400;
+            }
+            /*fim das frases*/
+            /* grid 2fr  para cada texto e imagem por 4*/
+            .Descricaodanossahistoria {
+                display: grid;
+                grid-template-columns: 2fr 2fr;
+                grid-template-rows: 70vh 70vh 10vh;
+                grid-auto-rows: 300px;
+            }
+            .P1 {
+                object-fit: cover;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-image: url("pastel-de-belem-02-1200x901.jpg");
+                grid-column-start: 1;
+                grid-column-end: 1;
+            }
+            .PP1 {
+                width: 100%;
+                height: 100%;
+                transition: 0.4s;
+                background-color: #303030;
+                opacity: 0;
+            }
+            .PP1:hover {
+                opacity: 0.5;
+            }
+            .P1 {
+                overflow: hidden;
+            }
+            .P4 {
+                overflow: hidden;
+            }
+            .P4 {
+                background-size: cover;
+                width: 100%;
+                background-color: yellow;
+                background-repeat: no-repeat;
+                background-image: url("ilcao_bx__13_.jpg");
+                grid-column-start: 2;
+                grid-column-end: 2;
+            }
+            .P2 {
+                background: #FFFFFF;
+                text-align: center;
+                margin: 0 auto;
+            }
+            .P3 {
+                background: #FFFFFF;
+                text-align: center;
+                margin: 0 auto;
+            }
+            /* grid 2fr  para cada texto e imagem por 4*/
+            /*  */
+            #Foto3 {
+                position: relative;
+                top: -10px;
+                left: -16px;
+                width: 60vh;
+            }
+            body::-webkit-scrollbar {
+                width: 10px;
+            }
+            body::-webkit-scrollbar-track {
+                background: transparent;
+            }
+            body::-webkit-scrollbar-thumb {
+                background-color: #fc6969;
+                /* color of the scroll thumb */
+                border-radius: 20px;
+                /* roundness of the scroll thumb */
+                border: 2px solid rgb(241, 234, 219);
+                /* creates padding around scroll thumb */
+            }
+            /*  footer*/
+            .f_social_icon {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                position: relative;
+                top: 6.5px;
+                /* color: #f38282; */
+                color: #fc6969;
+                display: inline-block;
+                background: #fdfdff;
+                -webkit-transition: all 0.2s linear;
+                -o-transition: all 0.2s linear;
+                transition: all 0.2s linear;
+            }
         }
         /*  */
-        .Whatsapp {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-Index: 9999;
-        }
-        .whatsappImagem {
-            width: 20px;
-            border-radius: 50rem;
-        }
-        /* Nesse código, foi adicionada uma regra @media para telas com no máximo 360 pixels de largura. Essa regra define algumas alterações para tornar o layout responsivo nessa resolução. A classe .V agora possui uma propriedade display: flex para centralizar os elementos filhos, e flex-wrap: wrap para quebrar a linha quando necessário. A propriedade width dos elementos #Cartao001 foi definida como 100% para ocupar a largura total do contêiner pai. A classe .img2 agora possui uma propriedade max-width definida como 100% para garantir que a imagem não exceda a largura disponível. Por fim, a classe .frase teve seu tamanho de fonte reduzido para 14px para melhor se adequar à tela menor. */
-        * {
-            margin: 0;
-            width: auto;
-            padding: 0;
-        }
-        .AlertaMenu {
-            width: 50vh;
-            position: absolute;
-            left: 50%;
-            top: -13%;
-            transform: translate(-50%, 50%);
-        }
-        /* circular */
-        .imagemCircular {
-            display: inline-block;
-            position: relative;
-            width: 50px;
-            height: 50px;
-            overflow: hidden;
-            border-radius: 50%;
-            background-color: #ddd;
-        }
-        #imagemCir {
-            width: auto;
-            height: 100%;
-        }
-        .CampoCadrastos {
-            display: flex;
-            flex-direction: column;
-            gap: 2.6rem;
-        }
-        .FormularioCampo {
-            top: 0px;
-            left: 8px;
-        }
-        h2 {
-            text-align: center;
-        }
-        /* butoes */
-        .menu1 {
-            display: flex;
-            justify-content: center;
-        }
-        #butao1 {
-            margin-bottom: 35px;
-            cursor: pointer;
-            border-radius: 5px;
-            text-align: center;
-            padding: 5px 15px;
-            border-color: red;
-        }
-        #butao1:hover {
-            background: red;
-        }
-        button {
-            transition-duration: 0.2s;
-        }
-        button:hover {
-            background-color: rgba(255, 99, 71, 0.5);
-            color: white;
-        }
-        /*  */
-        /* cartao  */
-        /* .V {
+        
+        @media screen and (max-width: 360px) {
+            .Cards {
+                display: flex;
+                flex-direction: column;
+                max-height: 360;
+            }
+            .Cards1 {
+                max-width: 360;
+                width: 40vh;
+            }
+            .Icons {
+                position: relative;
+                top: -62px;
+                left: 150px;
+                border-radius: 100%;
+                background-color: #9be79bcc;
+                padding: 2px 2px
+            }
+            /* Teste */
+            #butaoCadrastar {
+                margin: 9px;
+                margin-left: 9px;
+            }
+            .EfeitoSilader {
+                display: none;
+            }
+            #hr {
+                width: 100%;
+                border: none;
+                height: 10px;
+                size: 12px;
+                background: #111010;
+            }
+            #Aps {
+                margin: 1.5px;
+            }
+            #Aps:hover {
+                transform: scale(1.1);
+                transition: all 0.2s ease-in-out;
+            }
+            .Teste200 {
+                padding: 2px 2px;
+                border-radius: 5px 5px;
+            }
+            .Teste200 {
+                border: none;
+                background-color: transparent;
+            }
+            .Teste200:hover {
+                background-color: #5e2ced;
+            }
+            .Centro {
+                margin-top: -50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                justify-items: center;
+                padding: 2rem;
+                gap: -23px;
+            }
+            .img2 {
+                position: relative;
+                max-width: 100%;
+                margin-top: 50px;
+                width: 32vh;
+                left: 3.3rem;
+                bottom: -50px;
+            }
+            .img3 {
+                position: relative;
+                max-width: 100%;
+                margin-top: 50px;
+                width: 32vh;
+                left: 3.8rem;
+                bottom: -90px;
+            }
+            #Divisor {
+                margin-top: -150px;
+            }
+            .DivCard {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                padding-bottom: 7rem;
+                background-color: white;
+                border: 2px;
+                width: 40vh;
+                height: 45vh;
+                border-radius: 5px 40px;
+                margin: 0px auto;
+            }
+            /*  style={{ display:"flex",flexDirection:"column-reverse",alignItems:"center",paddingBottom:"7rem",background: "white", border: "2px", width: "40vh" ,height:"45vh", borderRadius: "5px 40px", margin: "0px auto" }} */
+            /*  */
+            table:hover {
+                background-color: #d4d4d4;
+            }
+            #P23 {
+                border: 1px solid #111010;
+            }
+            .DivTabela {
+                overflow-x: auto;
+            }
+            .TabelasListas {
+                font-size: 12px;
+            }
+            th {
+                min-width: 100px;
+                max-width: 150px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            td {
+                min-width: 100px;
+                max-width: 150px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            /*  */
+            .Whatsapp {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-Index: 9999;
+            }
+            .whatsappImagem {
+                width: 20px;
+                border-radius: 50rem;
+            }
+            /* Nesse código, foi adicionada uma regra @media para telas com no máximo 360 pixels de largura. Essa regra define algumas alterações para tornar o layout responsivo nessa resolução. A classe .V agora possui uma propriedade display: flex para centralizar os elementos filhos, e flex-wrap: wrap para quebrar a linha quando necessário. A propriedade width dos elementos #Cartao001 foi definida como 100% para ocupar a largura total do contêiner pai. A classe .img2 agora possui uma propriedade max-width definida como 100% para garantir que a imagem não exceda a largura disponível. Por fim, a classe .frase teve seu tamanho de fonte reduzido para 14px para melhor se adequar à tela menor. */
+            * {
+                margin: 0;
+                width: auto;
+                padding: 0;
+            }
+            .AlertaMenu {
+                width: 50vh;
+                position: absolute;
+                left: 50%;
+                top: -13%;
+                transform: translate(-50%, 50%);
+            }
+            /* circular */
+            .imagemCircular {
+                display: inline-block;
+                position: relative;
+                width: 50px;
+                height: 50px;
+                overflow: hidden;
+                border-radius: 50%;
+                background-color: #ddd;
+            }
+            #imagemCir {
+                width: 100%;
+                height: 100%;
+            }
+            .CampoCadrastos {
+                display: flex;
+                flex-direction: column;
+                gap: 2.6rem;
+            }
+            .FormularioCampo {
+                top: 0px;
+                left: 8px;
+            }
+            h2 {
+                text-align: center;
+            }
+            /* butoes */
+            .menu1 {
+                display: flex;
+                justify-content: center;
+            }
+            #butao1 {
+                margin-bottom: 35px;
+                cursor: pointer;
+                border-radius: 5px;
+                text-align: center;
+                padding: 5px 15px;
+                border-color: red;
+            }
+            #butao1:hover {
+                background: red;
+            }
+            button {
+                transition-duration: 0.2s;
+            }
+            button:hover {
+                background-color: rgba(255, 99, 71, 0.5);
+                color: white;
+            }
+            /*  */
+            /* cartao  */
+            /* .V {
             margin-top: 55px;
             display: flex;
             flex-direction: column;
             align-items: center;
         } */
-        /*  */
-        .navbar.fixed-top {
-            background: transparent;
-            background-color: rgba(36, 35, 35, 0.5);
-            position: fixed;
-            max-width: 360px;
-        }
-        .Fundocima {
-            background-color: white;
-            display: flex;
-            flex-direction: column;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-image: url("hero-background.png");
-            /* background-image: url('src/app/Img/hero-background.png'); */
-        }
-        .grid2 {
-            order: -1;
-            justify-content: center;
-            object-fit: contain;
-        }
-        /* card 320px para telefone  */
-        .Cartao320 {
-            display: flex;
-            flex-direction: column;
-        }
-        .Cartao1 {
-            width: 100%;
-            object-fit: cover;
-        }
-        .Cartao1 {
-            height: 35vh;
-            background-color: #303030;
-        }
-        .frase3 {
-            background-color: rgb(243, 111, 59);
-        }
-        .frase {
-            font-family: 'Merienda', cursive;
-            font-weight: 400;
-        }
-        .frase2 {
-            font-family: 'Merienda', cursive;
-            font-weight: 400;
-        }
-        .Sp {
-            color: red;
-        }
-        .PL {
-            margin: 10px;
-        }
-        .frase2 {
-            margin: 20px;
-        }
-        .div320 {
-            margin: 5px;
-            width: 100%;
-        }
-        /*  */
-        .grid1 {
-            margin: 30px;
-            text-align: left;
-        }
-        #Foto3 {
-            image-rendering: auto;
-            image-orientation: from-image;
-            width: 50vh;
-        }
-        .grid1 h5 {
-            font-size: 25pt;
-            font-weight: bold;
-        }
-        .f_social_icon {
-            border-radius: 12px;
-            color: #fbfbfd;
-            background-color: #f38282;
-        }
-        .Teste200 {
-            position: relative;
-            top: -13px;
-            left: 20px;
-        }
-        .Ver {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            gap: 50px;
-        }
-        .Cartao {
-            object-fit: cover;
-            width: 100%;
-            height: 50vh;
-        }
-        /* #but {
+            /*  */
+            .navbar.fixed-top {
+                background: transparent;
+                background-color: rgba(36, 35, 35, 0.5);
+                position: fixed;
+                max-width: 360px;
+            }
+            .Fundocima {
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-image: url("hero-background.png");
+                /* background-image: url('src/app/Img/hero-background.png'); */
+            }
+            .grid2 {
+                order: -1;
+                justify-content: center;
+                object-fit: contain;
+            }
+            /* card 320px para telefone  */
+            .Cartao320 {
+                display: flex;
+                flex-direction: column;
+            }
+            .Cartao1 {
+                width: 100%;
+                object-fit: cover;
+            }
+            .Cartao1 {
+                height: 35vh;
+                background-color: #303030;
+            }
+            .frase3 {
+                background-color: rgb(243, 111, 59);
+            }
+            .frase {
+                font-family: 'Merienda', cursive;
+                font-weight: 400;
+            }
+            .frase2 {
+                font-family: 'Merienda', cursive;
+                font-weight: 400;
+            }
+            .Sp {
+                color: red;
+            }
+            .PL {
+                margin: 10px;
+            }
+            .frase2 {
+                margin: 20px;
+            }
+            .div320 {
+                margin: 5px;
+                width: 100%;
+            }
+            /*  */
+            .grid1 {
+                margin: 30px;
+                text-align: left;
+            }
+            #Foto3 {
+                image-rendering: auto;
+                image-orientation: from-image;
+                width: 50vh;
+            }
+            .grid1 h5 {
+                font-size: 25pt;
+                font-weight: bold;
+            }
+            .f_social_icon {
+                border-radius: 12px;
+                color: #fbfbfd;
+                background-color: #f38282;
+            }
+            .Teste200 {
+                position: relative;
+                top: -13px;
+                left: 20px;
+            }
+            .Ver {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                gap: 50px;
+            }
+            .Cartao {
+                object-fit: cover;
+                width: 100%;
+                height: 50vh;
+            }
+            /* #but {
         position: relative;
         margin-left: 30px;
     } */
-        .Descricaodanossahistoria {
-            display: grid;
-            grid-template-columns: 2fr;
-            grid-template-rows: 60vh 60vh 60vh;
-            grid-auto-rows: 100px;
-            grid-auto-flow: column;
-            margin: 0 auto;
-            margin-bottom: 300px;
+            .Descricaodanossahistoria {
+                display: grid;
+                grid-template-columns: 2fr;
+                grid-template-rows: 60vh 60vh 60vh;
+                grid-auto-rows: 100px;
+                grid-auto-flow: column;
+                margin: 0 auto;
+                margin-bottom: 300px;
+            }
+            .P2 {
+                /* margin-left: 100px; */
+                justify-content: stretch;
+                justify-items: center;
+                grid-column-start: 1;
+                grid-column-end: 2;
+                object-fit: cover;
+                background: #FFFFFF;
+                text-align: center;
+                order: -1;
+            }
+            .P3 {
+                /* margin-left: 100px; */
+                justify-content: stretch;
+                justify-items: center;
+                grid-column-start: 1;
+                grid-column-end: 2;
+                background: #FFFFFF;
+                text-align: center;
+            }
+            .P1 {
+                /* margin-left: 100px; */
+                object-fit: cover;
+                width: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-image: url("pastel-de-belem-02-1200x901.jpg");
+                grid-column-start: 1;
+                grid-column-end: 1;
+            }
+            .P4 {
+                width: 100%;
+                /* margin-left: 100px; */
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-image: url("ilcao_bx__13_.jpg");
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row: span 4;
+            }
+            .new_footer_area {
+                background: #fbfbfd;
+            }
+            .btn_get_two {
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                background: #5e2ced;
+                border-color: #5e2ced;
+                color: #fff;
+            }
+            .btn_get_two:hover {
+                background: transparent;
+                color: #5e2ced;
+            }
         }
-        .P2 {
-            /* margin-left: 100px; */
-            justify-content: stretch;
-            justify-items: center;
-            grid-column-start: 1;
-            grid-column-end: 2;
-            object-fit: cover;
-            background: #FFFFFF;
-            text-align: center;
-            order: -1;
-        }
-        .P3 {
-            /* margin-left: 100px; */
-            justify-content: stretch;
-            justify-items: center;
-            grid-column-start: 1;
-            grid-column-end: 2;
-            background: #FFFFFF;
-            text-align: center;
-        }
-        .P1 {
-            /* margin-left: 100px; */
-            object-fit: cover;
-            width: 100%;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-image: url("pastel-de-belem-02-1200x901.jpg");
-            grid-column-start: 1;
-            grid-column-end: 1;
-        }
-        .P4 {
-            width: 100%;
-            /* margin-left: 100px; */
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-image: url("ilcao_bx__13_.jpg");
-            grid-column-start: 1;
-            grid-column-end: 2;
-            grid-row: span 4;
-        }
-        .new_footer_area {
-            background: #fbfbfd;
-        }
-        .btn_get_two {
-            -webkit-box-shadow: none;
-            box-shadow: none;
-            background: #5e2ced;
-            border-color: #5e2ced;
-            color: #fff;
-        }
-        .btn_get_two:hover {
-            background: transparent;
-            color: #5e2ced;
-        }
-    }
